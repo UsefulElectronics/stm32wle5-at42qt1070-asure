@@ -40,7 +40,7 @@ S_UPPER_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Middlewares/ST/threadx/ports/cortex_m4/gnu/src/%.o: ../Middlewares/ST/threadx/ports/cortex_m4/gnu/src/%.S Middlewares/ST/threadx/ports/cortex_m4/gnu/src/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"C:/Users/WARD/STM32CubeIDE/workspace_1.14.0/stm32wle5-at42qt1070/Core/Src" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I../Core/Src/at42qt1070 -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 
 clean: clean-Middlewares-2f-ST-2f-threadx-2f-ports-2f-cortex_m4-2f-gnu-2f-src
 

@@ -35,26 +35,29 @@ typedef struct
 	void	(*i2c_send)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	void	(*i2c_receive)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	void	(*change_pin_read)(void);
+	uint8_t key_buffer;
+	uint8_t *register_address;
 	at42qt1070_state_t  state;
+	circ_buffer_t circ_buffer;
 	//Event buffer
 }at42qt1070_t;
 /* VARIABLES -----------------------------------------------------------------*/
-const uint8_t at42qt1070_reg_list[AT42QT1070F_REGISTER_COUNT] =
+const uint8_t at42qt1070_reg_list[AT42QT1070_REGISTER_COUNT] =
 {
 AT42QT1070_CHIPID,
-AT42QT1070F_FIRMWARE,
-AT42QT1070F_DETECTIONSTATUS,
-AT42QT1070F_KEYSTATUS ,
-AT42QT1070F_KEYSIGNAL,
-AT42QT1070F_REFERENCE	,
-AT42QT1070F_NEGTHRESHOLD,
-AT42QT1070F_AVERAGE_ADJACENTKEYSUPPRESSIONLEVEl,
-AT42QT1070F_DETECTIONINTEGRATORCOUNTER,
-AT42QT1070F_FOMODI_MAXCAL_GUARDCHANNEL,
-AT42QT1070F_LOWPOWERMODE,
-AT42QT1070F_MAXONDURATION,
-AT42QT1070F_CALIBRATE,
-AT42QT1070F_RESET,
+AT42QT1070_FIRMWARE,
+AT42QT1070_DETECTIONSTATUS,
+AT42QT1070_KEYSTATUS ,
+AT42QT1070_KEYSIGNAL,
+AT42QT1070_REFERENCE	,
+AT42QT1070_NEGTHRESHOLD,
+AT42QT1070_AVERAGE_ADJACENTKEYSUPPRESSIONLEVEl,
+AT42QT1070_DETECTIONINTEGRATORCOUNTER,
+AT42QT1070_FOMODI_MAXCAL_GUARDCHANNEL,
+AT42QT1070_LOWPOWERMODE,
+AT42QT1070_MAXONDURATION,
+AT42QT1070_CALIBRATE,
+AT42QT1070_RESET,
 };
 
 at42qt1070_t at42qt1070_handler = {0};
@@ -73,11 +76,50 @@ void at42qt1070_init(void* send_function, void* receive_fucntion, void* change_s
 
 	at42qt1070_handler.change_pin_read	= change_state_read;
 
-	at42qt1070_init(&premetive_buffer);
+	at42qt1070_handler.state.all 		= 0;
 
-	ryuw122_set_mode(hRyuw122.operation_mode);
-
-
+	at42qt1070_handler.register_address = at42qt1070_reg_list;
 }
 
+
+bool at42qt1070_new_event_check(void)
+{
+	return at42qt1070_handler.state.flag.unread_event;
+}
+
+bool at42qt1070_key_stete_read(void)
+{
+	at42qt1070_handler.send_function(AT42QT1070_SLAVE_ADDRESS,
+									&at42qt1070_handler.register_address[SENSOR_KEYSTATUS],
+									AT42QT1070_REGISTER_WEDTH);
+
+	at42qt1070_handler.send_function(AT42QT1070_SLAVE_ADDRESS,
+									&at42qt1070_handler.key_buffer,
+									AT42QT1070_REGISTER_WEDTH);
+
+
+	at42qt1070_handler.state.flag.unread_event  = at42qt1070_handler.key_buffer ? 1 : 0;
+
+	circ_buffer_enqueue(&at42qt1070_handler.circ_buffer,
+						&at42qt1070_handler.key_buffer,
+						AT42QT1070_REGISTER_WEDTH);
+
+	//Clear the buffer content
+	at42qt1070_handler.key_buffer = 0;
+
+	return at42qt1070_handler.state.flag.unread_event;
+}
+
+uint8_t at42qt1070_key_stete_get(void)
+{
+
+	uint8_t* key_number  = circ_buffer_dequeue(&at42qt1070_handler.circ_buffer,
+												AT42QT1070_REGISTER_WEDTH);
+	//Update the unread event flag
+	at42qt1070_handler.state.flag.unread_event = circ_buffer_getNumArrays(&at42qt1070_handler.circ_buffer) ? 1 : 0;
+
+
+
+	return *key_number;
+}
 /*************************************** USEFUL ELECTRONICS*****END OF FILE****/
