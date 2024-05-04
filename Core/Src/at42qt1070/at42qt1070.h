@@ -53,8 +53,7 @@
 /// Change Pin pull state
 #define AT42QT1070_IDLE_EVENT			0x01
 #define AT42QT1070_NEW_EVENT			0x00
-/// Event Key Buffer Size
-#define AT42QT1070_NEW_EVENT			0x00
+
 /* ENUMORATIONS --------------------------------------------------------------*/
 typedef enum
 {

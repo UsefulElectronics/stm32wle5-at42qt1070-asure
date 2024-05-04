@@ -1,1 +1,4 @@
-../Core/Src/at42qt1070/at42qt1070.c:69:6:at42qt1070_init	24	static
+../Core/Src/at42qt1070/at42qt1070.c:109:6:at42qt1070_init	24	static
+../Core/Src/at42qt1070/at42qt1070.c:123:6:at42qt1070_new_event_check	4	static
+../Core/Src/at42qt1070/at42qt1070.c:128:6:at42qt1070_key_stete_read	8	static
+../Core/Src/at42qt1070/at42qt1070.c:151:9:at42qt1070_key_stete_get	16	static

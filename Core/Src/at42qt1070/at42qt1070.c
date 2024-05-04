@@ -30,13 +30,51 @@ typedef union
 	}flag;
 	uint8_t all;
 }at42qt1070_state_t;
+// Define a structure to hold chip IDs
+struct register_set_t
+{
+    uint8_t at42qt1070_chipid;
+    uint8_t at42qt1070_firmware;
+	uint8_t at42qt1070_detectionstatus;
+	uint8_t at42qt1070_keystatus;
+	uint8_t at42qt1070_keysignal;
+	uint8_t at42qt1070_reference;
+	uint8_t at42qt1070_negthreshold;
+	uint8_t at42qt1070_suppressionlevel;
+	uint8_t at42qt1070_integratorcounter;
+	uint8_t at42qt1070_guardchannel;
+	uint8_t at42qt1070_lowpowermode;
+	uint8_t at42qt1070_maxonduration;
+	uint8_t at42qt1070_calibrate;
+	uint8_t at42qt1070_reset;
+    // Other chip IDs can be added here
+};
+
+const struct register_set_t register_set =
+{
+	.at42qt1070_chipid 					= AT42QT1070_CHIPID,
+	.at42qt1070_firmware 				= AT42QT1070_FIRMWARE,
+	.at42qt1070_detectionstatus 		= AT42QT1070_DETECTIONSTATUS,
+	.at42qt1070_keystatus				= AT42QT1070_KEYSTATUS,
+	.at42qt1070_keysignal				= AT42QT1070_KEYSIGNAL,
+	.at42qt1070_reference				= AT42QT1070_REFERENCE,
+	.at42qt1070_negthreshold			= AT42QT1070_NEGTHRESHOLD,
+	.at42qt1070_suppressionlevel		= AT42QT1070_AVERAGE_ADJACENTKEYSUPPRESSIONLEVEl,
+	.at42qt1070_integratorcounter		= AT42QT1070_DETECTIONINTEGRATORCOUNTER,
+	.at42qt1070_guardchannel			= AT42QT1070_FOMODI_MAXCAL_GUARDCHANNEL,
+	.at42qt1070_lowpowermode			= AT42QT1070_LOWPOWERMODE,
+	.at42qt1070_maxonduration			= AT42QT1070_MAXONDURATION,
+	.at42qt1070_calibrate				= AT42QT1070_CALIBRATE,
+	.at42qt1070_reset					= AT42QT1070_RESET,
+};
+
 typedef struct
 {
 	void	(*i2c_send)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	void	(*i2c_receive)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	void	(*change_pin_read)(void);
 	uint8_t key_buffer;
-	uint8_t *register_address;
+	const struct register_set_t *register_address;
 	at42qt1070_state_t  state;
 	circ_buffer_t circ_buffer;
 	//Event buffer
@@ -78,7 +116,7 @@ void at42qt1070_init(void* send_function, void* receive_fucntion, void* change_s
 
 	at42qt1070_handler.state.all 		= 0;
 
-	at42qt1070_handler.register_address = at42qt1070_reg_list;
+	at42qt1070_handler.register_address = &register_set;
 }
 
 
@@ -89,11 +127,11 @@ bool at42qt1070_new_event_check(void)
 
 bool at42qt1070_key_stete_read(void)
 {
-	at42qt1070_handler.send_function(AT42QT1070_SLAVE_ADDRESS,
-									&at42qt1070_handler.register_address[SENSOR_KEYSTATUS],
-									AT42QT1070_REGISTER_WEDTH);
+	at42qt1070_handler.i2c_send(AT42QT1070_SLAVE_ADDRESS,
+								&at42qt1070_handler.register_address->at42qt1070_keystatus,
+								AT42QT1070_REGISTER_WEDTH);
 
-	at42qt1070_handler.send_function(AT42QT1070_SLAVE_ADDRESS,
+	at42qt1070_handler.i2c_receive(AT42QT1070_SLAVE_ADDRESS,
 									&at42qt1070_handler.key_buffer,
 									AT42QT1070_REGISTER_WEDTH);
 
