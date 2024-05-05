@@ -7,3 +7,4 @@
 ../Core/Src/stm32wlxx_it.c:166:6:TIM17_IRQHandler	1
 ../Core/Src/stm32wlxx_it.c:180:6:I2C1_EV_IRQHandler	1
 ../Core/Src/stm32wlxx_it.c:194:6:I2C1_ER_IRQHandler	1
+../Core/Src/stm32wlxx_it.c:208:6:EXTI15_10_IRQHandler	1

@@ -3,6 +3,6 @@
 ../Core/Src/main.c:115:6:SystemClock_Config	3
 ../Core/Src/main.c:158:13:MX_I2C1_Init	4
 ../Core/Src/main.c:206:13:MX_GPIO_Init	1
-../Core/Src/main.c:230:9:main_key_status_read	1
-../Core/Src/main.c:256:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:273:6:Error_Handler	1
+../Core/Src/main.c:241:9:main_key_status_read	1
+../Core/Src/main.c:267:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:284:6:Error_Handler	1

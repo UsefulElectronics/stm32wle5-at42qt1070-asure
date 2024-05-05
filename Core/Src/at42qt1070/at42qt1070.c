@@ -135,12 +135,16 @@ bool at42qt1070_key_stete_read(void)
 									&at42qt1070_handler.key_buffer,
 									AT42QT1070_REGISTER_WEDTH);
 
+	if(at42qt1070_handler.key_buffer)
+	{
+		circ_buffer_enqueue(&at42qt1070_handler.circ_buffer,
+							&at42qt1070_handler.key_buffer,
+							AT42QT1070_REGISTER_WEDTH);
 
-	at42qt1070_handler.state.flag.unread_event  = at42qt1070_handler.key_buffer ? 1 : 0;
+		at42qt1070_handler.state.flag.unread_event  = true;
+	}
 
-	circ_buffer_enqueue(&at42qt1070_handler.circ_buffer,
-						&at42qt1070_handler.key_buffer,
-						AT42QT1070_REGISTER_WEDTH);
+
 
 	//Clear the buffer content
 	at42qt1070_handler.key_buffer = 0;
@@ -148,11 +152,24 @@ bool at42qt1070_key_stete_read(void)
 	return at42qt1070_handler.state.flag.unread_event;
 }
 
+bool at42qt1070_callback(void)
+{
+	bool new_event = false;
+
+	if(!at42qt1070_handler.change_pin_read())
+	{
+		new_event = at42qt1070_key_stete_read();
+	}
+
+	return new_event;
+}
+
+
 uint8_t at42qt1070_key_stete_get(void)
 {
 
 	uint8_t* key_number  = circ_buffer_dequeue(&at42qt1070_handler.circ_buffer,
-												AT42QT1070_REGISTER_WEDTH);
+												NULL);
 	//Update the unread event flag
 	at42qt1070_handler.state.flag.unread_event = circ_buffer_getNumArrays(&at42qt1070_handler.circ_buffer) ? 1 : 0;
 
