@@ -18,7 +18,9 @@
 
 
 /* INCLUDES ------------------------------------------------------------------*/
-
+#include "stdlib.h"
+#include "stdint.h"
+#include "stdbool.h"
 /* MACROS --------------------------------------------------------------------*/
 #define AT42QT1070_SLAVE_ADDRESS		0x1B << 1
 
@@ -77,7 +79,12 @@ typedef enum
 /* VARIABLES -----------------------------------------------------------------*/
 
 /* FUNCTIONS DECLARATION -----------------------------------------------------*/
+void at42qt1070_init(void* send_function, void* receive_fucntion, void* change_state_read);
 
+bool at42qt1070_callback(void);
+
+
+uint8_t at42qt1070_key_stete_get(void);
 
 
 #endif /* SRC_AT42QT1070_H_ */

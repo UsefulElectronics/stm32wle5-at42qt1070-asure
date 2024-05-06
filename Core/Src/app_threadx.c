@@ -57,6 +57,8 @@ TX_MUTEX mutex_0;
 TX_EVENT_FLAGS_GROUP event_flags_0;
 TX_BYTE_POOL byte_pool_0;
 TX_BLOCK_POOL block_pool_0;
+
+TX_SEMAPHORE external_gpio_semaphore;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,14 +125,24 @@ static void thread_ui_control(ULONG thread_input)
     /* Your thread code here */
 	uint8_t key = 0;
 
+    // Create semaphore
+    tx_semaphore_create(&external_gpio_semaphore, "gpio interrupt", 0);
+
     while (1)
     {
+        // Wait for semaphore
+    	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
+    	{
+
+    	}
+
+
         /* Thread actions */
-    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
-
-    	key = main_key_status_read();
-
-        tx_thread_sleep(10); // Example: Sleep for 100 ticks
+//    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
+//
+//    	key = main_key_status_read();
+//
+//        tx_thread_sleep(10); // Example: Sleep for 100 ticks
     }
 }
 

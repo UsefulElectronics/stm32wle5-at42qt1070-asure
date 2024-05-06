@@ -61,7 +61,11 @@ uint8_t main_key_status_read(void);
 #define LED_PIN_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
+HAL_StatusTypeDef main_i2c_transmit(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 
+HAL_StatusTypeDef main_i2c_receive(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
+
+GPIO_PinState main_change_pin_read(void);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

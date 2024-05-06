@@ -1,8 +1,11 @@
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	1
 ../Core/Src/main.c:67:5:main	1
-../Core/Src/main.c:115:6:SystemClock_Config	3
-../Core/Src/main.c:158:13:MX_I2C1_Init	4
-../Core/Src/main.c:206:13:MX_GPIO_Init	1
-../Core/Src/main.c:241:9:main_key_status_read	1
-../Core/Src/main.c:267:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:284:6:Error_Handler	1
+../Core/Src/main.c:118:6:SystemClock_Config	3
+../Core/Src/main.c:161:13:MX_I2C1_Init	4
+../Core/Src/main.c:209:13:MX_GPIO_Init	1
+../Core/Src/main.c:244:9:main_key_status_read	2
+../Core/Src/main.c:269:19:main_i2c_transmit	1
+../Core/Src/main.c:274:19:main_i2c_receive	1
+../Core/Src/main.c:279:15:main_change_pin_read	1
+../Core/Src/main.c:294:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:312:6:Error_Handler	1

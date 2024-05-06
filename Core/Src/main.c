@@ -98,6 +98,9 @@ int main(void)
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  at42qt1070_init(main_i2c_transmit,
+		  	  	  main_i2c_receive,
+				  main_change_pin_read);
 
   while (1)
   {
@@ -240,20 +243,44 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 uint8_t main_key_status_read(void)
 {
-	uint8_t key_status_address = 3;
-
 	uint8_t key_status = 0;
 
-	HAL_I2C_GetState(&hi2c1);
+	if(at42qt1070_callback())
+	{
+		key_status = at42qt1070_key_stete_get();
+	}
 
-	key_status = HAL_I2C_IsDeviceReady(&hi2c1, AT42QT1070_SLAVE_ADDRESS, 100, 1000);
-
-	HAL_I2C_Master_Transmit(&hi2c1, AT42QT1070_SLAVE_ADDRESS, &key_status_address, 1, 1000);
-
-	HAL_I2C_Master_Receive(&hi2c1, AT42QT1070_SLAVE_ADDRESS, &key_status, 1, 1000);
+//	uint8_t key_status_address = 3;
+//
+//	uint8_t key_status = 0;
+//
+//	HAL_I2C_GetState(&hi2c1);
+//
+//	key_status = HAL_I2C_IsDeviceReady(&hi2c1, AT42QT1070_SLAVE_ADDRESS, 100, 1000);
+//
+//	HAL_I2C_Master_Transmit(&hi2c1, AT42QT1070_SLAVE_ADDRESS, &key_status_address, 1, 1000);
+//
+//	HAL_I2C_Master_Receive(&hi2c1, AT42QT1070_SLAVE_ADDRESS, &key_status, 1, 1000);
 
 	return key_status;
 }
+
+
+HAL_StatusTypeDef main_i2c_transmit(uint16_t slave_address, uint8_t *data_buffer, uint16_t size)
+{
+	return HAL_I2C_Master_Transmit(&hi2c1, slave_address, data_buffer, size, 1000);
+}
+
+HAL_StatusTypeDef main_i2c_receive(uint16_t slave_address, uint8_t *data_buffer, uint16_t size)
+{
+	return HAL_I2C_Master_Receive(&hi2c1, slave_address, data_buffer, size, 1000);
+}
+
+GPIO_PinState main_change_pin_read(void)
+{
+	return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12);
+}
+
 /* USER CODE END 4 */
 
 /**
@@ -269,7 +296,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM17) {
+  if (htim->Instance == TIM17)
+  {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
