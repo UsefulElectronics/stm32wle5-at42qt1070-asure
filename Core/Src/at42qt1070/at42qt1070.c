@@ -112,7 +112,7 @@ bool at42qt1070_key_stete_read(void)
 	if(at42qt1070_handler.i2c_send != NULL)
 	{
 		at42qt1070_handler.i2c_send(AT42QT1070_SLAVE_ADDRESS,
-									(const)&at42qt1070_handler.register_address->at42qt1070_keystatus,
+									&at42qt1070_handler.register_address->at42qt1070_keystatus,
 									AT42QT1070_REGISTER_WEDTH);
 
 		at42qt1070_handler.i2c_receive(AT42QT1070_SLAVE_ADDRESS,

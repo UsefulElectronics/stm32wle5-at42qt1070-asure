@@ -35,7 +35,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern TX_SEMAPHORE external_gpio_semaphore;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

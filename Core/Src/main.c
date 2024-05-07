@@ -281,6 +281,10 @@ GPIO_PinState main_change_pin_read(void)
 	return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12);
 }
 
+void main_interrupt_callback(void)
+{
+	tx_semaphore_put(&external_gpio_semaphore);
+}
 /* USER CODE END 4 */
 
 /**

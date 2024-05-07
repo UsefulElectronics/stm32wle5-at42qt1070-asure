@@ -133,7 +133,7 @@ static void thread_ui_control(ULONG thread_input)
         // Wait for semaphore
     	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
     	{
-
+    		key = main_key_status_read();
     	}
 
 

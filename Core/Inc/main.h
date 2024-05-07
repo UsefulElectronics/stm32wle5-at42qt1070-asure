@@ -66,6 +66,8 @@ HAL_StatusTypeDef main_i2c_transmit(uint16_t slave_address, uint8_t *data_buffer
 HAL_StatusTypeDef main_i2c_receive(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 
 GPIO_PinState main_change_pin_read(void);
+
+void main_interrupt_callback(void);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
