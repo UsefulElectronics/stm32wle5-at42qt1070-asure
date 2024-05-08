@@ -63,7 +63,8 @@ TX_SEMAPHORE external_gpio_semaphore;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-static void thread_ui_control(ULONG thread_input);
+static void thread_new_state_update(ULONG thread_input);
+static void thread_periodic_read(ULONG thread_input);
 /* USER CODE END PFP */
 
 /**
@@ -75,7 +76,6 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
 {
   UINT ret = TX_SUCCESS;
   /* USER CODE BEGIN App_ThreadX_MEM_POOL */
-  CHAR** pointer;
 
   /* USER CODE END App_ThreadX_MEM_POOL */
 
@@ -85,15 +85,28 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
 	/* Create the main thread.  */
 	tx_thread_create(&thread_0, 			// Thread Pointer: This is a pointer to the TX_THREAD structure that represents the thread being created. This structure holds information about the thread, such as its stack, entry function, priority, and state.
 					"thread 0", 			// Name: A string name for the thread, which can be used for identification and debugging purposes.
-					thread_ui_control, 		// Entry Function: The entry function is the starting point of execution for the thread. It's a function that takes a single argument of type ULONG and returns VOID.
+					thread_new_state_update,// Entry Function: The entry function is the starting point of execution for the thread. It's a function that takes a single argument of type ULONG and returns VOID.
 					0, 						// Entry Input: This is the input parameter passed to the entry function when the thread starts.
 					thread_stack,			// Stack Start: The starting address of the thread's stack. The stack is used for storing local variables, function call information, and other data related to thread execution.
 					UI_THREAD_STACK_SIZE, 	// Stack Size: The size of the stack in bytes.
 					1, 						// Priority: The priority of the thread, which determines its scheduling order relative to other threads in the system. Higher-priority threads are scheduled before lower-priority threads.
 					1, 						// Preemption Threshold: This parameter is used to set the preemption threshold for the thread. It determines the minimum priority level at which the thread can be preempted by other threads. Setting it to TX_NO_PREEMPTION allows the thread to run without being preempted.
 					TX_NO_TIME_SLICE,		// Time Slice: The time slice is the maximum amount of time (in ticks) that the thread can run before it is preempted if there are other ready threads of equal priority.
-					TX_AUTO_START);			// Auto Start: Specifies whether the thread should start automatically after creation (TX_AUTO_START) or if it should be manually started later.
+					TX_DONT_START);			// Auto Start: Specifies whether the thread should start automatically after creation (TX_AUTO_START) or if it should be manually started later.
 
+	tx_thread_create(&thread_1, 			// Thread Pointer: This is a pointer to the TX_THREAD structure that represents the thread being created. This structure holds information about the thread, such as its stack, entry function, priority, and state.
+					"thread 1", 			// Name: A string name for the thread, which can be used for identification and debugging purposes.
+					thread_periodic_read,  // Entry Function: The entry function is the starting point of execution for the thread. It's a function that takes a single argument of type ULONG and returns VOID.
+					0, 						// Entry Input: This is the input parameter passed to the entry function when the thread starts.
+					thread_stack,			// Stack Start: The starting address of the thread's stack. The stack is used for storing local variables, function call information, and other data related to thread execution.
+					UI_THREAD_STACK_SIZE, 	// Stack Size: The size of the stack in bytes.
+					1, 						// Priority: The priority of the thread, which determines its scheduling order relative to other threads in the system. Higher-priority threads are scheduled before lower-priority threads.
+					1, 						// Preemption Threshold: This parameter is used to set the preemption threshold for the thread. It determines the minimum priority level at which the thread can be preempted by other threads. Setting it to TX_NO_PREEMPTION allows the thread to run without being preempted.
+					TX_NO_TIME_SLICE,		// Time Slice: The time slice is the maximum amount of time (in ticks) that the thread can run before it is preempted if there are other ready threads of equal priority.
+					TX_DONT_START);
+
+    tx_thread_resume(&thread_0);
+    tx_thread_resume(&thread_1);
 
   /* USER CODE END App_ThreadX_Init */
 
@@ -120,7 +133,7 @@ void MX_ThreadX_Init(void)
 
 /* USER CODE BEGIN 1 */
 /* Azure RTOS thread entry function */
-static void thread_ui_control(ULONG thread_input)
+static void thread_new_state_update(ULONG thread_input)
 {
     /* Your thread code here */
 	uint8_t key = 0;
@@ -131,7 +144,7 @@ static void thread_ui_control(ULONG thread_input)
     while (1)
     {
         // Wait for semaphore
-    	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
+    	if (tx_semaphore_get(&external_gpio_semaphore, TX_NO_WAIT) == TX_SUCCESS)
     	{
     		key = main_key_status_read();
     	}
@@ -142,8 +155,36 @@ static void thread_ui_control(ULONG thread_input)
 //
 //    	key = main_key_status_read();
 //
-//        tx_thread_sleep(10); // Example: Sleep for 100 ticks
+        tx_thread_sleep(5); // Example: Sleep for 100 ticks
     }
+}
+
+static void thread_periodic_read(ULONG thread_input)
+{
+	/* Your thread code here */
+	uint8_t key = 0;
+
+	uint8_t register_address  = 3;
+
+	while (1)
+	{
+
+		main_i2c_transmit(0x1B << 1,
+						&register_address,
+						1);
+
+		main_i2c_receive(0x1B << 1,
+						&key,
+						1);
+
+
+		/* Thread actions */
+//    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
+//
+//    	key = main_key_status_read();
+//
+        tx_thread_sleep(100); // Example: Sleep for 100 ticks
+	}
 }
 
 /* USER CODE END 1 */
