@@ -90,7 +90,9 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  at42qt1070_init(main_i2c_transmit,
+		  	  	  main_i2c_receive,
+				  main_change_pin_read);
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();
@@ -98,9 +100,7 @@ int main(void)
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  at42qt1070_init(main_i2c_transmit,
-		  	  	  main_i2c_receive,
-				  main_change_pin_read);
+
 
   while (1)
   {

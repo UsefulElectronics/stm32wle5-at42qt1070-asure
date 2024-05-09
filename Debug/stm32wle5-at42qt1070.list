@@ -21,31 +21,31 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   8 .data         00000010  20000000  08005f70  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000117c  20000010  08005f80  00020010  2**2
+  9 .bss          0000157c  20000010  08005f80  00020010  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  2000118c  08005f80  0002118c  2**0
+ 10 ._user_heap_stack 00000604  2000158c  08005f80  0002158c  2**0
                   ALLOC
  11 .ARM.attributes 0000002a  00000000  00000000  00020010  2**0
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  0002003a  2**0
                   CONTENTS, READONLY
- 13 .debug_info   0001cd40  00000000  00000000  0002007d  2**0
+ 13 .debug_info   0001cd62  00000000  00000000  0002007d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00005a39  00000000  00000000  0003cdbd  2**0
+ 14 .debug_abbrev 00005a39  00000000  00000000  0003cddf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00001990  00000000  00000000  000427f8  2**3
+ 15 .debug_aranges 00001990  00000000  00000000  00042818  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 000012b4  00000000  00000000  00044188  2**0
+ 16 .debug_rnglists 000012b4  00000000  00000000  000441a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  0001e611  00000000  00000000  0004543c  2**0
+ 17 .debug_macro  0001e611  00000000  00000000  0004545c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000229cc  00000000  00000000  00063a4d  2**0
+ 18 .debug_line   000229c7  00000000  00000000  00063a6d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000ac619  00000000  00000000  00086419  2**0
+ 19 .debug_str    000ac63e  00000000  00000000  00086434  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00005f84  00000000  00000000  00132a34  2**2
+ 20 .debug_frame  00005f84  00000000  00000000  00132a74  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000109  00000000  00000000  001389b8  2**0
+ 21 .debug_line_str 00000109  00000000  00000000  001389f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -242,7 +242,7 @@ __tx_DBGHandler:
     LDR     r1, =g_pfnVectors                           @ Pickup address of vector table
  80001ec:	08000000 	.word	0x08000000
     LDR     r0, =_tx_thread_system_stack_ptr        @ Build address of system stack pointer
- 80001f0:	20000b80 	.word	0x20000b80
+ 80001f0:	20000f80 	.word	0x20000f80
     LDR     r0, =0xE0001000                         @ Build address of DWT register
  80001f4:	e0001000 	.word	0xe0001000
     LDR     r1, =SYSTICK_CYCLES
@@ -468,13 +468,13 @@ __tx_ts_ready:
  800028c:	e7e1      	b.n	8000252 <__tx_ts_restore>
  800028e:	0000      	.short	0x0000
     LDR     r2, =_tx_thread_preempt_disable         // Build address of preempt disable flag
- 8000290:	20000c1c 	.word	0x20000c1c
+ 8000290:	2000101c 	.word	0x2000101c
     LDR     r0, =_tx_thread_current_ptr             // Build current thread pointer address
- 8000294:	20000b84 	.word	0x20000b84
+ 8000294:	20000f84 	.word	0x20000f84
     LDR     r2, =_tx_thread_execute_ptr             // Build execute thread pointer address
- 8000298:	20000b88 	.word	0x20000b88
+ 8000298:	20000f88 	.word	0x20000f88
     LDR     r4, =_tx_timer_time_slice               // Build address of time-slice variable
- 800029c:	20001188 	.word	0x20001188
+ 800029c:	20001588 	.word	0x20001588
 
 080002a0 <_tx_thread_stack_build>:
                        pc          Initial value for pc
@@ -772,25 +772,25 @@ __tx_timer_nothing_expired:
     BX      lr                                      // Return to caller
  800036a:	4770      	bx	lr
     LDR     r1, =_tx_timer_system_clock             // Pickup address of system clock
- 800036c:	20000c28 	.word	0x20000c28
+ 800036c:	20001028 	.word	0x20001028
     LDR     r3, =_tx_timer_time_slice               // Pickup address of time-slice
- 8000370:	20001188 	.word	0x20001188
+ 8000370:	20001588 	.word	0x20001588
     LDR     r3, =_tx_timer_expired_time_slice       // Pickup address of expired flag
- 8000374:	20000c2c 	.word	0x20000c2c
+ 8000374:	2000102c 	.word	0x2000102c
     LDR     r1, =_tx_timer_current_ptr              // Pickup current timer pointer address
- 8000378:	20000cb8 	.word	0x20000cb8
+ 8000378:	200010b8 	.word	0x200010b8
     LDR     r3, =_tx_timer_expired                  // Pickup expiration flag address
- 800037c:	20000cbc 	.word	0x20000cbc
+ 800037c:	200010bc 	.word	0x200010bc
     LDR     r3, =_tx_timer_list_end                 // Pickup addr of timer list end
- 8000380:	20000cb4 	.word	0x20000cb4
+ 8000380:	200010b4 	.word	0x200010b4
     LDR     r3, =_tx_timer_list_start               // Pickup addr of timer list start
- 8000384:	20000cb0 	.word	0x20000cb0
+ 8000384:	200010b0 	.word	0x200010b0
     LDR     r0, =_tx_thread_preempt_disable         // Build address of preempt disable flag
- 8000388:	20000c1c 	.word	0x20000c1c
+ 8000388:	2000101c 	.word	0x2000101c
     LDR     r0, =_tx_thread_current_ptr             // Build current thread pointer address
- 800038c:	20000b84 	.word	0x20000b84
+ 800038c:	20000f84 	.word	0x20000f84
     LDR     r2, =_tx_thread_execute_ptr             // Build execute thread pointer address
- 8000390:	20000b88 	.word	0x20000b88
+ 8000390:	20000f88 	.word	0x20000f88
     LDR     r0, =0xE000ED04                         // Build address of control register
  8000394:	e000ed04 	.word	0xe000ed04
 
@@ -916,12 +916,12 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
  800042c:	9302      	str	r3, [sp, #8]
  800042e:	f44f 6380 	mov.w	r3, #1024	; 0x400
  8000432:	9301      	str	r3, [sp, #4]
- 8000434:	4b09      	ldr	r3, [pc, #36]	; (800045c <App_ThreadX_Init+0x78>)
+ 8000434:	4b0d      	ldr	r3, [pc, #52]	; (800046c <App_ThreadX_Init+0x88>)
  8000436:	9300      	str	r3, [sp, #0]
  8000438:	2300      	movs	r3, #0
- 800043a:	4a0c      	ldr	r2, [pc, #48]	; (800046c <App_ThreadX_Init+0x88>)
- 800043c:	490c      	ldr	r1, [pc, #48]	; (8000470 <App_ThreadX_Init+0x8c>)
- 800043e:	480d      	ldr	r0, [pc, #52]	; (8000474 <App_ThreadX_Init+0x90>)
+ 800043a:	4a0d      	ldr	r2, [pc, #52]	; (8000470 <App_ThreadX_Init+0x8c>)
+ 800043c:	490d      	ldr	r1, [pc, #52]	; (8000474 <App_ThreadX_Init+0x90>)
+ 800043e:	480e      	ldr	r0, [pc, #56]	; (8000478 <App_ThreadX_Init+0x94>)
  8000440:	f005 fbae 	bl	8005ba0 <_txe_thread_create>
 					1, 						// Priority: The priority of the thread, which determines its scheduling order relative to other threads in the system. Higher-priority threads are scheduled before lower-priority threads.
 					1, 						// Preemption Threshold: This parameter is used to set the preemption threshold for the thread. It determines the minimum priority level at which the thread can be preempted by other threads. Setting it to TX_NO_PREEMPTION allows the thread to run without being preempted.
@@ -932,7 +932,7 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
  8000444:	4808      	ldr	r0, [pc, #32]	; (8000468 <App_ThreadX_Init+0x84>)
  8000446:	f005 fc9d 	bl	8005d84 <_txe_thread_resume>
     tx_thread_resume(&thread_1);
- 800044a:	480a      	ldr	r0, [pc, #40]	; (8000474 <App_ThreadX_Init+0x90>)
+ 800044a:	480b      	ldr	r0, [pc, #44]	; (8000478 <App_ThreadX_Init+0x94>)
  800044c:	f005 fc9a 	bl	8005d84 <_txe_thread_resume>
 
   /* USER CODE END App_ThreadX_Init */
@@ -946,89 +946,84 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
  8000458:	bd80      	pop	{r7, pc}
  800045a:	bf00      	nop
  800045c:	20000460 	.word	0x20000460
- 8000460:	08000485 	.word	0x08000485
+ 8000460:	08000489 	.word	0x08000489
  8000464:	08005e60 	.word	0x08005e60
- 8000468:	20000860 	.word	0x20000860
- 800046c:	080004c5 	.word	0x080004c5
- 8000470:	08005e6c 	.word	0x08005e6c
- 8000474:	20000910 	.word	0x20000910
+ 8000468:	20000c60 	.word	0x20000c60
+ 800046c:	20000860 	.word	0x20000860
+ 8000470:	080004c5 	.word	0x080004c5
+ 8000474:	08005e6c 	.word	0x08005e6c
+ 8000478:	20000d10 	.word	0x20000d10
 
-08000478 <MX_ThreadX_Init>:
+0800047c <MX_ThreadX_Init>:
   * @brief  Function that implements the kernel's initialization.
   * @param  None
   * @retval None
   */
 void MX_ThreadX_Init(void)
 {
- 8000478:	b580      	push	{r7, lr}
- 800047a:	af00      	add	r7, sp, #0
+ 800047c:	b580      	push	{r7, lr}
+ 800047e:	af00      	add	r7, sp, #0
   /* USER CODE BEGIN  Before_Kernel_Start */
 
   /* USER CODE END  Before_Kernel_Start */
 
   tx_kernel_enter();
- 800047c:	f004 f8ba 	bl	80045f4 <_tx_initialize_kernel_enter>
+ 8000480:	f004 f8b8 	bl	80045f4 <_tx_initialize_kernel_enter>
 
   /* USER CODE BEGIN  Kernel_Start_Error */
 
   /* USER CODE END  Kernel_Start_Error */
 }
- 8000480:	bf00      	nop
- 8000482:	bd80      	pop	{r7, pc}
+ 8000484:	bf00      	nop
+ 8000486:	bd80      	pop	{r7, pc}
 
-08000484 <thread_new_state_update>:
+08000488 <thread_new_state_update>:
 
 /* USER CODE BEGIN 1 */
 /* Azure RTOS thread entry function */
 static void thread_new_state_update(ULONG thread_input)
 {
- 8000484:	b580      	push	{r7, lr}
- 8000486:	b084      	sub	sp, #16
- 8000488:	af00      	add	r7, sp, #0
- 800048a:	6078      	str	r0, [r7, #4]
+ 8000488:	b580      	push	{r7, lr}
+ 800048a:	b084      	sub	sp, #16
+ 800048c:	af00      	add	r7, sp, #0
+ 800048e:	6078      	str	r0, [r7, #4]
     /* Your thread code here */
 	uint8_t key = 0;
- 800048c:	2300      	movs	r3, #0
- 800048e:	73fb      	strb	r3, [r7, #15]
+ 8000490:	2300      	movs	r3, #0
+ 8000492:	73fb      	strb	r3, [r7, #15]
 
     // Create semaphore
     tx_semaphore_create(&external_gpio_semaphore, "gpio interrupt", 0);
- 8000490:	231c      	movs	r3, #28
- 8000492:	2200      	movs	r2, #0
- 8000494:	4909      	ldr	r1, [pc, #36]	; (80004bc <thread_new_state_update+0x38>)
- 8000496:	480a      	ldr	r0, [pc, #40]	; (80004c0 <thread_new_state_update+0x3c>)
- 8000498:	f005 fa8c 	bl	80059b4 <_txe_semaphore_create>
+ 8000494:	231c      	movs	r3, #28
+ 8000496:	2200      	movs	r2, #0
+ 8000498:	4908      	ldr	r1, [pc, #32]	; (80004bc <thread_new_state_update+0x34>)
+ 800049a:	4809      	ldr	r0, [pc, #36]	; (80004c0 <thread_new_state_update+0x38>)
+ 800049c:	f005 fa8a 	bl	80059b4 <_txe_semaphore_create>
+//    tx_mutex_create(&periodic_read_mutex, "Mutex");
 
     while (1)
     {
         // Wait for semaphore
-    	if (tx_semaphore_get(&external_gpio_semaphore, TX_NO_WAIT) == TX_SUCCESS)
- 800049c:	2100      	movs	r1, #0
- 800049e:	4808      	ldr	r0, [pc, #32]	; (80004c0 <thread_new_state_update+0x3c>)
- 80004a0:	f005 fb1e 	bl	8005ae0 <_txe_semaphore_get>
- 80004a4:	4603      	mov	r3, r0
- 80004a6:	2b00      	cmp	r3, #0
- 80004a8:	d103      	bne.n	80004b2 <thread_new_state_update+0x2e>
+    	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
+ 80004a0:	f04f 31ff 	mov.w	r1, #4294967295
+ 80004a4:	4806      	ldr	r0, [pc, #24]	; (80004c0 <thread_new_state_update+0x38>)
+ 80004a6:	f005 fb1b 	bl	8005ae0 <_txe_semaphore_get>
+ 80004aa:	4603      	mov	r3, r0
+ 80004ac:	2b00      	cmp	r3, #0
+ 80004ae:	d1f7      	bne.n	80004a0 <thread_new_state_update+0x18>
     	{
     		key = main_key_status_read();
- 80004aa:	f000 f927 	bl	80006fc <main_key_status_read>
- 80004ae:	4603      	mov	r3, r0
- 80004b0:	73fb      	strb	r3, [r7, #15]
-        /* Thread actions */
-//    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
-//
-//    	key = main_key_status_read();
-//
-        tx_thread_sleep(5); // Example: Sleep for 100 ticks
- 80004b2:	2005      	movs	r0, #5
- 80004b4:	f004 fc50 	bl	8004d58 <_tx_thread_sleep>
-    	if (tx_semaphore_get(&external_gpio_semaphore, TX_NO_WAIT) == TX_SUCCESS)
- 80004b8:	e7f0      	b.n	800049c <thread_new_state_update+0x18>
+ 80004b0:	f000 f924 	bl	80006fc <main_key_status_read>
+ 80004b4:	4603      	mov	r3, r0
+ 80004b6:	73fb      	strb	r3, [r7, #15]
+    	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
+ 80004b8:	e7f2      	b.n	80004a0 <thread_new_state_update+0x18>
  80004ba:	bf00      	nop
  80004bc:	08005e78 	.word	0x08005e78
- 80004c0:	200009c0 	.word	0x200009c0
+ 80004c0:	20000dc0 	.word	0x20000dc0
 
 080004c4 <thread_periodic_read>:
+//        tx_thread_sleep(5); // Example: Sleep for 100 ticks
     }
 }
 
@@ -1144,22 +1139,21 @@ int main(void)
   MX_I2C1_Init();
  8000538:	f000 f860 	bl	80005fc <MX_I2C1_Init>
   /* USER CODE BEGIN 2 */
-
+  at42qt1070_init(main_i2c_transmit,
+ 800053c:	4a03      	ldr	r2, [pc, #12]	; (800054c <main+0x24>)
+ 800053e:	4904      	ldr	r1, [pc, #16]	; (8000550 <main+0x28>)
+ 8000540:	4804      	ldr	r0, [pc, #16]	; (8000554 <main+0x2c>)
+ 8000542:	f000 fa9b 	bl	8000a7c <at42qt1070_init>
+		  	  	  main_i2c_receive,
+				  main_change_pin_read);
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();
- 800053c:	f7ff ff9c 	bl	8000478 <MX_ThreadX_Init>
-
+ 8000546:	f7ff ff99 	bl	800047c <MX_ThreadX_Init>
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  at42qt1070_init(main_i2c_transmit,
- 8000540:	4a02      	ldr	r2, [pc, #8]	; (800054c <main+0x24>)
- 8000542:	4903      	ldr	r1, [pc, #12]	; (8000550 <main+0x28>)
- 8000544:	4803      	ldr	r0, [pc, #12]	; (8000554 <main+0x2c>)
- 8000546:	f000 fa99 	bl	8000a7c <at42qt1070_init>
-		  	  	  main_i2c_receive,
-				  main_change_pin_read);
+
 
   while (1)
  800054a:	e7fe      	b.n	800054a <main+0x22>
@@ -1375,7 +1369,7 @@ static void MX_I2C1_Init(void)
  800066a:	bf00      	nop
  800066c:	bd80      	pop	{r7, pc}
  800066e:	bf00      	nop
- 8000670:	200009dc 	.word	0x200009dc
+ 8000670:	20000ddc 	.word	0x20000ddc
  8000674:	40005400 	.word	0x40005400
  8000678:	20303efd 	.word	0x20303efd
 
@@ -1533,7 +1527,7 @@ HAL_StatusTypeDef main_i2c_transmit(uint16_t slave_address, uint8_t *data_buffer
  800074a:	3708      	adds	r7, #8
  800074c:	46bd      	mov	sp, r7
  800074e:	bd80      	pop	{r7, pc}
- 8000750:	200009dc 	.word	0x200009dc
+ 8000750:	20000ddc 	.word	0x20000ddc
 
 08000754 <main_i2c_receive>:
 
@@ -1561,7 +1555,7 @@ HAL_StatusTypeDef main_i2c_receive(uint16_t slave_address, uint8_t *data_buffer,
  800077a:	3708      	adds	r7, #8
  800077c:	46bd      	mov	sp, r7
  800077e:	bd80      	pop	{r7, pc}
- 8000780:	200009dc 	.word	0x200009dc
+ 8000780:	20000ddc 	.word	0x20000ddc
 
 08000784 <main_change_pin_read>:
 
@@ -1592,7 +1586,7 @@ void main_interrupt_callback(void)
  80007a6:	bf00      	nop
  80007a8:	bd80      	pop	{r7, pc}
  80007aa:	bf00      	nop
- 80007ac:	200009c0 	.word	0x200009c0
+ 80007ac:	20000dc0 	.word	0x20000dc0
 
 080007b0 <HAL_TIM_PeriodElapsedCallback>:
   * a global variable "uwTick" used as application time base.
@@ -2026,7 +2020,7 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
  80009e0:	bd80      	pop	{r7, pc}
  80009e2:	bf00      	nop
  80009e4:	431bde83 	.word	0x431bde83
- 80009e8:	20000a30 	.word	0x20000a30
+ 80009e8:	20000e30 	.word	0x20000e30
  80009ec:	40014800 	.word	0x40014800
  80009f0:	20000004 	.word	0x20000004
 
@@ -2149,7 +2143,7 @@ void TIM17_IRQHandler(void)
  8000a2a:	bf00      	nop
  8000a2c:	bd80      	pop	{r7, pc}
  8000a2e:	bf00      	nop
- 8000a30:	20000a30 	.word	0x20000a30
+ 8000a30:	20000e30 	.word	0x20000e30
 
 08000a34 <I2C1_EV_IRQHandler>:
 
@@ -2173,7 +2167,7 @@ void I2C1_EV_IRQHandler(void)
  8000a3e:	bf00      	nop
  8000a40:	bd80      	pop	{r7, pc}
  8000a42:	bf00      	nop
- 8000a44:	200009dc 	.word	0x200009dc
+ 8000a44:	20000ddc 	.word	0x20000ddc
 
 08000a48 <I2C1_ER_IRQHandler>:
 
@@ -2197,7 +2191,7 @@ void I2C1_ER_IRQHandler(void)
  8000a52:	bf00      	nop
  8000a54:	bd80      	pop	{r7, pc}
  8000a56:	bf00      	nop
- 8000a58:	200009dc 	.word	0x200009dc
+ 8000a58:	20000ddc 	.word	0x20000ddc
 
 08000a5c <EXTI15_10_IRQHandler>:
 
@@ -2285,7 +2279,7 @@ void at42qt1070_init(void* send_function, void* receive_fucntion, void* change_s
  8000aaa:	46bd      	mov	sp, r7
  8000aac:	bc80      	pop	{r7}
  8000aae:	4770      	bx	lr
- 8000ab0:	20000a7c 	.word	0x20000a7c
+ 8000ab0:	20000e7c 	.word	0x20000e7c
  8000ab4:	08005f58 	.word	0x08005f58
 
 08000ab8 <at42qt1070_key_stete_read>:
@@ -2374,9 +2368,9 @@ bool at42qt1070_key_stete_read(void)
  8000b1a:	4618      	mov	r0, r3
  8000b1c:	bd80      	pop	{r7, pc}
  8000b1e:	bf00      	nop
- 8000b20:	20000a7c 	.word	0x20000a7c
- 8000b24:	20000a88 	.word	0x20000a88
- 8000b28:	20000a91 	.word	0x20000a91
+ 8000b20:	20000e7c 	.word	0x20000e7c
+ 8000b24:	20000e88 	.word	0x20000e88
+ 8000b28:	20000e91 	.word	0x20000e91
 
 08000b2c <at42qt1070_callback>:
 
@@ -2420,7 +2414,7 @@ bool at42qt1070_callback(void)
  8000b5a:	3708      	adds	r7, #8
  8000b5c:	46bd      	mov	sp, r7
  8000b5e:	bd80      	pop	{r7, pc}
- 8000b60:	20000a7c 	.word	0x20000a7c
+ 8000b60:	20000e7c 	.word	0x20000e7c
 
 08000b64 <at42qt1070_key_stete_get>:
 
@@ -2462,8 +2456,8 @@ uint8_t at42qt1070_key_stete_get(void)
  8000b96:	3708      	adds	r7, #8
  8000b98:	46bd      	mov	sp, r7
  8000b9a:	bd80      	pop	{r7, pc}
- 8000b9c:	20000a91 	.word	0x20000a91
- 8000ba0:	20000a7c 	.word	0x20000a7c
+ 8000b9c:	20000e91 	.word	0x20000e91
+ 8000ba0:	20000e7c 	.word	0x20000e7c
 
 08000ba4 <circ_buffer_enqueue>:
  * @param 	data	: 	Array of bytes to add to the buffer
@@ -2755,7 +2749,7 @@ LoopForever:
   ldr r2, =_sbss
  8000d40:	20000010 	.word	0x20000010
   ldr r4, =_ebss
- 8000d44:	2000118c 	.word	0x2000118c
+ 8000d44:	2000158c 	.word	0x2000158c
 
 08000d48 <ADC_IRQHandler>:
  * @retval : None
@@ -2855,7 +2849,7 @@ __weak void HAL_IncTick(void)
  8000da4:	bc80      	pop	{r7}
  8000da6:	4770      	bx	lr
  8000da8:	20000008 	.word	0x20000008
- 8000dac:	20000b48 	.word	0x20000b48
+ 8000dac:	20000f48 	.word	0x20000f48
 
 08000db0 <HAL_GetTick>:
   * @note This function is declared as __weak to be overwritten in case of other
@@ -2874,7 +2868,7 @@ __weak uint32_t HAL_GetTick(void)
  8000dba:	46bd      	mov	sp, r7
  8000dbc:	bc80      	pop	{r7}
  8000dbe:	4770      	bx	lr
- 8000dc0:	20000b48 	.word	0x20000b48
+ 8000dc0:	20000f48 	.word	0x20000f48
 
 08000dc4 <__NVIC_SetPriorityGrouping>:
            In case of a conflict between priority grouping and available
@@ -13177,8 +13171,8 @@ unsigned int int_posture;
  800455a:	bd80      	pop	{r7, pc}
  800455c:	ffffeeee 	.word	0xffffeeee
  8004560:	42595445 	.word	0x42595445
- 8004564:	20000b78 	.word	0x20000b78
- 8004568:	20000b74 	.word	0x20000b74
+ 8004564:	20000f78 	.word	0x20000f78
+ 8004568:	20000f74 	.word	0x20000f74
 
 0800456c <_tx_initialize_high_level>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -13263,18 +13257,18 @@ VOID    _tx_initialize_high_level(VOID)
 }
  80045c0:	bf00      	nop
  80045c2:	bd80      	pop	{r7, pc}
- 80045c4:	20000b4c 	.word	0x20000b4c
- 80045c8:	20000b50 	.word	0x20000b50
- 80045cc:	20000b54 	.word	0x20000b54
- 80045d0:	20000b58 	.word	0x20000b58
- 80045d4:	20000b5c 	.word	0x20000b5c
- 80045d8:	20000b60 	.word	0x20000b60
- 80045dc:	20000b6c 	.word	0x20000b6c
- 80045e0:	20000b70 	.word	0x20000b70
- 80045e4:	20000b74 	.word	0x20000b74
- 80045e8:	20000b78 	.word	0x20000b78
- 80045ec:	20000b64 	.word	0x20000b64
- 80045f0:	20000b68 	.word	0x20000b68
+ 80045c4:	20000f4c 	.word	0x20000f4c
+ 80045c8:	20000f50 	.word	0x20000f50
+ 80045cc:	20000f54 	.word	0x20000f54
+ 80045d0:	20000f58 	.word	0x20000f58
+ 80045d4:	20000f5c 	.word	0x20000f5c
+ 80045d8:	20000f60 	.word	0x20000f60
+ 80045dc:	20000f6c 	.word	0x20000f6c
+ 80045e0:	20000f70 	.word	0x20000f70
+ 80045e4:	20000f74 	.word	0x20000f74
+ 80045e8:	20000f78 	.word	0x20000f78
+ 80045ec:	20000f64 	.word	0x20000f64
+ 80045f0:	20000f68 	.word	0x20000f68
 
 080045f4 <_tx_initialize_kernel_enter>:
 /*                                            added EPK initialization,   */
@@ -13362,8 +13356,8 @@ VOID  _tx_initialize_kernel_enter(VOID)
  8004638:	bf00      	nop
  800463a:	bd80      	pop	{r7, pc}
  800463c:	2000000c 	.word	0x2000000c
- 8004640:	20000c1c 	.word	0x20000c1c
- 8004644:	20000b7c 	.word	0x20000b7c
+ 8004640:	2000101c 	.word	0x2000101c
+ 8004644:	20000f7c 	.word	0x20000f7c
 
 08004648 <_tx_semaphore_cleanup>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -13599,7 +13593,7 @@ VOID  _tx_semaphore_cleanup(TX_THREAD *thread_ptr, ULONG suspension_sequence)
  8004732:	bf00      	nop
  8004734:	08004649 	.word	0x08004649
  8004738:	53454d41 	.word	0x53454d41
- 800473c:	20000c1c 	.word	0x20000c1c
+ 800473c:	2000101c 	.word	0x2000101c
 
 08004740 <_tx_semaphore_create>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -13741,8 +13735,8 @@ TX_SEMAPHORE    *previous_semaphore;
  80047d4:	46bd      	mov	sp, r7
  80047d6:	bd80      	pop	{r7, pc}
  80047d8:	53454d41 	.word	0x53454d41
- 80047dc:	20000b50 	.word	0x20000b50
- 80047e0:	20000b4c 	.word	0x20000b4c
+ 80047dc:	20000f50 	.word	0x20000f50
+ 80047e0:	20000f4c 	.word	0x20000f4c
 
 080047e4 <_tx_semaphore_get>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -14011,8 +14005,8 @@ UINT            status;
  80048f6:	3738      	adds	r7, #56	; 0x38
  80048f8:	46bd      	mov	sp, r7
  80048fa:	bd80      	pop	{r7, pc}
- 80048fc:	20000c1c 	.word	0x20000c1c
- 8004900:	20000b84 	.word	0x20000b84
+ 80048fc:	2000101c 	.word	0x2000101c
+ 8004900:	20000f84 	.word	0x20000f84
  8004904:	08004649 	.word	0x08004649
 
 08004908 <_tx_semaphore_put>:
@@ -14195,7 +14189,7 @@ TX_THREAD       *previous_thread;
  80049ae:	3730      	adds	r7, #48	; 0x30
  80049b0:	46bd      	mov	sp, r7
  80049b2:	bd80      	pop	{r7, pc}
- 80049b4:	20000c1c 	.word	0x20000c1c
+ 80049b4:	2000101c 	.word	0x2000101c
 
 080049b8 <_tx_thread_create>:
 /*                                                                        */
@@ -14615,11 +14609,11 @@ UINT                    saved_threshold =  ((UINT) 0);
  8004b84:	08005399 	.word	0x08005399
  8004b88:	08004cdd 	.word	0x08004cdd
  8004b8c:	54485244 	.word	0x54485244
- 8004b90:	20000b90 	.word	0x20000b90
- 8004b94:	20000b8c 	.word	0x20000b8c
- 8004b98:	20000c1c 	.word	0x20000c1c
+ 8004b90:	20000f90 	.word	0x20000f90
+ 8004b94:	20000f8c 	.word	0x20000f8c
+ 8004b98:	2000101c 	.word	0x2000101c
  8004b9c:	2000000c 	.word	0x2000000c
- 8004ba0:	20000b88 	.word	0x20000b88
+ 8004ba0:	20000f88 	.word	0x20000f88
 
 08004ba4 <_tx_thread_initialize>:
 /*                                            stack check error handling, */
@@ -14711,16 +14705,16 @@ VOID  _tx_thread_initialize(VOID)
  8004bee:	bf00      	nop
  8004bf0:	bd80      	pop	{r7, pc}
  8004bf2:	bf00      	nop
- 8004bf4:	20000b84 	.word	0x20000b84
- 8004bf8:	20000b88 	.word	0x20000b88
- 8004bfc:	20000b94 	.word	0x20000b94
- 8004c00:	20000b98 	.word	0x20000b98
- 8004c04:	20000b9c 	.word	0x20000b9c
- 8004c08:	20000b8c 	.word	0x20000b8c
- 8004c0c:	20000b90 	.word	0x20000b90
- 8004c10:	20000c1c 	.word	0x20000c1c
- 8004c14:	20000c20 	.word	0x20000c20
- 8004c18:	20000c24 	.word	0x20000c24
+ 8004bf4:	20000f84 	.word	0x20000f84
+ 8004bf8:	20000f88 	.word	0x20000f88
+ 8004bfc:	20000f94 	.word	0x20000f94
+ 8004c00:	20000f98 	.word	0x20000f98
+ 8004c04:	20000f9c 	.word	0x20000f9c
+ 8004c08:	20000f8c 	.word	0x20000f8c
+ 8004c0c:	20000f90 	.word	0x20000f90
+ 8004c10:	2000101c 	.word	0x2000101c
+ 8004c14:	20001020 	.word	0x20001020
+ 8004c18:	20001024 	.word	0x20001024
 
 08004c1c <_tx_thread_resume>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -14926,8 +14920,8 @@ UINT        saved_threshold =  ((UINT) 0);
  8004ccc:	bd80      	pop	{r7, pc}
  8004cce:	bf00      	nop
  8004cd0:	2000000c 	.word	0x2000000c
- 8004cd4:	20000b88 	.word	0x20000b88
- 8004cd8:	20000c1c 	.word	0x20000c1c
+ 8004cd4:	20000f88 	.word	0x20000f88
+ 8004cd8:	2000101c 	.word	0x2000101c
 
 08004cdc <_tx_thread_shell_entry>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -15052,9 +15046,9 @@ VOID            (*entry_exit_notify)(TX_THREAD *notify_thread_ptr, UINT type);
  8004d46:	46bd      	mov	sp, r7
  8004d48:	bd80      	pop	{r7, pc}
  8004d4a:	bf00      	nop
- 8004d4c:	20000b84 	.word	0x20000b84
- 8004d50:	20000c20 	.word	0x20000c20
- 8004d54:	20000c1c 	.word	0x20000c1c
+ 8004d4c:	20000f84 	.word	0x20000f84
+ 8004d50:	20001020 	.word	0x20001020
+ 8004d54:	2000101c 	.word	0x2000101c
 
 08004d58 <_tx_thread_sleep>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -15293,10 +15287,10 @@ TX_THREAD       *thread_ptr;
  8004e42:	46bd      	mov	sp, r7
  8004e44:	bd80      	pop	{r7, pc}
  8004e46:	bf00      	nop
- 8004e48:	20000b84 	.word	0x20000b84
+ 8004e48:	20000f84 	.word	0x20000f84
  8004e4c:	2000000c 	.word	0x2000000c
- 8004e50:	20000ccc 	.word	0x20000ccc
- 8004e54:	20000c1c 	.word	0x20000c1c
+ 8004e50:	200010cc 	.word	0x200010cc
+ 8004e54:	2000101c 	.word	0x2000101c
 
 08004e58 <_tx_thread_system_preempt_check>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -15399,9 +15393,9 @@ unsigned int interrupt_save;
  8004eb2:	46bd      	mov	sp, r7
  8004eb4:	bc80      	pop	{r7}
  8004eb6:	4770      	bx	lr
- 8004eb8:	20000c1c 	.word	0x20000c1c
- 8004ebc:	20000b84 	.word	0x20000b84
- 8004ec0:	20000b88 	.word	0x20000b88
+ 8004eb8:	2000101c 	.word	0x2000101c
+ 8004ebc:	20000f84 	.word	0x20000f84
+ 8004ec0:	20000f88 	.word	0x20000f88
  8004ec4:	e000ed04 	.word	0xe000ed04
 
 08004ec8 <_tx_thread_system_resume>:
@@ -15854,13 +15848,13 @@ VOID  _tx_thread_system_resume(TX_THREAD *thread_ptr)
  80050a6:	46bd      	mov	sp, r7
  80050a8:	bd80      	pop	{r7, pc}
  80050aa:	bf00      	nop
- 80050ac:	20000c1c 	.word	0x20000c1c
- 80050b0:	20000b9c 	.word	0x20000b9c
- 80050b4:	20000b94 	.word	0x20000b94
- 80050b8:	20000b98 	.word	0x20000b98
- 80050bc:	20000b88 	.word	0x20000b88
+ 80050ac:	2000101c 	.word	0x2000101c
+ 80050b0:	20000f9c 	.word	0x20000f9c
+ 80050b4:	20000f94 	.word	0x20000f94
+ 80050b8:	20000f98 	.word	0x20000f98
+ 80050bc:	20000f88 	.word	0x20000f88
  80050c0:	e000ed04 	.word	0xe000ed04
- 80050c4:	20000b84 	.word	0x20000b84
+ 80050c4:	20000f84 	.word	0x20000f84
 
 080050c8 <_tx_thread_system_suspend>:
 /*                                            resulting in version 6.1    */
@@ -16333,13 +16327,13 @@ ULONG                       time_stamp =  ((ULONG) 0);
  80052d2:	3778      	adds	r7, #120	; 0x78
  80052d4:	46bd      	mov	sp, r7
  80052d6:	bd80      	pop	{r7, pc}
- 80052d8:	20000b84 	.word	0x20000b84
- 80052dc:	20001188 	.word	0x20001188
- 80052e0:	20000c1c 	.word	0x20000c1c
- 80052e4:	20000b9c 	.word	0x20000b9c
- 80052e8:	20000b94 	.word	0x20000b94
- 80052ec:	20000b98 	.word	0x20000b98
- 80052f0:	20000b88 	.word	0x20000b88
+ 80052d8:	20000f84 	.word	0x20000f84
+ 80052dc:	20001588 	.word	0x20001588
+ 80052e0:	2000101c 	.word	0x2000101c
+ 80052e4:	20000f9c 	.word	0x20000f9c
+ 80052e8:	20000f94 	.word	0x20000f94
+ 80052ec:	20000f98 	.word	0x20000f98
+ 80052f0:	20000f88 	.word	0x20000f88
  80052f4:	e000ed04 	.word	0xe000ed04
 
 080052f8 <_tx_thread_time_slice>:
@@ -16474,12 +16468,12 @@ UINT            preempt_disable;
  800537a:	46bd      	mov	sp, r7
  800537c:	bc80      	pop	{r7}
  800537e:	4770      	bx	lr
- 8005380:	20000b84 	.word	0x20000b84
- 8005384:	20000c2c 	.word	0x20000c2c
- 8005388:	20001188 	.word	0x20001188
- 800538c:	20000b9c 	.word	0x20000b9c
- 8005390:	20000b98 	.word	0x20000b98
- 8005394:	20000b88 	.word	0x20000b88
+ 8005380:	20000f84 	.word	0x20000f84
+ 8005384:	2000102c 	.word	0x2000102c
+ 8005388:	20001588 	.word	0x20001588
+ 800538c:	20000f9c 	.word	0x20000f9c
+ 8005390:	20000f98 	.word	0x20000f98
+ 8005394:	20000f88 	.word	0x20000f88
 
 08005398 <_tx_thread_timeout>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -16585,7 +16579,7 @@ ULONG           suspension_sequence;
  8005406:	46bd      	mov	sp, r7
  8005408:	bd80      	pop	{r7, pc}
  800540a:	bf00      	nop
- 800540c:	20000c1c 	.word	0x20000c1c
+ 800540c:	2000101c 	.word	0x2000101c
 
 08005410 <_tx_timer_expiration_process>:
 /*                                            TX_NO_TIMER is defined,     */
@@ -16652,8 +16646,8 @@ VOID  _tx_timer_expiration_process(VOID)
  8005446:	46bd      	mov	sp, r7
  8005448:	bd80      	pop	{r7, pc}
  800544a:	bf00      	nop
- 800544c:	20000c1c 	.word	0x20000c1c
- 8005450:	20000ccc 	.word	0x20000ccc
+ 800544c:	2000101c 	.word	0x2000101c
+ 8005450:	200010cc 	.word	0x200010cc
 
 08005454 <_tx_timer_initialize>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -16809,26 +16803,26 @@ VOID  _tx_timer_initialize(VOID)
  80054f6:	46bd      	mov	sp, r7
  80054f8:	bd90      	pop	{r4, r7, pc}
  80054fa:	bf00      	nop
- 80054fc:	20000c28 	.word	0x20000c28
- 8005500:	20001188 	.word	0x20001188
- 8005504:	20000c2c 	.word	0x20000c2c
- 8005508:	20000cbc 	.word	0x20000cbc
- 800550c:	20000cc8 	.word	0x20000cc8
- 8005510:	20000c30 	.word	0x20000c30
- 8005514:	20000cb0 	.word	0x20000cb0
- 8005518:	20000cb8 	.word	0x20000cb8
- 800551c:	20000cb4 	.word	0x20000cb4
- 8005520:	20000cac 	.word	0x20000cac
- 8005524:	20000d7c 	.word	0x20000d7c
- 8005528:	20000d88 	.word	0x20000d88
- 800552c:	20000d80 	.word	0x20000d80
- 8005530:	20000d84 	.word	0x20000d84
+ 80054fc:	20001028 	.word	0x20001028
+ 8005500:	20001588 	.word	0x20001588
+ 8005504:	2000102c 	.word	0x2000102c
+ 8005508:	200010bc 	.word	0x200010bc
+ 800550c:	200010c8 	.word	0x200010c8
+ 8005510:	20001030 	.word	0x20001030
+ 8005514:	200010b0 	.word	0x200010b0
+ 8005518:	200010b8 	.word	0x200010b8
+ 800551c:	200010b4 	.word	0x200010b4
+ 8005520:	200010ac 	.word	0x200010ac
+ 8005524:	2000117c 	.word	0x2000117c
+ 8005528:	20001188 	.word	0x20001188
+ 800552c:	20001180 	.word	0x20001180
+ 8005530:	20001184 	.word	0x20001184
  8005534:	4154494d 	.word	0x4154494d
  8005538:	08005679 	.word	0x08005679
  800553c:	08005ea4 	.word	0x08005ea4
- 8005540:	20000ccc 	.word	0x20000ccc
- 8005544:	20000cc0 	.word	0x20000cc0
- 8005548:	20000cc4 	.word	0x20000cc4
+ 8005540:	200010cc 	.word	0x200010cc
+ 8005544:	200010c0 	.word	0x200010c0
+ 8005548:	200010c4 	.word	0x200010c4
 
 0800554c <_tx_timer_system_activate>:
 /*                                            TX_NO_TIMER is defined,     */
@@ -17006,9 +17000,9 @@ ULONG                       expiration_time;
  80055fa:	46bd      	mov	sp, r7
  80055fc:	bc80      	pop	{r7}
  80055fe:	4770      	bx	lr
- 8005600:	20000cb8 	.word	0x20000cb8
- 8005604:	20000cb4 	.word	0x20000cb4
- 8005608:	20000cb0 	.word	0x20000cb0
+ 8005600:	200010b8 	.word	0x200010b8
+ 8005604:	200010b4 	.word	0x200010b4
+ 8005608:	200010b0 	.word	0x200010b0
 
 0800560c <_tx_timer_system_deactivate>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -17603,13 +17597,13 @@ ULONG                       timeout_param =  ((ULONG) 0);
  8005850:	bd80      	pop	{r7, pc}
  8005852:	bf00      	nop
  8005854:	4154494d 	.word	0x4154494d
- 8005858:	20000cb8 	.word	0x20000cb8
- 800585c:	20000cb4 	.word	0x20000cb4
- 8005860:	20000cb0 	.word	0x20000cb0
- 8005864:	20000cbc 	.word	0x20000cbc
- 8005868:	20000cc8 	.word	0x20000cc8
- 800586c:	20000ccc 	.word	0x20000ccc
- 8005870:	20000c1c 	.word	0x20000c1c
+ 8005858:	200010b8 	.word	0x200010b8
+ 800585c:	200010b4 	.word	0x200010b4
+ 8005860:	200010b0 	.word	0x200010b0
+ 8005864:	200010bc 	.word	0x200010bc
+ 8005868:	200010c8 	.word	0x200010c8
+ 800586c:	200010cc 	.word	0x200010cc
+ 8005870:	2000101c 	.word	0x2000101c
 
 08005874 <_txe_byte_pool_create>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -17902,11 +17896,11 @@ TX_THREAD       *thread_ptr;
  8005996:	3748      	adds	r7, #72	; 0x48
  8005998:	46bd      	mov	sp, r7
  800599a:	bd80      	pop	{r7, pc}
- 800599c:	20000c1c 	.word	0x20000c1c
- 80059a0:	20000b74 	.word	0x20000b74
- 80059a4:	20000b78 	.word	0x20000b78
- 80059a8:	20000b84 	.word	0x20000b84
- 80059ac:	20000ccc 	.word	0x20000ccc
+ 800599c:	2000101c 	.word	0x2000101c
+ 80059a0:	20000f74 	.word	0x20000f74
+ 80059a4:	20000f78 	.word	0x20000f78
+ 80059a8:	20000f84 	.word	0x20000f84
+ 80059ac:	200010cc 	.word	0x200010cc
  80059b0:	2000000c 	.word	0x2000000c
 
 080059b4 <_txe_semaphore_create>:
@@ -18179,11 +18173,11 @@ TX_THREAD           *thread_ptr;
  8005ac2:	3748      	adds	r7, #72	; 0x48
  8005ac4:	46bd      	mov	sp, r7
  8005ac6:	bd80      	pop	{r7, pc}
- 8005ac8:	20000c1c 	.word	0x20000c1c
- 8005acc:	20000b4c 	.word	0x20000b4c
- 8005ad0:	20000b50 	.word	0x20000b50
- 8005ad4:	20000b84 	.word	0x20000b84
- 8005ad8:	20000ccc 	.word	0x20000ccc
+ 8005ac8:	2000101c 	.word	0x2000101c
+ 8005acc:	20000f4c 	.word	0x20000f4c
+ 8005ad0:	20000f50 	.word	0x20000f50
+ 8005ad4:	20000f84 	.word	0x20000f84
+ 8005ad8:	200010cc 	.word	0x200010cc
  8005adc:	2000000c 	.word	0x2000000c
 
 08005ae0 <_txe_semaphore_get>:
@@ -18316,8 +18310,8 @@ TX_THREAD   *current_thread;
  8005b52:	bd80      	pop	{r7, pc}
  8005b54:	53454d41 	.word	0x53454d41
  8005b58:	2000000c 	.word	0x2000000c
- 8005b5c:	20000b84 	.word	0x20000b84
- 8005b60:	20000ccc 	.word	0x20000ccc
+ 8005b5c:	20000f84 	.word	0x20000f84
+ 8005b60:	200010cc 	.word	0x200010cc
 
 08005b64 <_txe_semaphore_put>:
 /*  09-30-2020     Yuxin Zhou               Modified comment(s),          */
@@ -18833,11 +18827,11 @@ TX_THREAD       *current_thread;
  8005d66:	3750      	adds	r7, #80	; 0x50
  8005d68:	46bd      	mov	sp, r7
  8005d6a:	bd80      	pop	{r7, pc}
- 8005d6c:	20000c1c 	.word	0x20000c1c
- 8005d70:	20000b8c 	.word	0x20000b8c
- 8005d74:	20000b90 	.word	0x20000b90
- 8005d78:	20000b84 	.word	0x20000b84
- 8005d7c:	20000ccc 	.word	0x20000ccc
+ 8005d6c:	2000101c 	.word	0x2000101c
+ 8005d70:	20000f8c 	.word	0x20000f8c
+ 8005d74:	20000f90 	.word	0x20000f90
+ 8005d78:	20000f84 	.word	0x20000f84
+ 8005d7c:	200010cc 	.word	0x200010cc
  8005d80:	2000000c 	.word	0x2000000c
 
 08005d84 <_txe_thread_resume>:

@@ -1,4 +1,4 @@
-../Core/Src/app_threadx.c:75:6:App_ThreadX_Init	1
-../Core/Src/app_threadx.c:121:6:MX_ThreadX_Init	1
-../Core/Src/app_threadx.c:136:13:thread_new_state_update	2
-../Core/Src/app_threadx.c:162:13:thread_periodic_read	1
+../Core/Src/app_threadx.c:77:6:App_ThreadX_Init	1
+../Core/Src/app_threadx.c:123:6:MX_ThreadX_Init	1
+../Core/Src/app_threadx.c:138:13:thread_new_state_update	2
+../Core/Src/app_threadx.c:166:13:thread_periodic_read	1

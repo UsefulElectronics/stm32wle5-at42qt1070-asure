@@ -47,7 +47,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 VOID *threadx_memory;
-uint8_t thread_stack[UI_THREAD_STACK_SIZE] = {0};
+uint8_t thread_stack_0[UI_THREAD_STACK_SIZE] = {0};
+uint8_t thread_stack_1[UI_THREAD_STACK_SIZE] = {0};
 TX_THREAD thread_0;
 TX_THREAD thread_1;
 
@@ -59,6 +60,7 @@ TX_BYTE_POOL byte_pool_0;
 TX_BLOCK_POOL block_pool_0;
 
 TX_SEMAPHORE external_gpio_semaphore;
+TX_MUTEX 	 periodic_read_mutex;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,7 +89,7 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
 					"thread 0", 			// Name: A string name for the thread, which can be used for identification and debugging purposes.
 					thread_new_state_update,// Entry Function: The entry function is the starting point of execution for the thread. It's a function that takes a single argument of type ULONG and returns VOID.
 					0, 						// Entry Input: This is the input parameter passed to the entry function when the thread starts.
-					thread_stack,			// Stack Start: The starting address of the thread's stack. The stack is used for storing local variables, function call information, and other data related to thread execution.
+					thread_stack_0,			// Stack Start: The starting address of the thread's stack. The stack is used for storing local variables, function call information, and other data related to thread execution.
 					UI_THREAD_STACK_SIZE, 	// Stack Size: The size of the stack in bytes.
 					1, 						// Priority: The priority of the thread, which determines its scheduling order relative to other threads in the system. Higher-priority threads are scheduled before lower-priority threads.
 					1, 						// Preemption Threshold: This parameter is used to set the preemption threshold for the thread. It determines the minimum priority level at which the thread can be preempted by other threads. Setting it to TX_NO_PREEMPTION allows the thread to run without being preempted.
@@ -98,7 +100,7 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
 					"thread 1", 			// Name: A string name for the thread, which can be used for identification and debugging purposes.
 					thread_periodic_read,  // Entry Function: The entry function is the starting point of execution for the thread. It's a function that takes a single argument of type ULONG and returns VOID.
 					0, 						// Entry Input: This is the input parameter passed to the entry function when the thread starts.
-					thread_stack,			// Stack Start: The starting address of the thread's stack. The stack is used for storing local variables, function call information, and other data related to thread execution.
+					thread_stack_1,			// Stack Start: The starting address of the thread's stack. The stack is used for storing local variables, function call information, and other data related to thread execution.
 					UI_THREAD_STACK_SIZE, 	// Stack Size: The size of the stack in bytes.
 					1, 						// Priority: The priority of the thread, which determines its scheduling order relative to other threads in the system. Higher-priority threads are scheduled before lower-priority threads.
 					1, 						// Preemption Threshold: This parameter is used to set the preemption threshold for the thread. It determines the minimum priority level at which the thread can be preempted by other threads. Setting it to TX_NO_PREEMPTION allows the thread to run without being preempted.
@@ -141,10 +143,12 @@ static void thread_new_state_update(ULONG thread_input)
     // Create semaphore
     tx_semaphore_create(&external_gpio_semaphore, "gpio interrupt", 0);
 
+    tx_mutex_create(&periodic_read_mutex, "periodic read", TX_NO_WAIT);
+
     while (1)
     {
         // Wait for semaphore
-    	if (tx_semaphore_get(&external_gpio_semaphore, TX_NO_WAIT) == TX_SUCCESS)
+    	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
     	{
     		key = main_key_status_read();
     	}
@@ -155,7 +159,7 @@ static void thread_new_state_update(ULONG thread_input)
 //
 //    	key = main_key_status_read();
 //
-        tx_thread_sleep(5); // Example: Sleep for 100 ticks
+//        tx_thread_sleep(5); // Example: Sleep for 100 ticks
     }
 }
 
