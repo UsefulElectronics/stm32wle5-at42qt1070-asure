@@ -145,12 +145,21 @@ static void thread_new_state_update(ULONG thread_input)
 
     tx_mutex_create(&periodic_read_mutex, "periodic read", TX_NO_WAIT);
 
+    tx_mutex_get(&periodic_read_mutex, TX_NO_WAIT);
+
     while (1)
     {
         // Wait for semaphore
     	if (tx_semaphore_get(&external_gpio_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
     	{
     		key = main_key_status_read();
+
+    		if(key)
+    		{
+    			tx_mutex_get(&periodic_read_mutex, TX_NO_WAIT);
+
+    			tx_mutex_put(&periodic_read_mutex);
+    		}
     	}
 
 
@@ -172,22 +181,26 @@ static void thread_periodic_read(ULONG thread_input)
 
 	while (1)
 	{
+		if(tx_mutex_get(&periodic_read_mutex, TX_WAIT_FOREVER))
+		{
+			main_i2c_transmit(0x1B << 1,
+							&register_address,
+							1);
 
-		main_i2c_transmit(0x1B << 1,
-						&register_address,
-						1);
-
-		main_i2c_receive(0x1B << 1,
-						&key,
-						1);
-
-
+			main_i2c_receive(0x1B << 1,
+							&key,
+							1);
+			if(!key)
+			{
+				tx_mutex_put(&periodic_read_mutex);
+			}
+		}
 		/* Thread actions */
 //    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
 //
 //    	key = main_key_status_read();
 //
-        tx_thread_sleep(100); // Example: Sleep for 100 ticks
+        tx_thread_sleep(5); // Example: Sleep for 100 ticks
 	}
 }
 
