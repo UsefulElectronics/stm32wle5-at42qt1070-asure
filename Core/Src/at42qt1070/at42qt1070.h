@@ -55,6 +55,8 @@
 /// Change Pin pull state
 #define AT42QT1070_IDLE_EVENT			0x01
 #define AT42QT1070_NEW_EVENT			0x00
+/// Timing
+#define AT42QT1070_LONG_PRESSED_PERIOD	1000	// 1 seconds
 
 /* ENUMORATIONS --------------------------------------------------------------*/
 typedef enum
@@ -74,6 +76,13 @@ typedef enum
 	SENSOR_CALIBRATE,
 	SENSOR_RESET,
 }at42qt1070_e;
+
+typedef enum
+{
+	SENSOR_KEY_PRESSED,
+	SENSOR_KEY_LONG_PRESSED,
+	SENSOR_KEY_RELEASE,
+}at42qt1070_event_e;
 /* STRUCTURES & TYPEDEFS -----------------------------------------------------*/
 
 /* VARIABLES -----------------------------------------------------------------*/

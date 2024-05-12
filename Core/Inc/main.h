@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "at42qt1070.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

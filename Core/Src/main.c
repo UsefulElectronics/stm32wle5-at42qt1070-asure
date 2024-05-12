@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "at42qt1070.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,7 +92,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   at42qt1070_init(main_i2c_transmit,
 		  	  	  main_i2c_receive,
-				  main_change_pin_read);
+				  main_change_pin_read
+				  HAL_GetTick);
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();

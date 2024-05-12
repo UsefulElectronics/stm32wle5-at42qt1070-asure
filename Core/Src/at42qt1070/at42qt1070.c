@@ -25,6 +25,7 @@ typedef union
 	{
 		uint8_t change_pin 	: 1,
 				unread_event: 1,
+				event_type  : 2,
 				reserved	: 6;
 	}flag;
 	uint8_t all;
@@ -72,6 +73,7 @@ typedef struct
 	uint8_t	(*i2c_send)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	uint8_t	(*i2c_receive)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	uint8_t	(*change_pin_read)(void);
+	uint32_t(*get_tick)(void);
 	uint8_t key_buffer;
 	const struct register_set_t *register_address;
 	at42qt1070_state_t  state;
@@ -88,13 +90,15 @@ at42qt1070_t at42qt1070_handler = {0};
 /* PRIVATE FUNCTIONS DECLARATION ---------------------------------------------*/
 
 /* FUNCTION PROTOTYPES -------------------------------------------------------*/
-void at42qt1070_init(void* send_function, void* receive_fucntion, void* change_state_read)
+void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t* change_state_read, uint32_t* get_tick)
 {
 	at42qt1070_handler.i2c_send 		= send_function;
 
 	at42qt1070_handler.i2c_receive	 	= receive_fucntion;
 
 	at42qt1070_handler.change_pin_read	= change_state_read;
+
+	at42qt1070_handler.get_tick			= get_tick;
 
 	at42qt1070_handler.state.all 		= 0;
 
@@ -167,5 +171,12 @@ uint8_t at42qt1070_key_stete_get(void)
 
 
 	return *key_number;
+}
+
+at42qt1070_event_e at42qt1070_key_event_type_handler(void)
+{
+	at42qt1070_event_e key_event_type = SENSOR_KEY_IDLE;
+
+	return key_event_type;
 }
 /*************************************** USEFUL ELECTRONICS*****END OF FILE****/
