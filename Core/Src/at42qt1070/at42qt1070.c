@@ -149,7 +149,9 @@ bool at42qt1070_callback(void)
 	{
 		bool new_event = false;
 
-		if(!at42qt1070_handler.change_pin_read())
+		bool pin_state = at42qt1070_handler.change_pin_read();
+
+		if(!pin_state)
 		{
 			new_event = at42qt1070_key_stete_read();
 		}
@@ -173,10 +175,35 @@ uint8_t at42qt1070_key_stete_get(void)
 	return *key_number;
 }
 
-at42qt1070_event_e at42qt1070_key_event_type_handler(void)
+at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state)
 {
 	at42qt1070_event_e key_event_type = SENSOR_KEY_IDLE;
 
+	if(SENSOR_CHANGE_PIN_LOW == current_change_pin_state &&
+	   SENSOR_KEY_IDLE == key_event_type)
+	{
+		key_event_type = SENSOR_KEY_PRESSED;
+		//TODO
+		//Update timer for SENSOR_KEY_LONG_PRESSED event detection .
+	}
+	else if(SENSOR_CHANGE_PIN_HIGH == current_change_pin_state &&
+			SENSOR_KEY_PRESSED == key_event_type)
+	{
+		key_event_type = SENSOR_KEY_RELEASE;
+	}
+	else if(SENSOR_CHANGE_PIN_HIGH == current_change_pin_state &&
+			SENSOR_KEY_RELEASE == key_event_type)
+	{
+		key_event_type = SENSOR_KEY_IDLE;
+	}
+	else if(SENSOR_CHANGE_PIN_LOW == current_change_pin_state &&
+			SENSOR_KEY_PRESSED == key_event_type)
+	{
+		//TODO
+		//check the spent time since SENSOR_KEY_PRESSED event is first detected.
+
+		key_event_type = SENSOR_KEY_IDLE;
+	}
 	return key_event_type;
 }
 /*************************************** USEFUL ELECTRONICS*****END OF FILE****/

@@ -84,6 +84,12 @@ typedef enum
 	SENSOR_KEY_LONG_PRESSED,
 	SENSOR_KEY_RELEASE,
 }at42qt1070_event_e;
+
+typedef enum
+{
+	SENSOR_CHANGE_PIN_LOW,		//When new event is active
+	SENSOR_CHANGE_PIN_HIGH,		//While the sensor is IDLE
+}at42qt1070_change_pin_e;
 /* STRUCTURES & TYPEDEFS -----------------------------------------------------*/
 
 /* VARIABLES -----------------------------------------------------------------*/
