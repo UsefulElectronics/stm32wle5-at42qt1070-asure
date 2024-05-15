@@ -56,7 +56,7 @@
 #define AT42QT1070_IDLE_EVENT			0x01
 #define AT42QT1070_NEW_EVENT			0x00
 /// Timing
-#define AT42QT1070_LONG_PRESSED_PERIOD	1000	// 1 seconds
+#define AT42QT1070_LONG_PRESSED_PERIOD	2000	// 1 seconds
 
 /* ENUMORATIONS --------------------------------------------------------------*/
 typedef enum
@@ -87,15 +87,15 @@ typedef enum
 
 typedef enum
 {
-	SENSOR_CHANGE_PIN_LOW,		//When new event is active
-	SENSOR_CHANGE_PIN_HIGH,		//While the sensor is IDLE
+	SENSOR_CHANGE_PIN_LOW	= 0,	//When new event is active
+	SENSOR_CHANGE_PIN_HIGH,			//While the sensor is IDLE
 }at42qt1070_change_pin_e;
 /* STRUCTURES & TYPEDEFS -----------------------------------------------------*/
 
 /* VARIABLES -----------------------------------------------------------------*/
 
 /* FUNCTIONS DECLARATION -----------------------------------------------------*/
-void at42qt1070_init(void* send_function, void* receive_fucntion, void* change_state_read);
+void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t* change_state_read, uint32_t* get_tick);
 
 bool at42qt1070_callback(void);
 

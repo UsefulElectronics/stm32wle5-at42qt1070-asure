@@ -453,7 +453,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x269 ./Core/Src/main.o
  .debug_macro   0x0000000000000000      0x293 ./Core/Src/main.o
  .debug_macro   0x0000000000000000       0x22 ./Core/Src/main.o
- .debug_macro   0x0000000000000000       0x88 ./Core/Src/main.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/main.o
  .debug_macro   0x0000000000000000       0x10 ./Core/Src/main.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32wlxx_hal_msp.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32wlxx_hal_msp.o
@@ -591,7 +591,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 ./Core/Src/stm32wlxx_hal_msp.o
  .debug_macro   0x0000000000000000       0x29 ./Core/Src/stm32wlxx_hal_msp.o
  .debug_macro   0x0000000000000000       0x22 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x0000000000000000       0x88 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/stm32wlxx_hal_msp.o
  .debug_macro   0x0000000000000000       0x10 ./Core/Src/stm32wlxx_hal_msp.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32wlxx_hal_timebase_tim.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32wlxx_hal_timebase_tim.o
@@ -833,7 +833,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 ./Core/Src/stm32wlxx_it.o
  .debug_macro   0x0000000000000000       0x29 ./Core/Src/stm32wlxx_it.o
  .debug_macro   0x0000000000000000       0x22 ./Core/Src/stm32wlxx_it.o
- .debug_macro   0x0000000000000000       0x88 ./Core/Src/stm32wlxx_it.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/stm32wlxx_it.o
  .debug_macro   0x0000000000000000       0x10 ./Core/Src/stm32wlxx_it.o
  .group         0x0000000000000000        0xc ./Core/Src/syscalls.o
  .group         0x0000000000000000        0xc ./Core/Src/syscalls.o
@@ -1195,7 +1195,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x6a ./Core/Src/at42qt1070/at42qt1070.o
  .debug_macro   0x0000000000000000      0x1df ./Core/Src/at42qt1070/at42qt1070.o
  .debug_macro   0x0000000000000000       0x22 ./Core/Src/at42qt1070/at42qt1070.o
- .debug_macro   0x0000000000000000       0x88 ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/at42qt1070/at42qt1070.o
  .group         0x0000000000000000        0xc ./Core/Src/at42qt1070/circ_buffer.o
  .group         0x0000000000000000        0xc ./Core/Src/at42qt1070/circ_buffer.o
  .group         0x0000000000000000        0xc ./Core/Src/at42qt1070/circ_buffer.o
@@ -18822,7 +18822,7 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000138                . = ALIGN (0x4)
 
-.text           0x0000000008000140     0x5d40
+.text           0x0000000008000140     0x5e00
                 0x0000000008000140                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000140       0x40 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
@@ -18860,657 +18860,659 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x00000000080004e8       0x44 ./Core/Src/app_threadx.o
  .text.LL_AHB2_GRP1_EnableClock
                 0x000000000800052c       0x30 ./Core/Src/main.o
- .text.main     0x000000000800055c       0x30 ./Core/Src/main.o
+ .text.main     0x000000000800055c       0x38 ./Core/Src/main.o
                 0x000000000800055c                main
  .text.SystemClock_Config
-                0x000000000800058c       0xa4 ./Core/Src/main.o
-                0x000000000800058c                SystemClock_Config
+                0x0000000008000594       0xa4 ./Core/Src/main.o
+                0x0000000008000594                SystemClock_Config
  .text.MX_I2C1_Init
-                0x0000000008000630       0x80 ./Core/Src/main.o
+                0x0000000008000638       0x80 ./Core/Src/main.o
  .text.MX_GPIO_Init
-                0x00000000080006b0       0x80 ./Core/Src/main.o
+                0x00000000080006b8       0x80 ./Core/Src/main.o
  .text.main_key_status_read
-                0x0000000008000730       0x26 ./Core/Src/main.o
-                0x0000000008000730                main_key_status_read
- *fill*         0x0000000008000756        0x2 
+                0x0000000008000738       0x26 ./Core/Src/main.o
+                0x0000000008000738                main_key_status_read
+ *fill*         0x000000000800075e        0x2 
  .text.main_i2c_transmit
-                0x0000000008000758       0x30 ./Core/Src/main.o
-                0x0000000008000758                main_i2c_transmit
+                0x0000000008000760       0x30 ./Core/Src/main.o
+                0x0000000008000760                main_i2c_transmit
  .text.main_i2c_receive
-                0x0000000008000788       0x30 ./Core/Src/main.o
-                0x0000000008000788                main_i2c_receive
+                0x0000000008000790       0x30 ./Core/Src/main.o
+                0x0000000008000790                main_i2c_receive
  .text.main_change_pin_read
-                0x00000000080007b8       0x18 ./Core/Src/main.o
-                0x00000000080007b8                main_change_pin_read
+                0x00000000080007c0       0x18 ./Core/Src/main.o
+                0x00000000080007c0                main_change_pin_read
  .text.main_interrupt_callback
-                0x00000000080007d0       0x14 ./Core/Src/main.o
-                0x00000000080007d0                main_interrupt_callback
+                0x00000000080007d8       0x14 ./Core/Src/main.o
+                0x00000000080007d8                main_interrupt_callback
  .text.HAL_TIM_PeriodElapsedCallback
-                0x00000000080007e4       0x24 ./Core/Src/main.o
-                0x00000000080007e4                HAL_TIM_PeriodElapsedCallback
+                0x00000000080007ec       0x24 ./Core/Src/main.o
+                0x00000000080007ec                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x0000000008000808        0xa ./Core/Src/main.o
-                0x0000000008000808                Error_Handler
+                0x0000000008000810        0xa ./Core/Src/main.o
+                0x0000000008000810                Error_Handler
  .text.LL_AHB2_GRP1_EnableClock
-                0x0000000008000812       0x30 ./Core/Src/stm32wlxx_hal_msp.o
+                0x000000000800081a       0x30 ./Core/Src/stm32wlxx_hal_msp.o
  .text.LL_APB1_GRP1_EnableClock
-                0x0000000008000842       0x30 ./Core/Src/stm32wlxx_hal_msp.o
+                0x000000000800084a       0x30 ./Core/Src/stm32wlxx_hal_msp.o
  .text.HAL_MspInit
-                0x0000000008000872        0xc ./Core/Src/stm32wlxx_hal_msp.o
-                0x0000000008000872                HAL_MspInit
- *fill*         0x000000000800087e        0x2 
+                0x000000000800087a        0xc ./Core/Src/stm32wlxx_hal_msp.o
+                0x000000000800087a                HAL_MspInit
+ *fill*         0x0000000008000886        0x2 
  .text.HAL_I2C_MspInit
-                0x0000000008000880       0xac ./Core/Src/stm32wlxx_hal_msp.o
-                0x0000000008000880                HAL_I2C_MspInit
+                0x0000000008000888       0xac ./Core/Src/stm32wlxx_hal_msp.o
+                0x0000000008000888                HAL_I2C_MspInit
  .text.LL_APB2_GRP1_EnableClock
-                0x000000000800092c       0x30 ./Core/Src/stm32wlxx_hal_timebase_tim.o
+                0x0000000008000934       0x30 ./Core/Src/stm32wlxx_hal_timebase_tim.o
  .text.HAL_InitTick
-                0x000000000800095c       0xcc ./Core/Src/stm32wlxx_hal_timebase_tim.o
-                0x000000000800095c                HAL_InitTick
+                0x0000000008000964       0xcc ./Core/Src/stm32wlxx_hal_timebase_tim.o
+                0x0000000008000964                HAL_InitTick
  .text.NMI_Handler
-                0x0000000008000a28        0x6 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a28                NMI_Handler
+                0x0000000008000a30        0x6 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a30                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008000a2e        0x6 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a2e                HardFault_Handler
+                0x0000000008000a36        0x6 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a36                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008000a34        0x6 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a34                MemManage_Handler
+                0x0000000008000a3c        0x6 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a3c                MemManage_Handler
  .text.BusFault_Handler
-                0x0000000008000a3a        0x6 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a3a                BusFault_Handler
+                0x0000000008000a42        0x6 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a42                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008000a40        0x6 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a40                UsageFault_Handler
+                0x0000000008000a48        0x6 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a48                UsageFault_Handler
  .text.DebugMon_Handler
-                0x0000000008000a46        0xc ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a46                DebugMon_Handler
- *fill*         0x0000000008000a52        0x2 
+                0x0000000008000a4e        0xc ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a4e                DebugMon_Handler
+ *fill*         0x0000000008000a5a        0x2 
  .text.TIM17_IRQHandler
-                0x0000000008000a54       0x14 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a54                TIM17_IRQHandler
+                0x0000000008000a5c       0x14 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a5c                TIM17_IRQHandler
  .text.I2C1_EV_IRQHandler
-                0x0000000008000a68       0x14 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a68                I2C1_EV_IRQHandler
+                0x0000000008000a70       0x14 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a70                I2C1_EV_IRQHandler
  .text.I2C1_ER_IRQHandler
-                0x0000000008000a7c       0x14 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a7c                I2C1_ER_IRQHandler
+                0x0000000008000a84       0x14 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a84                I2C1_ER_IRQHandler
  .text.EXTI15_10_IRQHandler
-                0x0000000008000a90       0x14 ./Core/Src/stm32wlxx_it.o
-                0x0000000008000a90                EXTI15_10_IRQHandler
+                0x0000000008000a98       0x14 ./Core/Src/stm32wlxx_it.o
+                0x0000000008000a98                EXTI15_10_IRQHandler
  .text.SystemInit
-                0x0000000008000aa4        0xc ./Core/Src/system_stm32wlxx.o
-                0x0000000008000aa4                SystemInit
+                0x0000000008000aac        0xc ./Core/Src/system_stm32wlxx.o
+                0x0000000008000aac                SystemInit
  .text.at42qt1070_init
-                0x0000000008000ab0       0x3c ./Core/Src/at42qt1070/at42qt1070.o
-                0x0000000008000ab0                at42qt1070_init
+                0x0000000008000ab8       0x44 ./Core/Src/at42qt1070/at42qt1070.o
+                0x0000000008000ab8                at42qt1070_init
  .text.at42qt1070_key_stete_read
-                0x0000000008000aec       0x74 ./Core/Src/at42qt1070/at42qt1070.o
-                0x0000000008000aec                at42qt1070_key_stete_read
+                0x0000000008000afc       0x74 ./Core/Src/at42qt1070/at42qt1070.o
+                0x0000000008000afc                at42qt1070_key_stete_read
  .text.at42qt1070_callback
-                0x0000000008000b60       0x38 ./Core/Src/at42qt1070/at42qt1070.o
-                0x0000000008000b60                at42qt1070_callback
+                0x0000000008000b70       0x54 ./Core/Src/at42qt1070/at42qt1070.o
+                0x0000000008000b70                at42qt1070_callback
  .text.at42qt1070_key_stete_get
-                0x0000000008000b98       0x40 ./Core/Src/at42qt1070/at42qt1070.o
-                0x0000000008000b98                at42qt1070_key_stete_get
+                0x0000000008000bc4       0x40 ./Core/Src/at42qt1070/at42qt1070.o
+                0x0000000008000bc4                at42qt1070_key_stete_get
+ .text.at42qt1070_key_event_type_handler
+                0x0000000008000c04       0x94 ./Core/Src/at42qt1070/at42qt1070.o
  .text.circ_buffer_enqueue
-                0x0000000008000bd8       0x9c ./Core/Src/at42qt1070/circ_buffer.o
-                0x0000000008000bd8                circ_buffer_enqueue
+                0x0000000008000c98       0x9c ./Core/Src/at42qt1070/circ_buffer.o
+                0x0000000008000c98                circ_buffer_enqueue
  .text.circ_buffer_dequeue
-                0x0000000008000c74       0x70 ./Core/Src/at42qt1070/circ_buffer.o
-                0x0000000008000c74                circ_buffer_dequeue
+                0x0000000008000d34       0x70 ./Core/Src/at42qt1070/circ_buffer.o
+                0x0000000008000d34                circ_buffer_dequeue
  .text.circ_buffer_getNumArrays
-                0x0000000008000ce4       0x48 ./Core/Src/at42qt1070/circ_buffer.o
-                0x0000000008000ce4                circ_buffer_getNumArrays
+                0x0000000008000da4       0x48 ./Core/Src/at42qt1070/circ_buffer.o
+                0x0000000008000da4                circ_buffer_getNumArrays
  .text.Reset_Handler
-                0x0000000008000d2c       0x50 ./Core/Startup/startup_stm32wle5ccux.o
-                0x0000000008000d2c                Reset_Handler
+                0x0000000008000dec       0x50 ./Core/Startup/startup_stm32wle5ccux.o
+                0x0000000008000dec                Reset_Handler
  .text.Default_Handler
-                0x0000000008000d7c        0x2 ./Core/Startup/startup_stm32wle5ccux.o
-                0x0000000008000d7c                RTC_Alarm_IRQHandler
-                0x0000000008000d7c                EXTI2_IRQHandler
-                0x0000000008000d7c                TIM1_CC_IRQHandler
-                0x0000000008000d7c                EXTI3_IRQHandler
-                0x0000000008000d7c                LPTIM2_IRQHandler
-                0x0000000008000d7c                I2C3_ER_IRQHandler
-                0x0000000008000d7c                LPTIM3_IRQHandler
-                0x0000000008000d7c                EXTI0_IRQHandler
-                0x0000000008000d7c                I2C2_EV_IRQHandler
-                0x0000000008000d7c                TAMP_STAMP_LSECSS_SSRU_IRQHandler
-                0x0000000008000d7c                SPI1_IRQHandler
-                0x0000000008000d7c                DMA2_Channel2_IRQHandler
-                0x0000000008000d7c                DMA1_Channel4_IRQHandler
-                0x0000000008000d7c                PKA_IRQHandler
-                0x0000000008000d7c                DMA1_Channel7_IRQHandler
-                0x0000000008000d7c                SUBGHZSPI_IRQHandler
-                0x0000000008000d7c                DMA2_Channel1_IRQHandler
-                0x0000000008000d7c                SUBGHZ_Radio_IRQHandler
-                0x0000000008000d7c                DMAMUX1_OVR_IRQHandler
-                0x0000000008000d7c                DMA1_Channel6_IRQHandler
-                0x0000000008000d7c                TIM16_IRQHandler
-                0x0000000008000d7c                DMA2_Channel4_IRQHandler
-                0x0000000008000d7c                RCC_IRQHandler
-                0x0000000008000d7c                TIM1_TRG_COM_IRQHandler
-                0x0000000008000d7c                DMA1_Channel1_IRQHandler
-                0x0000000008000d7c                Default_Handler
-                0x0000000008000d7c                DMA2_Channel7_IRQHandler
-                0x0000000008000d7c                ADC_IRQHandler
-                0x0000000008000d7c                I2C3_EV_IRQHandler
-                0x0000000008000d7c                EXTI9_5_IRQHandler
-                0x0000000008000d7c                RTC_WKUP_IRQHandler
-                0x0000000008000d7c                PVD_PVM_IRQHandler
-                0x0000000008000d7c                SPI2_IRQHandler
-                0x0000000008000d7c                SVC_Handler
-                0x0000000008000d7c                DMA2_Channel5_IRQHandler
-                0x0000000008000d7c                DMA1_Channel5_IRQHandler
-                0x0000000008000d7c                EXTI4_IRQHandler
-                0x0000000008000d7c                RNG_IRQHandler
-                0x0000000008000d7c                DMA1_Channel3_IRQHandler
-                0x0000000008000d7c                COMP_IRQHandler
-                0x0000000008000d7c                HSEM_IRQHandler
-                0x0000000008000d7c                TIM1_UP_IRQHandler
-                0x0000000008000d7c                WWDG_IRQHandler
-                0x0000000008000d7c                LPUART1_IRQHandler
-                0x0000000008000d7c                DMA2_Channel6_IRQHandler
-                0x0000000008000d7c                TIM2_IRQHandler
-                0x0000000008000d7c                TIM1_BRK_IRQHandler
-                0x0000000008000d7c                DAC_IRQHandler
-                0x0000000008000d7c                EXTI1_IRQHandler
-                0x0000000008000d7c                AES_IRQHandler
-                0x0000000008000d7c                USART2_IRQHandler
-                0x0000000008000d7c                I2C2_ER_IRQHandler
-                0x0000000008000d7c                DMA1_Channel2_IRQHandler
-                0x0000000008000d7c                FLASH_IRQHandler
-                0x0000000008000d7c                USART1_IRQHandler
-                0x0000000008000d7c                LPTIM1_IRQHandler
-                0x0000000008000d7c                DMA2_Channel3_IRQHandler
- *fill*         0x0000000008000d7e        0x2 
+                0x0000000008000e3c        0x2 ./Core/Startup/startup_stm32wle5ccux.o
+                0x0000000008000e3c                RTC_Alarm_IRQHandler
+                0x0000000008000e3c                EXTI2_IRQHandler
+                0x0000000008000e3c                TIM1_CC_IRQHandler
+                0x0000000008000e3c                EXTI3_IRQHandler
+                0x0000000008000e3c                LPTIM2_IRQHandler
+                0x0000000008000e3c                I2C3_ER_IRQHandler
+                0x0000000008000e3c                LPTIM3_IRQHandler
+                0x0000000008000e3c                EXTI0_IRQHandler
+                0x0000000008000e3c                I2C2_EV_IRQHandler
+                0x0000000008000e3c                TAMP_STAMP_LSECSS_SSRU_IRQHandler
+                0x0000000008000e3c                SPI1_IRQHandler
+                0x0000000008000e3c                DMA2_Channel2_IRQHandler
+                0x0000000008000e3c                DMA1_Channel4_IRQHandler
+                0x0000000008000e3c                PKA_IRQHandler
+                0x0000000008000e3c                DMA1_Channel7_IRQHandler
+                0x0000000008000e3c                SUBGHZSPI_IRQHandler
+                0x0000000008000e3c                DMA2_Channel1_IRQHandler
+                0x0000000008000e3c                SUBGHZ_Radio_IRQHandler
+                0x0000000008000e3c                DMAMUX1_OVR_IRQHandler
+                0x0000000008000e3c                DMA1_Channel6_IRQHandler
+                0x0000000008000e3c                TIM16_IRQHandler
+                0x0000000008000e3c                DMA2_Channel4_IRQHandler
+                0x0000000008000e3c                RCC_IRQHandler
+                0x0000000008000e3c                TIM1_TRG_COM_IRQHandler
+                0x0000000008000e3c                DMA1_Channel1_IRQHandler
+                0x0000000008000e3c                Default_Handler
+                0x0000000008000e3c                DMA2_Channel7_IRQHandler
+                0x0000000008000e3c                ADC_IRQHandler
+                0x0000000008000e3c                I2C3_EV_IRQHandler
+                0x0000000008000e3c                EXTI9_5_IRQHandler
+                0x0000000008000e3c                RTC_WKUP_IRQHandler
+                0x0000000008000e3c                PVD_PVM_IRQHandler
+                0x0000000008000e3c                SPI2_IRQHandler
+                0x0000000008000e3c                SVC_Handler
+                0x0000000008000e3c                DMA2_Channel5_IRQHandler
+                0x0000000008000e3c                DMA1_Channel5_IRQHandler
+                0x0000000008000e3c                EXTI4_IRQHandler
+                0x0000000008000e3c                RNG_IRQHandler
+                0x0000000008000e3c                DMA1_Channel3_IRQHandler
+                0x0000000008000e3c                COMP_IRQHandler
+                0x0000000008000e3c                HSEM_IRQHandler
+                0x0000000008000e3c                TIM1_UP_IRQHandler
+                0x0000000008000e3c                WWDG_IRQHandler
+                0x0000000008000e3c                LPUART1_IRQHandler
+                0x0000000008000e3c                DMA2_Channel6_IRQHandler
+                0x0000000008000e3c                TIM2_IRQHandler
+                0x0000000008000e3c                TIM1_BRK_IRQHandler
+                0x0000000008000e3c                DAC_IRQHandler
+                0x0000000008000e3c                EXTI1_IRQHandler
+                0x0000000008000e3c                AES_IRQHandler
+                0x0000000008000e3c                USART2_IRQHandler
+                0x0000000008000e3c                I2C2_ER_IRQHandler
+                0x0000000008000e3c                DMA1_Channel2_IRQHandler
+                0x0000000008000e3c                FLASH_IRQHandler
+                0x0000000008000e3c                USART1_IRQHandler
+                0x0000000008000e3c                LPTIM1_IRQHandler
+                0x0000000008000e3c                DMA2_Channel3_IRQHandler
+ *fill*         0x0000000008000e3e        0x2 
  .text.HAL_Init
-                0x0000000008000d80       0x40 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
-                0x0000000008000d80                HAL_Init
+                0x0000000008000e40       0x40 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+                0x0000000008000e40                HAL_Init
  .text.HAL_IncTick
-                0x0000000008000dc0       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
-                0x0000000008000dc0                HAL_IncTick
+                0x0000000008000e80       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+                0x0000000008000e80                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008000de4       0x14 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
-                0x0000000008000de4                HAL_GetTick
+                0x0000000008000ea4       0x14 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+                0x0000000008000ea4                HAL_GetTick
  .text.__NVIC_SetPriorityGrouping
-                0x0000000008000df8       0x48 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008000eb8       0x48 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .text.__NVIC_GetPriorityGrouping
-                0x0000000008000e40       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008000f00       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .text.__NVIC_EnableIRQ
-                0x0000000008000e5c       0x38 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008000f1c       0x38 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .text.__NVIC_SetPriority
-                0x0000000008000e94       0x54 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008000f54       0x54 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x0000000008000ee8       0x64 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008000fa8       0x64 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008000f4c       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
-                0x0000000008000f4c                HAL_NVIC_SetPriorityGrouping
+                0x000000000800100c       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x000000000800100c                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0000000008000f62       0x34 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
-                0x0000000008000f62                HAL_NVIC_SetPriority
+                0x0000000008001022       0x34 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008001022                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008000f96       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
-                0x0000000008000f96                HAL_NVIC_EnableIRQ
+                0x0000000008001056       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000008001056                HAL_NVIC_EnableIRQ
  .text.HAL_DMA_Abort_IT
-                0x0000000008000fb2       0xbe ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
-                0x0000000008000fb2                HAL_DMA_Abort_IT
+                0x0000000008001072       0xbe ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+                0x0000000008001072                HAL_DMA_Abort_IT
  .text.HAL_DMA_GetState
-                0x0000000008001070       0x1a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
-                0x0000000008001070                HAL_DMA_GetState
- *fill*         0x000000000800108a        0x2 
+                0x0000000008001130       0x1a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+                0x0000000008001130                HAL_DMA_GetState
+ *fill*         0x000000000800114a        0x2 
  .text.HAL_GPIO_Init
-                0x000000000800108c      0x2c0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
-                0x000000000800108c                HAL_GPIO_Init
+                0x000000000800114c      0x2c0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x000000000800114c                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x000000000800134c       0x2e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
-                0x000000000800134c                HAL_GPIO_ReadPin
+                0x000000000800140c       0x2e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x000000000800140c                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x000000000800137a       0x2e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
-                0x000000000800137a                HAL_GPIO_WritePin
+                0x000000000800143a       0x2e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x000000000800143a                HAL_GPIO_WritePin
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x00000000080013a8       0x30 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
-                0x00000000080013a8                HAL_GPIO_EXTI_IRQHandler
+                0x0000000008001468       0x30 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x0000000008001468                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_GPIO_EXTI_Callback
-                0x00000000080013d8       0x14 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
-                0x00000000080013d8                HAL_GPIO_EXTI_Callback
+                0x0000000008001498       0x14 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x0000000008001498                HAL_GPIO_EXTI_Callback
  .text.HAL_I2C_Init
-                0x00000000080013ec      0x11e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x00000000080013ec                HAL_I2C_Init
- *fill*         0x000000000800150a        0x2 
+                0x00000000080014ac      0x11e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080014ac                HAL_I2C_Init
+ *fill*         0x00000000080015ca        0x2 
  .text.HAL_I2C_Master_Transmit
-                0x000000000800150c      0x1e8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x000000000800150c                HAL_I2C_Master_Transmit
+                0x00000000080015cc      0x1e8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080015cc                HAL_I2C_Master_Transmit
  .text.HAL_I2C_Master_Receive
-                0x00000000080016f4      0x1ec ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x00000000080016f4                HAL_I2C_Master_Receive
+                0x00000000080017b4      0x1ec ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080017b4                HAL_I2C_Master_Receive
  .text.HAL_I2C_EV_IRQHandler
-                0x00000000080018e0       0x34 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x00000000080018e0                HAL_I2C_EV_IRQHandler
+                0x00000000080019a0       0x34 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080019a0                HAL_I2C_EV_IRQHandler
  .text.HAL_I2C_ER_IRQHandler
-                0x0000000008001914       0xb6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x0000000008001914                HAL_I2C_ER_IRQHandler
+                0x00000000080019d4       0xb6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080019d4                HAL_I2C_ER_IRQHandler
  .text.HAL_I2C_SlaveTxCpltCallback
-                0x00000000080019ca       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x00000000080019ca                HAL_I2C_SlaveTxCpltCallback
+                0x0000000008001a8a       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001a8a                HAL_I2C_SlaveTxCpltCallback
  .text.HAL_I2C_SlaveRxCpltCallback
-                0x00000000080019dc       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x00000000080019dc                HAL_I2C_SlaveRxCpltCallback
+                0x0000000008001a9c       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001a9c                HAL_I2C_SlaveRxCpltCallback
  .text.HAL_I2C_AddrCallback
-                0x00000000080019ee       0x1a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x00000000080019ee                HAL_I2C_AddrCallback
+                0x0000000008001aae       0x1a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001aae                HAL_I2C_AddrCallback
  .text.HAL_I2C_ListenCpltCallback
-                0x0000000008001a08       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x0000000008001a08                HAL_I2C_ListenCpltCallback
+                0x0000000008001ac8       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001ac8                HAL_I2C_ListenCpltCallback
  .text.HAL_I2C_ErrorCallback
-                0x0000000008001a1a       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x0000000008001a1a                HAL_I2C_ErrorCallback
+                0x0000000008001ada       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001ada                HAL_I2C_ErrorCallback
  .text.HAL_I2C_AbortCpltCallback
-                0x0000000008001a2c       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
-                0x0000000008001a2c                HAL_I2C_AbortCpltCallback
+                0x0000000008001aec       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001aec                HAL_I2C_AbortCpltCallback
  .text.I2C_Slave_ISR_IT
-                0x0000000008001a3e      0x1f0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001afe      0x1f0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_ITAddrCplt
-                0x0000000008001c2e      0x108 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001cee      0x108 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_ITSlaveSeqCplt
-                0x0000000008001d36       0xb8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
- *fill*         0x0000000008001dee        0x2 
+                0x0000000008001df6       0xb8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ *fill*         0x0000000008001eae        0x2 
  .text.I2C_ITSlaveCplt
-                0x0000000008001df0      0x20c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008001eb0      0x20c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_ITListenCplt
-                0x0000000008001ffc       0xa8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080020bc       0xa8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_ITError
-                0x00000000080020a4      0x1a0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002164      0x1a0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_TreatErrorCallback
-                0x0000000008002244       0x4e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002304       0x4e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_Flush_TXDR
-                0x0000000008002292       0x46 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002352       0x46 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_DMAAbort
-                0x00000000080022d8       0x3c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002398       0x3c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_WaitOnFlagUntilTimeout
-                0x0000000008002314       0x80 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080023d4       0x80 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_WaitOnTXISFlagUntilTimeout
-                0x0000000008002394       0x80 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002454       0x80 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_WaitOnSTOPFlagUntilTimeout
-                0x0000000008002414       0x78 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000080024d4       0x78 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_WaitOnRXNEFlagUntilTimeout
-                0x000000000800248c       0xf4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x000000000800254c       0xf4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_IsErrorOccurred
-                0x0000000008002580      0x1c0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002640      0x1c0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_TransferConfig
-                0x0000000008002740       0x60 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002800       0x60 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.I2C_Disable_IRQ
-                0x00000000080027a0       0xba ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x0000000008002860       0xba ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .text.HAL_I2CEx_ConfigAnalogFilter
-                0x000000000800285a       0x94 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
-                0x000000000800285a                HAL_I2CEx_ConfigAnalogFilter
+                0x000000000800291a       0x94 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+                0x000000000800291a                HAL_I2CEx_ConfigAnalogFilter
  .text.HAL_I2CEx_ConfigDigitalFilter
-                0x00000000080028ee       0x96 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
-                0x00000000080028ee                HAL_I2CEx_ConfigDigitalFilter
+                0x00000000080029ae       0x96 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+                0x00000000080029ae                HAL_I2CEx_ConfigDigitalFilter
  .text.HAL_PWR_EnableBkUpAccess
-                0x0000000008002984       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
-                0x0000000008002984                HAL_PWR_EnableBkUpAccess
+                0x0000000008002a44       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+                0x0000000008002a44                HAL_PWR_EnableBkUpAccess
  .text.HAL_PWREx_GetVoltageRange
-                0x00000000080029a0       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
-                0x00000000080029a0                HAL_PWREx_GetVoltageRange
+                0x0000000008002a60       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+                0x0000000008002a60                HAL_PWREx_GetVoltageRange
  .text.LL_PWR_IsEnabledBkUpAccess
-                0x00000000080029b8       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002a78       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSE_EnableTcxo
-                0x00000000080029dc       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002a9c       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSE_DisableTcxo
-                0x00000000080029f8       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002ab8       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSE_IsEnabledDiv2
-                0x0000000008002a14       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002ad4       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSE_Enable
-                0x0000000008002a36       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002af6       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSE_Disable
-                0x0000000008002a52       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002b12       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSE_IsReady
-                0x0000000008002a6e       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002b2e       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSI_Enable
-                0x0000000008002a90       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002b50       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSI_Disable
-                0x0000000008002aac       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002b6c       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSI_IsReady
-                0x0000000008002ac8       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002b88       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_HSI_SetCalibTrimming
-                0x0000000008002aea       0x28 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002baa       0x28 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_LSE_IsReady
-                0x0000000008002b12       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002bd2       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_LSI_Enable
-                0x0000000008002b34       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002bf4       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_LSI_Disable
-                0x0000000008002b54       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002c14       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_LSI_IsReady
-                0x0000000008002b74       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002c34       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_Enable
-                0x0000000008002b96       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002c56       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_Disable
-                0x0000000008002bb2       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002c72       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_IsReady
-                0x0000000008002bce       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002c8e       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_IsEnabledRangeSelect
-                0x0000000008002bee       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002cae       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_GetRange
-                0x0000000008002c0e       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002cce       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_GetRangeAfterStandby
-                0x0000000008002c24       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002ce4       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_MSI_SetCalibTrimming
-                0x0000000008002c3c       0x28 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002cfc       0x28 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_SetSysClkSource
-                0x0000000008002c64       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002d24       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_GetSysClkSource
-                0x0000000008002c8a       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002d4a       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_SetAHBPrescaler
-                0x0000000008002ca0       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002d60       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_SetAHB3Prescaler
-                0x0000000008002cc6       0x2c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002d86       0x2c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_SetAPB1Prescaler
-                0x0000000008002cf2       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002db2       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_SetAPB2Prescaler
-                0x0000000008002d18       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002dd8       0x26 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_GetAHBPrescaler
-                0x0000000008002d3e       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002dfe       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_GetAHB3Prescaler
-                0x0000000008002d54       0x1a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002e14       0x1a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_GetAPB2Prescaler
-                0x0000000008002d6e       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002e2e       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_Enable
-                0x0000000008002d84       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002e44       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_Disable
-                0x0000000008002da0       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002e60       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_IsReady
-                0x0000000008002dbc       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002e7c       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_GetN
-                0x0000000008002dde       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002e9e       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_GetR
-                0x0000000008002df6       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002eb6       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_GetDivider
-                0x0000000008002e0c       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002ecc       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_PLL_GetMainSource
-                0x0000000008002e22       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002ee2       0x16 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_IsActiveFlag_HPRE
-                0x0000000008002e38       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002ef8       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_IsActiveFlag_SHDHPRE
-                0x0000000008002e5a       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002f1a       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_IsActiveFlag_PPRE1
-                0x0000000008002e7e       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002f3e       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_IsActiveFlag_PPRE2
-                0x0000000008002ea0       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- *fill*         0x0000000008002ec2        0x2 
+                0x0000000008002f60       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ *fill*         0x0000000008002f82        0x2 
  .text.HAL_RCC_OscConfig
-                0x0000000008002ec4      0x704 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
-                0x0000000008002ec4                HAL_RCC_OscConfig
+                0x0000000008002f84      0x704 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008002f84                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x00000000080035c8      0x248 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
-                0x00000000080035c8                HAL_RCC_ClockConfig
+                0x0000000008003688      0x248 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008003688                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008003810      0x140 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
-                0x0000000008003810                HAL_RCC_GetSysClockFreq
+                0x00000000080038d0      0x140 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x00000000080038d0                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008003950       0x28 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
-                0x0000000008003950                HAL_RCC_GetHCLKFreq
+                0x0000000008003a10       0x28 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008003a10                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK2Freq
-                0x0000000008003978       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
-                0x0000000008003978                HAL_RCC_GetPCLK2Freq
+                0x0000000008003a38       0x24 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008003a38                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_GetClockConfig
-                0x000000000800399c       0x7c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
-                0x000000000800399c                HAL_RCC_GetClockConfig
+                0x0000000008003a5c       0x7c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008003a5c                HAL_RCC_GetClockConfig
  .text.RCC_SetFlashLatencyFromMSIRange
-                0x0000000008003a18       0x60 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008003ad8       0x60 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.RCC_SetFlashLatency
-                0x0000000008003a78      0x104 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000008003b38      0x104 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .text.LL_RCC_LSE_IsReady
-                0x0000000008003b7c       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003c3c       0x22 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetUSARTClockSource
-                0x0000000008003b9e       0x30 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003c5e       0x30 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetI2SClockSource
-                0x0000000008003bce       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003c8e       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetLPUARTClockSource
-                0x0000000008003bf8       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003cb8       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetI2CClockSource
-                0x0000000008003c22       0x38 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003ce2       0x38 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetLPTIMClockSource
-                0x0000000008003c5a       0x32 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003d1a       0x32 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetRNGClockSource
-                0x0000000008003c8c       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003d4c       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetADCClockSource
-                0x0000000008003cb6       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003d76       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_SetRTCClockSource
-                0x0000000008003ce0       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003da0       0x2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_GetRTCClockSource
-                0x0000000008003d0a       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003dca       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_ForceBackupDomainReset
-                0x0000000008003d22       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003de2       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .text.LL_RCC_ReleaseBackupDomainReset
-                0x0000000008003d42       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
- *fill*         0x0000000008003d62        0x2 
+                0x0000000008003e02       0x20 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ *fill*         0x0000000008003e22        0x2 
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x0000000008003d64      0x234 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
-                0x0000000008003d64                HAL_RCCEx_PeriphCLKConfig
+                0x0000000008003e24      0x234 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000008003e24                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_TIM_Base_Init
-                0x0000000008003f98       0xae ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008003f98                HAL_TIM_Base_Init
+                0x0000000008004058       0xae ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004058                HAL_TIM_Base_Init
  .text.HAL_TIM_Base_MspInit
-                0x0000000008004046       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008004046                HAL_TIM_Base_MspInit
+                0x0000000008004106       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004106                HAL_TIM_Base_MspInit
  .text.HAL_TIM_Base_Start_IT
-                0x0000000008004058       0x98 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008004058                HAL_TIM_Base_Start_IT
+                0x0000000008004118       0x98 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004118                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_IRQHandler
-                0x00000000080040f0      0x23e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x00000000080040f0                HAL_TIM_IRQHandler
+                0x00000000080041b0      0x23e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x00000000080041b0                HAL_TIM_IRQHandler
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x000000000800432e       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x000000000800432e                HAL_TIM_OC_DelayElapsedCallback
+                0x00000000080043ee       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x00000000080043ee                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x0000000008004340       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008004340                HAL_TIM_IC_CaptureCallback
+                0x0000000008004400       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004400                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x0000000008004352       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008004352                HAL_TIM_PWM_PulseFinishedCallback
+                0x0000000008004412       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004412                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x0000000008004364       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008004364                HAL_TIM_TriggerCallback
- *fill*         0x0000000008004376        0x2 
+                0x0000000008004424       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004424                HAL_TIM_TriggerCallback
+ *fill*         0x0000000008004436        0x2 
  .text.TIM_Base_SetConfig
-                0x0000000008004378       0xc4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
-                0x0000000008004378                TIM_Base_SetConfig
+                0x0000000008004438       0xc4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000008004438                TIM_Base_SetConfig
  .text.HAL_TIMEx_CommutCallback
-                0x000000000800443c       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
-                0x000000000800443c                HAL_TIMEx_CommutCallback
+                0x00000000080044fc       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+                0x00000000080044fc                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x000000000800444e       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
-                0x000000000800444e                HAL_TIMEx_BreakCallback
+                0x000000000800450e       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+                0x000000000800450e                HAL_TIMEx_BreakCallback
  .text.HAL_TIMEx_Break2Callback
-                0x0000000008004460       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
-                0x0000000008004460                HAL_TIMEx_Break2Callback
- *fill*         0x0000000008004472        0x2 
+                0x0000000008004520       0x12 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+                0x0000000008004520                HAL_TIMEx_Break2Callback
+ *fill*         0x0000000008004532        0x2 
  .text._tx_byte_pool_create
-                0x0000000008004474      0x12c ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
-                0x0000000008004474                _tx_byte_pool_create
+                0x0000000008004534      0x12c ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+                0x0000000008004534                _tx_byte_pool_create
  .text._tx_initialize_high_level
-                0x00000000080045a0       0x88 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x00000000080045a0                _tx_initialize_high_level
+                0x0000000008004660       0x88 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+                0x0000000008004660                _tx_initialize_high_level
  .text._tx_initialize_kernel_enter
-                0x0000000008004628       0x54 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
-                0x0000000008004628                _tx_initialize_kernel_enter
+                0x00000000080046e8       0x54 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+                0x00000000080046e8                _tx_initialize_kernel_enter
  .text._tx_semaphore_cleanup
-                0x000000000800467c       0xf8 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
-                0x000000000800467c                _tx_semaphore_cleanup
+                0x000000000800473c       0xf8 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+                0x000000000800473c                _tx_semaphore_cleanup
  .text._tx_semaphore_create
-                0x0000000008004774       0xa4 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
-                0x0000000008004774                _tx_semaphore_create
+                0x0000000008004834       0xa4 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+                0x0000000008004834                _tx_semaphore_create
  .text._tx_semaphore_get
-                0x0000000008004818      0x124 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
-                0x0000000008004818                _tx_semaphore_get
+                0x00000000080048d8      0x124 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+                0x00000000080048d8                _tx_semaphore_get
  .text._tx_semaphore_put
-                0x000000000800493c       0xb0 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
-                0x000000000800493c                _tx_semaphore_put
+                0x00000000080049fc       0xb0 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+                0x00000000080049fc                _tx_semaphore_put
  .text._tx_thread_create
-                0x00000000080049ec      0x1ec ./Middlewares/ST/threadx/common/src/tx_thread_create.o
-                0x00000000080049ec                _tx_thread_create
+                0x0000000008004aac      0x1ec ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+                0x0000000008004aac                _tx_thread_create
  .text._tx_thread_initialize
-                0x0000000008004bd8       0x78 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000008004bd8                _tx_thread_initialize
+                0x0000000008004c98       0x78 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000008004c98                _tx_thread_initialize
  .text._tx_thread_resume
-                0x0000000008004c50       0xc0 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
-                0x0000000008004c50                _tx_thread_resume
+                0x0000000008004d10       0xc0 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+                0x0000000008004d10                _tx_thread_resume
  .text._tx_thread_shell_entry
-                0x0000000008004d10       0x7c ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
-                0x0000000008004d10                _tx_thread_shell_entry
+                0x0000000008004dd0       0x7c ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+                0x0000000008004dd0                _tx_thread_shell_entry
  .text._tx_thread_sleep
-                0x0000000008004d8c      0x100 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
-                0x0000000008004d8c                _tx_thread_sleep
+                0x0000000008004e4c      0x100 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+                0x0000000008004e4c                _tx_thread_sleep
  .text._tx_thread_system_preempt_check
-                0x0000000008004e8c       0x70 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
-                0x0000000008004e8c                _tx_thread_system_preempt_check
+                0x0000000008004f4c       0x70 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+                0x0000000008004f4c                _tx_thread_system_preempt_check
  .text._tx_thread_system_resume
-                0x0000000008004efc      0x200 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
-                0x0000000008004efc                _tx_thread_system_resume
+                0x0000000008004fbc      0x200 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+                0x0000000008004fbc                _tx_thread_system_resume
  .text._tx_thread_system_suspend
-                0x00000000080050fc      0x230 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
-                0x00000000080050fc                _tx_thread_system_suspend
+                0x00000000080051bc      0x230 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+                0x00000000080051bc                _tx_thread_system_suspend
  .text._tx_thread_time_slice
-                0x000000000800532c       0xa0 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
-                0x000000000800532c                _tx_thread_time_slice
+                0x00000000080053ec       0xa0 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+                0x00000000080053ec                _tx_thread_time_slice
  .text._tx_thread_timeout
-                0x00000000080053cc       0x78 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
-                0x00000000080053cc                _tx_thread_timeout
+                0x000000000800548c       0x78 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+                0x000000000800548c                _tx_thread_timeout
  .text._tx_timer_expiration_process
-                0x0000000008005444       0x44 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
-                0x0000000008005444                _tx_timer_expiration_process
+                0x0000000008005504       0x44 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+                0x0000000008005504                _tx_timer_expiration_process
  .text._tx_timer_initialize
-                0x0000000008005488       0xf8 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x0000000008005488                _tx_timer_initialize
+                0x0000000008005548       0xf8 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x0000000008005548                _tx_timer_initialize
  .text._tx_timer_system_activate
-                0x0000000008005580       0xc0 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
-                0x0000000008005580                _tx_timer_system_activate
+                0x0000000008005640       0xc0 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+                0x0000000008005640                _tx_timer_system_activate
  .text._tx_timer_system_deactivate
-                0x0000000008005640       0x6c ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
-                0x0000000008005640                _tx_timer_system_deactivate
+                0x0000000008005700       0x6c ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+                0x0000000008005700                _tx_timer_system_deactivate
  .text._tx_timer_thread_entry
-                0x00000000080056ac      0x1fc ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
-                0x00000000080056ac                _tx_timer_thread_entry
+                0x000000000800576c      0x1fc ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+                0x000000000800576c                _tx_timer_thread_entry
  .text._txe_byte_pool_create
-                0x00000000080058a8      0x140 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
-                0x00000000080058a8                _txe_byte_pool_create
+                0x0000000008005968      0x140 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+                0x0000000008005968                _txe_byte_pool_create
  .text._txe_semaphore_create
-                0x00000000080059e8      0x12c ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
-                0x00000000080059e8                _txe_semaphore_create
+                0x0000000008005aa8      0x12c ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+                0x0000000008005aa8                _txe_semaphore_create
  .text._txe_semaphore_get
-                0x0000000008005b14       0x84 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
-                0x0000000008005b14                _txe_semaphore_get
+                0x0000000008005bd4       0x84 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+                0x0000000008005bd4                _txe_semaphore_get
  .text._txe_semaphore_put
-                0x0000000008005b98       0x3c ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
-                0x0000000008005b98                _txe_semaphore_put
+                0x0000000008005c58       0x3c ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+                0x0000000008005c58                _txe_semaphore_put
  .text._txe_thread_create
-                0x0000000008005bd4      0x1e4 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
-                0x0000000008005bd4                _txe_thread_create
+                0x0000000008005c94      0x1e4 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+                0x0000000008005c94                _txe_thread_create
  .text._txe_thread_resume
-                0x0000000008005db8       0x3c ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
-                0x0000000008005db8                _txe_thread_resume
- .text.memset   0x0000000008005df4       0x10 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memset.o)
-                0x0000000008005df4                memset
+                0x0000000008005e78       0x3c ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+                0x0000000008005e78                _txe_thread_resume
+ .text.memset   0x0000000008005eb4       0x10 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memset.o)
+                0x0000000008005eb4                memset
  .text.__libc_init_array
-                0x0000000008005e04       0x48 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-init.o)
-                0x0000000008005e04                __libc_init_array
- .text.memcpy   0x0000000008005e4c       0x1c C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
-                0x0000000008005e4c                memcpy
+                0x0000000008005ec4       0x48 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-init.o)
+                0x0000000008005ec4                __libc_init_array
+ .text.memcpy   0x0000000008005f0c       0x1c C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+                0x0000000008005f0c                memcpy
  *(.glue_7)
- .glue_7        0x0000000008005e68        0x0 linker stubs
+ .glue_7        0x0000000008005f28        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008005e68        0x0 linker stubs
+ .glue_7t       0x0000000008005f28        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008005e68        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008005f28        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008005e68        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008005e68                _init
- .init          0x0000000008005e6c        0x8 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x0000000008005f28        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008005f28                _init
+ .init          0x0000000008005f2c        0x8 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008005e74        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008005e74                _fini
- .fini          0x0000000008005e78        0x8 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtn.o
-                0x0000000008005e80                . = ALIGN (0x4)
-                0x0000000008005e80                _etext = .
+ .fini          0x0000000008005f34        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008005f34                _fini
+ .fini          0x0000000008005f38        0x8 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtn.o
+                0x0000000008005f40                . = ALIGN (0x4)
+                0x0000000008005f40                _etext = .
 
-.vfp11_veneer   0x0000000008005e80        0x0
- .vfp11_veneer  0x0000000008005e80        0x0 linker stubs
+.vfp11_veneer   0x0000000008005f40        0x0
+ .vfp11_veneer  0x0000000008005f40        0x0 linker stubs
 
-.v4_bx          0x0000000008005e80        0x0
- .v4_bx         0x0000000008005e80        0x0 linker stubs
+.v4_bx          0x0000000008005f40        0x0
+ .v4_bx         0x0000000008005f40        0x0 linker stubs
 
-.iplt           0x0000000008005e80        0x0
- .iplt          0x0000000008005e80        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x0000000008005f40        0x0
+ .iplt          0x0000000008005f40        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x0000000008005e80      0x12c
-                0x0000000008005e80                . = ALIGN (0x4)
+.rodata         0x0000000008005f40      0x12c
+                0x0000000008005f40                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008005e80       0x13 ./AZURE_RTOS/App/app_azure_rtos.o
- *fill*         0x0000000008005e93        0x1 
- .rodata        0x0000000008005e94       0x36 ./Core/Src/app_threadx.o
- *fill*         0x0000000008005eca        0x2 
- .rodata        0x0000000008005ecc       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .rodata        0x0000000008005ee8       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .rodata        0x0000000008005f40       0x13 ./AZURE_RTOS/App/app_azure_rtos.o
+ *fill*         0x0000000008005f53        0x1 
+ .rodata        0x0000000008005f54       0x36 ./Core/Src/app_threadx.o
+ *fill*         0x0000000008005f8a        0x2 
+ .rodata        0x0000000008005f8c       0x1c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .rodata        0x0000000008005fa8       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0000000008005efc       0x40 ./Core/Src/system_stm32wlxx.o
-                0x0000000008005efc                AHBPrescTable
+                0x0000000008005fbc       0x40 ./Core/Src/system_stm32wlxx.o
+                0x0000000008005fbc                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008005f3c       0x20 ./Core/Src/system_stm32wlxx.o
-                0x0000000008005f3c                APBPrescTable
+                0x0000000008005ffc       0x20 ./Core/Src/system_stm32wlxx.o
+                0x0000000008005ffc                APBPrescTable
  .rodata.MSIRangeTable
-                0x0000000008005f5c       0x40 ./Core/Src/system_stm32wlxx.o
-                0x0000000008005f5c                MSIRangeTable
+                0x000000000800601c       0x40 ./Core/Src/system_stm32wlxx.o
+                0x000000000800601c                MSIRangeTable
  .rodata.register_set
-                0x0000000008005f9c        0xe ./Core/Src/at42qt1070/at42qt1070.o
-                0x0000000008005f9c                register_set
-                0x0000000008005fac                . = ALIGN (0x4)
- *fill*         0x0000000008005faa        0x2 
+                0x000000000800605c        0xe ./Core/Src/at42qt1070/at42qt1070.o
+                0x000000000800605c                register_set
+                0x000000000800606c                . = ALIGN (0x4)
+ *fill*         0x000000000800606a        0x2 
 
-.rel.dyn        0x0000000008005fac        0x0
- .rel.iplt      0x0000000008005fac        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x000000000800606c        0x0
+ .rel.iplt      0x000000000800606c        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.ARM.extab      0x0000000008005fac        0x0
-                0x0000000008005fac                . = ALIGN (0x4)
+.ARM.extab      0x000000000800606c        0x0
+                0x000000000800606c                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008005fac                . = ALIGN (0x4)
+                0x000000000800606c                . = ALIGN (0x4)
 
-.ARM            0x0000000008005fac        0x0
-                0x0000000008005fac                . = ALIGN (0x4)
-                0x0000000008005fac                __exidx_start = .
+.ARM            0x000000000800606c        0x0
+                0x000000000800606c                . = ALIGN (0x4)
+                0x000000000800606c                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008005fac                __exidx_end = .
-                0x0000000008005fac                . = ALIGN (0x4)
+                0x000000000800606c                __exidx_end = .
+                0x000000000800606c                . = ALIGN (0x4)
 
-.preinit_array  0x0000000008005fac        0x0
-                0x0000000008005fac                . = ALIGN (0x4)
-                0x0000000008005fac                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000000800606c        0x0
+                0x000000000800606c                . = ALIGN (0x4)
+                0x000000000800606c                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008005fac                PROVIDE (__preinit_array_end = .)
-                0x0000000008005fac                . = ALIGN (0x4)
+                0x000000000800606c                PROVIDE (__preinit_array_end = .)
+                0x000000000800606c                . = ALIGN (0x4)
 
-.init_array     0x0000000008005fac        0x4
-                0x0000000008005fac                . = ALIGN (0x4)
-                0x0000000008005fac                PROVIDE (__init_array_start = .)
+.init_array     0x000000000800606c        0x4
+                0x000000000800606c                . = ALIGN (0x4)
+                0x000000000800606c                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008005fac        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x0000000008005fb0                PROVIDE (__init_array_end = .)
-                0x0000000008005fb0                . = ALIGN (0x4)
+ .init_array    0x000000000800606c        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008006070                PROVIDE (__init_array_end = .)
+                0x0000000008006070                . = ALIGN (0x4)
 
-.fini_array     0x0000000008005fb0        0x4
-                0x0000000008005fb0                . = ALIGN (0x4)
+.fini_array     0x0000000008006070        0x4
+                0x0000000008006070                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008005fb0        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .fini_array    0x0000000008006070        0x4 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008005fb4                . = ALIGN (0x4)
-                0x0000000008005fb4                _sidata = LOADADDR (.data)
+                0x0000000008006074                . = ALIGN (0x4)
+                0x0000000008006074                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x10 load address 0x0000000008005fb4
+.data           0x0000000020000000       0x10 load address 0x0000000008006074
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -19533,11 +19535,11 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000020000010                . = ALIGN (0x4)
                 0x0000000020000010                _edata = .
 
-.igot.plt       0x0000000020000010        0x0 load address 0x0000000008005fc4
+.igot.plt       0x0000000020000010        0x0 load address 0x0000000008006084
  .igot.plt      0x0000000020000010        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
                 0x0000000020000010                . = ALIGN (0x4)
 
-.bss            0x0000000020000010     0x1598 load address 0x0000000008005fc4
+.bss            0x0000000020000010     0x15a0 load address 0x0000000008006084
                 0x0000000020000010                _sbss = .
                 0x0000000020000010                __bss_start__ = _sbss
  *(.bss)
@@ -19568,145 +19570,147 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .bss.htim17    0x0000000020000e4c       0x4c ./Core/Src/stm32wlxx_hal_timebase_tim.o
                 0x0000000020000e4c                htim17
  .bss.at42qt1070_handler
-                0x0000000020000e98       0xcc ./Core/Src/at42qt1070/at42qt1070.o
+                0x0000000020000e98       0xd0 ./Core/Src/at42qt1070/at42qt1070.o
                 0x0000000020000e98                at42qt1070_handler
- .bss.uwTick    0x0000000020000f64        0x4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
-                0x0000000020000f64                uwTick
+ .bss.long_pressed_timer.0
+                0x0000000020000f68        0x4 ./Core/Src/at42qt1070/at42qt1070.o
+ .bss.uwTick    0x0000000020000f6c        0x4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+                0x0000000020000f6c                uwTick
  .bss._tx_semaphore_created_ptr
-                0x0000000020000f68        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f68                _tx_semaphore_created_ptr
- .bss._tx_semaphore_created_count
-                0x0000000020000f6c        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f6c                _tx_semaphore_created_count
- .bss._tx_queue_created_ptr
                 0x0000000020000f70        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f70                _tx_queue_created_ptr
- .bss._tx_queue_created_count
+                0x0000000020000f70                _tx_semaphore_created_ptr
+ .bss._tx_semaphore_created_count
                 0x0000000020000f74        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f74                _tx_queue_created_count
- .bss._tx_event_flags_created_ptr
+                0x0000000020000f74                _tx_semaphore_created_count
+ .bss._tx_queue_created_ptr
                 0x0000000020000f78        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f78                _tx_event_flags_created_ptr
- .bss._tx_event_flags_created_count
+                0x0000000020000f78                _tx_queue_created_ptr
+ .bss._tx_queue_created_count
                 0x0000000020000f7c        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f7c                _tx_event_flags_created_count
- .bss._tx_mutex_created_ptr
+                0x0000000020000f7c                _tx_queue_created_count
+ .bss._tx_event_flags_created_ptr
                 0x0000000020000f80        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f80                _tx_mutex_created_ptr
- .bss._tx_mutex_created_count
+                0x0000000020000f80                _tx_event_flags_created_ptr
+ .bss._tx_event_flags_created_count
                 0x0000000020000f84        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f84                _tx_mutex_created_count
- .bss._tx_block_pool_created_ptr
+                0x0000000020000f84                _tx_event_flags_created_count
+ .bss._tx_mutex_created_ptr
                 0x0000000020000f88        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f88                _tx_block_pool_created_ptr
- .bss._tx_block_pool_created_count
+                0x0000000020000f88                _tx_mutex_created_ptr
+ .bss._tx_mutex_created_count
                 0x0000000020000f8c        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f8c                _tx_block_pool_created_count
- .bss._tx_byte_pool_created_ptr
+                0x0000000020000f8c                _tx_mutex_created_count
+ .bss._tx_block_pool_created_ptr
                 0x0000000020000f90        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f90                _tx_byte_pool_created_ptr
- .bss._tx_byte_pool_created_count
+                0x0000000020000f90                _tx_block_pool_created_ptr
+ .bss._tx_block_pool_created_count
                 0x0000000020000f94        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f94                _tx_byte_pool_created_count
- .bss._tx_initialize_unused_memory
+                0x0000000020000f94                _tx_block_pool_created_count
+ .bss._tx_byte_pool_created_ptr
                 0x0000000020000f98        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
-                0x0000000020000f98                _tx_initialize_unused_memory
+                0x0000000020000f98                _tx_byte_pool_created_ptr
+ .bss._tx_byte_pool_created_count
+                0x0000000020000f9c        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+                0x0000000020000f9c                _tx_byte_pool_created_count
+ .bss._tx_initialize_unused_memory
+                0x0000000020000fa0        0x4 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+                0x0000000020000fa0                _tx_initialize_unused_memory
  .bss._tx_thread_system_stack_ptr
-                0x0000000020000f9c        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000f9c                _tx_thread_system_stack_ptr
- .bss._tx_thread_current_ptr
-                0x0000000020000fa0        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fa0                _tx_thread_current_ptr
- .bss._tx_thread_execute_ptr
                 0x0000000020000fa4        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fa4                _tx_thread_execute_ptr
- .bss._tx_thread_created_ptr
+                0x0000000020000fa4                _tx_thread_system_stack_ptr
+ .bss._tx_thread_current_ptr
                 0x0000000020000fa8        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fa8                _tx_thread_created_ptr
- .bss._tx_thread_created_count
+                0x0000000020000fa8                _tx_thread_current_ptr
+ .bss._tx_thread_execute_ptr
                 0x0000000020000fac        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fac                _tx_thread_created_count
- .bss._tx_thread_priority_maps
+                0x0000000020000fac                _tx_thread_execute_ptr
+ .bss._tx_thread_created_ptr
                 0x0000000020000fb0        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fb0                _tx_thread_priority_maps
- .bss._tx_thread_highest_priority
+                0x0000000020000fb0                _tx_thread_created_ptr
+ .bss._tx_thread_created_count
                 0x0000000020000fb4        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fb4                _tx_thread_highest_priority
+                0x0000000020000fb4                _tx_thread_created_count
+ .bss._tx_thread_priority_maps
+                0x0000000020000fb8        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000020000fb8                _tx_thread_priority_maps
+ .bss._tx_thread_highest_priority
+                0x0000000020000fbc        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000020000fbc                _tx_thread_highest_priority
  .bss._tx_thread_priority_list
-                0x0000000020000fb8       0x80 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020000fb8                _tx_thread_priority_list
+                0x0000000020000fc0       0x80 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000020000fc0                _tx_thread_priority_list
  .bss._tx_thread_preempt_disable
-                0x0000000020001038        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020001038                _tx_thread_preempt_disable
- .bss._tx_thread_mutex_release
-                0x000000002000103c        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x000000002000103c                _tx_thread_mutex_release
- .bss._tx_build_options
                 0x0000000020001040        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
-                0x0000000020001040                _tx_build_options
+                0x0000000020001040                _tx_thread_preempt_disable
+ .bss._tx_thread_mutex_release
+                0x0000000020001044        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000020001044                _tx_thread_mutex_release
+ .bss._tx_build_options
+                0x0000000020001048        0x4 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000020001048                _tx_build_options
  .bss._tx_timer_system_clock
-                0x0000000020001044        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x0000000020001044                _tx_timer_system_clock
+                0x000000002000104c        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x000000002000104c                _tx_timer_system_clock
  .bss._tx_timer_expired_time_slice
-                0x0000000020001048        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x0000000020001048                _tx_timer_expired_time_slice
+                0x0000000020001050        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x0000000020001050                _tx_timer_expired_time_slice
  .bss._tx_timer_list
-                0x000000002000104c       0x80 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x000000002000104c                _tx_timer_list
+                0x0000000020001054       0x80 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x0000000020001054                _tx_timer_list
  .bss._tx_timer_list_start
-                0x00000000200010cc        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010cc                _tx_timer_list_start
- .bss._tx_timer_list_end
-                0x00000000200010d0        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010d0                _tx_timer_list_end
- .bss._tx_timer_current_ptr
                 0x00000000200010d4        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010d4                _tx_timer_current_ptr
- .bss._tx_timer_expired
+                0x00000000200010d4                _tx_timer_list_start
+ .bss._tx_timer_list_end
                 0x00000000200010d8        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010d8                _tx_timer_expired
- .bss._tx_timer_created_ptr
+                0x00000000200010d8                _tx_timer_list_end
+ .bss._tx_timer_current_ptr
                 0x00000000200010dc        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010dc                _tx_timer_created_ptr
- .bss._tx_timer_created_count
+                0x00000000200010dc                _tx_timer_current_ptr
+ .bss._tx_timer_expired
                 0x00000000200010e0        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010e0                _tx_timer_created_count
- .bss._tx_timer_expired_timer_ptr
+                0x00000000200010e0                _tx_timer_expired
+ .bss._tx_timer_created_ptr
                 0x00000000200010e4        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010e4                _tx_timer_expired_timer_ptr
+                0x00000000200010e4                _tx_timer_created_ptr
+ .bss._tx_timer_created_count
+                0x00000000200010e8        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200010e8                _tx_timer_created_count
+ .bss._tx_timer_expired_timer_ptr
+                0x00000000200010ec        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200010ec                _tx_timer_expired_timer_ptr
  .bss._tx_timer_thread
-                0x00000000200010e8       0xb0 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200010e8                _tx_timer_thread
+                0x00000000200010f0       0xb0 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200010f0                _tx_timer_thread
  .bss._tx_timer_stack_start
-                0x0000000020001198        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x0000000020001198                _tx_timer_stack_start
- .bss._tx_timer_stack_size
-                0x000000002000119c        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x000000002000119c                _tx_timer_stack_size
- .bss._tx_timer_priority
                 0x00000000200011a0        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200011a0                _tx_timer_priority
+                0x00000000200011a0                _tx_timer_stack_start
+ .bss._tx_timer_stack_size
+                0x00000000200011a4        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200011a4                _tx_timer_stack_size
+ .bss._tx_timer_priority
+                0x00000000200011a8        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200011a8                _tx_timer_priority
  .bss._tx_timer_thread_stack_area
-                0x00000000200011a4      0x400 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200011a4                _tx_timer_thread_stack_area
+                0x00000000200011ac      0x400 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200011ac                _tx_timer_thread_stack_area
  .bss._tx_timer_time_slice
-                0x00000000200015a4        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
-                0x00000000200015a4                _tx_timer_time_slice
+                0x00000000200015ac        0x4 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000200015ac                _tx_timer_time_slice
  *(COMMON)
-                0x00000000200015a8                . = ALIGN (0x4)
-                0x00000000200015a8                _ebss = .
-                0x00000000200015a8                __bss_end__ = _ebss
+                0x00000000200015b0                . = ALIGN (0x4)
+                0x00000000200015b0                _ebss = .
+                0x00000000200015b0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200015a8      0x600 load address 0x0000000008005fc4
-                0x00000000200015a8                . = ALIGN (0x8)
+                0x00000000200015b0      0x600 load address 0x0000000008006084
+                0x00000000200015b0                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x00000000200015a8                PROVIDE (_end = .)
-                0x00000000200017a8                . = (. + _Min_Heap_Size)
- *fill*         0x00000000200015a8      0x200 
-                0x0000000020001ba8                . = (. + _Min_Stack_Size)
- *fill*         0x00000000200017a8      0x400 
-                0x0000000020001ba8                . = ALIGN (0x8)
+                0x00000000200015b0                PROVIDE (_end = .)
+                0x00000000200017b0                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200015b0      0x200 
+                0x0000000020001bb0                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200017b0      0x400 
+                0x0000000020001bb0                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -19895,119 +19899,119 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .comment       0x0000000000000043       0x44 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
  .comment       0x0000000000000043       0x44 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
 
-.debug_info     0x0000000000000000    0x1ccea
+.debug_info     0x0000000000000000    0x1ce09
  .debug_info    0x0000000000000000      0x5ee ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_info    0x00000000000005ee      0xa54 ./Core/Src/app_threadx.o
- .debug_info    0x0000000000001042     0x1b97 ./Core/Src/main.o
- .debug_info    0x0000000000002bd9      0xe8d ./Core/Src/stm32wlxx_hal_msp.o
- .debug_info    0x0000000000003a66      0xdc2 ./Core/Src/stm32wlxx_hal_timebase_tim.o
- .debug_info    0x0000000000004828      0xbec ./Core/Src/stm32wlxx_it.o
- .debug_info    0x0000000000005414      0x413 ./Core/Src/system_stm32wlxx.o
- .debug_info    0x0000000000005827       0x25 ./Core/Src/tx_initialize_low_level.o
- .debug_info    0x000000000000584c      0x425 ./Core/Src/at42qt1070/at42qt1070.o
- .debug_info    0x0000000000005c71      0x260 ./Core/Src/at42qt1070/circ_buffer.o
- .debug_info    0x0000000000005ed1       0x23 ./Core/Startup/startup_stm32wle5ccux.o
- .debug_info    0x0000000000005ef4      0xe92 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
- .debug_info    0x0000000000006d86      0xcdb ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
- .debug_info    0x0000000000007a61      0x866 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
- .debug_info    0x00000000000082c7      0x65c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
- .debug_info    0x0000000000008923     0x218f ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
- .debug_info    0x000000000000aab2      0x8ef ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
- .debug_info    0x000000000000b3a1      0x857 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
- .debug_info    0x000000000000bbf8      0xcc6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
- .debug_info    0x000000000000c8be     0x11ca ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .debug_info    0x000000000000da88      0xd98 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
- .debug_info    0x000000000000e820     0x2be1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
- .debug_info    0x0000000000011401     0x18e0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
- .debug_info    0x0000000000012ce1      0x692 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
- .debug_info    0x0000000000013373      0x8bf ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_info    0x0000000000013c32       0xfb ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
- .debug_info    0x0000000000013d2d      0x619 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
- .debug_info    0x0000000000014346      0x5e4 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
- .debug_info    0x000000000001492a      0x647 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
- .debug_info    0x0000000000014f71      0x5e2 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
- .debug_info    0x0000000000015553      0x72e ./Middlewares/ST/threadx/common/src/tx_thread_create.o
- .debug_info    0x0000000000015c81      0x60c ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
- .debug_info    0x000000000001628d      0x5a8 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
- .debug_info    0x0000000000016835      0x534 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
- .debug_info    0x0000000000016d69      0x615 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
- .debug_info    0x000000000001737e      0x56b ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
- .debug_info    0x00000000000178e9      0x72e ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
- .debug_info    0x0000000000018017      0x7f9 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
- .debug_info    0x0000000000018810      0x538 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
- .debug_info    0x0000000000018d48      0x553 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
- .debug_info    0x000000000001929b      0x50c ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
- .debug_info    0x00000000000197a7      0x6cd ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
- .debug_info    0x0000000000019e74      0x1ba ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
- .debug_info    0x000000000001a02e      0x172 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
- .debug_info    0x000000000001a1a0      0x6f4 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
- .debug_info    0x000000000001a894      0x74e ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
- .debug_info    0x000000000001afe2      0x6df ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
- .debug_info    0x000000000001b6c1      0x559 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
- .debug_info    0x000000000001bc1a      0x4da ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
- .debug_info    0x000000000001c0f4      0x72b ./Middlewares/ST/threadx/common/src/txe_thread_create.o
- .debug_info    0x000000000001c81f      0x45d ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
- .debug_info    0x000000000001cc7c       0x25 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
- .debug_info    0x000000000001cca1       0x24 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
- .debug_info    0x000000000001ccc5       0x25 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
+ .debug_info    0x0000000000001042     0x1bac ./Core/Src/main.o
+ .debug_info    0x0000000000002bee      0xe8d ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_info    0x0000000000003a7b      0xdc2 ./Core/Src/stm32wlxx_hal_timebase_tim.o
+ .debug_info    0x000000000000483d      0xbec ./Core/Src/stm32wlxx_it.o
+ .debug_info    0x0000000000005429      0x413 ./Core/Src/system_stm32wlxx.o
+ .debug_info    0x000000000000583c       0x25 ./Core/Src/tx_initialize_low_level.o
+ .debug_info    0x0000000000005861      0x52f ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_info    0x0000000000005d90      0x260 ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_info    0x0000000000005ff0       0x23 ./Core/Startup/startup_stm32wle5ccux.o
+ .debug_info    0x0000000000006013      0xe92 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_info    0x0000000000006ea5      0xcdb ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_info    0x0000000000007b80      0x866 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+ .debug_info    0x00000000000083e6      0x65c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_info    0x0000000000008a42     0x218f ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ .debug_info    0x000000000000abd1      0x8ef ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+ .debug_info    0x000000000000b4c0      0x857 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+ .debug_info    0x000000000000bd17      0xcc6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+ .debug_info    0x000000000000c9dd     0x11ca ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_info    0x000000000000dba7      0xd98 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ .debug_info    0x000000000000e93f     0x2be1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+ .debug_info    0x0000000000011520     0x18e0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+ .debug_info    0x0000000000012e00      0x692 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+ .debug_info    0x0000000000013492      0x8bf ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_info    0x0000000000013d51       0xfb ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+ .debug_info    0x0000000000013e4c      0x619 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+ .debug_info    0x0000000000014465      0x5e4 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+ .debug_info    0x0000000000014a49      0x647 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+ .debug_info    0x0000000000015090      0x5e2 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+ .debug_info    0x0000000000015672      0x72e ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+ .debug_info    0x0000000000015da0      0x60c ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+ .debug_info    0x00000000000163ac      0x5a8 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+ .debug_info    0x0000000000016954      0x534 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+ .debug_info    0x0000000000016e88      0x615 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+ .debug_info    0x000000000001749d      0x56b ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+ .debug_info    0x0000000000017a08      0x72e ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+ .debug_info    0x0000000000018136      0x7f9 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+ .debug_info    0x000000000001892f      0x538 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+ .debug_info    0x0000000000018e67      0x553 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+ .debug_info    0x00000000000193ba      0x50c ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+ .debug_info    0x00000000000198c6      0x6cd ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .debug_info    0x0000000000019f93      0x1ba ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+ .debug_info    0x000000000001a14d      0x172 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+ .debug_info    0x000000000001a2bf      0x6f4 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+ .debug_info    0x000000000001a9b3      0x74e ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+ .debug_info    0x000000000001b101      0x6df ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+ .debug_info    0x000000000001b7e0      0x559 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+ .debug_info    0x000000000001bd39      0x4da ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+ .debug_info    0x000000000001c213      0x72b ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+ .debug_info    0x000000000001c93e      0x45d ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+ .debug_info    0x000000000001cd9b       0x25 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
+ .debug_info    0x000000000001cdc0       0x24 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
+ .debug_info    0x000000000001cde4       0x25 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
 
-.debug_abbrev   0x0000000000000000     0x5a04
+.debug_abbrev   0x0000000000000000     0x5a39
  .debug_abbrev  0x0000000000000000      0x131 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_abbrev  0x0000000000000131      0x1af ./Core/Src/app_threadx.o
- .debug_abbrev  0x00000000000002e0      0x3d1 ./Core/Src/main.o
- .debug_abbrev  0x00000000000006b1      0x246 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_abbrev  0x00000000000008f7      0x24a ./Core/Src/stm32wlxx_hal_timebase_tim.o
- .debug_abbrev  0x0000000000000b41      0x1b6 ./Core/Src/stm32wlxx_it.o
- .debug_abbrev  0x0000000000000cf7      0x13d ./Core/Src/system_stm32wlxx.o
- .debug_abbrev  0x0000000000000e34       0x14 ./Core/Src/tx_initialize_low_level.o
- .debug_abbrev  0x0000000000000e48      0x1e0 ./Core/Src/at42qt1070/at42qt1070.o
- .debug_abbrev  0x0000000000001028      0x139 ./Core/Src/at42qt1070/circ_buffer.o
- .debug_abbrev  0x0000000000001161       0x12 ./Core/Startup/startup_stm32wle5ccux.o
- .debug_abbrev  0x0000000000001173      0x31a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
- .debug_abbrev  0x000000000000148d      0x2e8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
- .debug_abbrev  0x0000000000001775      0x219 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
- .debug_abbrev  0x000000000000198e      0x1e7 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
- .debug_abbrev  0x0000000000001b75      0x282 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
- .debug_abbrev  0x0000000000001df7      0x1cc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
- .debug_abbrev  0x0000000000001fc3      0x209 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
- .debug_abbrev  0x00000000000021cc      0x2d3 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
- .debug_abbrev  0x000000000000249f      0x32c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .debug_abbrev  0x00000000000027cb      0x2ca ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
- .debug_abbrev  0x0000000000002a95      0x287 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
- .debug_abbrev  0x0000000000002d1c      0x295 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
- .debug_abbrev  0x0000000000002fb1      0x1a3 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
- .debug_abbrev  0x0000000000003154      0x108 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_abbrev  0x000000000000325c       0xd0 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
- .debug_abbrev  0x000000000000332c      0x1a9 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
- .debug_abbrev  0x00000000000034d5      0x1a3 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
- .debug_abbrev  0x0000000000003678      0x1be ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
- .debug_abbrev  0x0000000000003836      0x1a6 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
- .debug_abbrev  0x00000000000039dc      0x1e0 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
- .debug_abbrev  0x0000000000003bbc      0x119 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
- .debug_abbrev  0x0000000000003cd5      0x199 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
- .debug_abbrev  0x0000000000003e6e      0x193 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
- .debug_abbrev  0x0000000000004001      0x1bd ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
- .debug_abbrev  0x00000000000041be      0x1a4 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
- .debug_abbrev  0x0000000000004362      0x1fd ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
- .debug_abbrev  0x000000000000455f      0x1f7 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
- .debug_abbrev  0x0000000000004756      0x19f ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
- .debug_abbrev  0x00000000000048f5      0x1a4 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
- .debug_abbrev  0x0000000000004a99      0x1a4 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
- .debug_abbrev  0x0000000000004c3d      0x13c ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
- .debug_abbrev  0x0000000000004d79       0xd8 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
- .debug_abbrev  0x0000000000004e51       0xc3 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
- .debug_abbrev  0x0000000000004f14      0x1d2 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
- .debug_abbrev  0x00000000000050e6      0x1ea ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
- .debug_abbrev  0x00000000000052d0      0x1ea ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
- .debug_abbrev  0x00000000000054ba      0x157 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
- .debug_abbrev  0x0000000000005611       0xe8 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
- .debug_abbrev  0x00000000000056f9      0x1e7 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
- .debug_abbrev  0x00000000000058e0       0xe8 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
- .debug_abbrev  0x00000000000059c8       0x14 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
- .debug_abbrev  0x00000000000059dc       0x14 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
- .debug_abbrev  0x00000000000059f0       0x14 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
+ .debug_abbrev  0x00000000000002e0      0x3d2 ./Core/Src/main.o
+ .debug_abbrev  0x00000000000006b2      0x246 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_abbrev  0x00000000000008f8      0x24a ./Core/Src/stm32wlxx_hal_timebase_tim.o
+ .debug_abbrev  0x0000000000000b42      0x1b6 ./Core/Src/stm32wlxx_it.o
+ .debug_abbrev  0x0000000000000cf8      0x13d ./Core/Src/system_stm32wlxx.o
+ .debug_abbrev  0x0000000000000e35       0x14 ./Core/Src/tx_initialize_low_level.o
+ .debug_abbrev  0x0000000000000e49      0x214 ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_abbrev  0x000000000000105d      0x139 ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_abbrev  0x0000000000001196       0x12 ./Core/Startup/startup_stm32wle5ccux.o
+ .debug_abbrev  0x00000000000011a8      0x31a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_abbrev  0x00000000000014c2      0x2e8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_abbrev  0x00000000000017aa      0x219 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+ .debug_abbrev  0x00000000000019c3      0x1e7 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_abbrev  0x0000000000001baa      0x282 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ .debug_abbrev  0x0000000000001e2c      0x1cc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+ .debug_abbrev  0x0000000000001ff8      0x209 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+ .debug_abbrev  0x0000000000002201      0x2d3 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+ .debug_abbrev  0x00000000000024d4      0x32c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_abbrev  0x0000000000002800      0x2ca ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ .debug_abbrev  0x0000000000002aca      0x287 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+ .debug_abbrev  0x0000000000002d51      0x295 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000002fe6      0x1a3 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+ .debug_abbrev  0x0000000000003189      0x108 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_abbrev  0x0000000000003291       0xd0 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+ .debug_abbrev  0x0000000000003361      0x1a9 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+ .debug_abbrev  0x000000000000350a      0x1a3 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+ .debug_abbrev  0x00000000000036ad      0x1be ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+ .debug_abbrev  0x000000000000386b      0x1a6 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+ .debug_abbrev  0x0000000000003a11      0x1e0 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+ .debug_abbrev  0x0000000000003bf1      0x119 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+ .debug_abbrev  0x0000000000003d0a      0x199 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+ .debug_abbrev  0x0000000000003ea3      0x193 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+ .debug_abbrev  0x0000000000004036      0x1bd ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+ .debug_abbrev  0x00000000000041f3      0x1a4 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+ .debug_abbrev  0x0000000000004397      0x1fd ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+ .debug_abbrev  0x0000000000004594      0x1f7 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+ .debug_abbrev  0x000000000000478b      0x19f ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+ .debug_abbrev  0x000000000000492a      0x1a4 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+ .debug_abbrev  0x0000000000004ace      0x1a4 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+ .debug_abbrev  0x0000000000004c72      0x13c ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .debug_abbrev  0x0000000000004dae       0xd8 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+ .debug_abbrev  0x0000000000004e86       0xc3 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+ .debug_abbrev  0x0000000000004f49      0x1d2 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+ .debug_abbrev  0x000000000000511b      0x1ea ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+ .debug_abbrev  0x0000000000005305      0x1ea ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+ .debug_abbrev  0x00000000000054ef      0x157 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+ .debug_abbrev  0x0000000000005646       0xe8 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+ .debug_abbrev  0x000000000000572e      0x1e7 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+ .debug_abbrev  0x0000000000005915       0xe8 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+ .debug_abbrev  0x00000000000059fd       0x14 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
+ .debug_abbrev  0x0000000000005a11       0x14 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
+ .debug_abbrev  0x0000000000005a25       0x14 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
 
-.debug_aranges  0x0000000000000000     0x1990
+.debug_aranges  0x0000000000000000     0x1998
  .debug_aranges
                 0x0000000000000000       0x20 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_aranges
@@ -20025,100 +20029,100 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_aranges
                 0x00000000000001e0       0x20 ./Core/Src/tx_initialize_low_level.o
  .debug_aranges
-                0x0000000000000200       0x40 ./Core/Src/at42qt1070/at42qt1070.o
+                0x0000000000000200       0x48 ./Core/Src/at42qt1070/at42qt1070.o
  .debug_aranges
-                0x0000000000000240       0x48 ./Core/Src/at42qt1070/circ_buffer.o
+                0x0000000000000248       0x48 ./Core/Src/at42qt1070/circ_buffer.o
  .debug_aranges
-                0x0000000000000288       0x28 ./Core/Startup/startup_stm32wle5ccux.o
+                0x0000000000000290       0x28 ./Core/Startup/startup_stm32wle5ccux.o
  .debug_aranges
-                0x00000000000002b0      0x210 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+                0x00000000000002b8      0x210 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
  .debug_aranges
-                0x00000000000004c0      0x118 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x00000000000004c8      0x118 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .debug_aranges
-                0x00000000000005d8       0x90 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+                0x00000000000005e0       0x90 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
  .debug_aranges
-                0x0000000000000668       0x60 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x0000000000000670       0x60 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
  .debug_aranges
-                0x00000000000006c8      0x2a0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000000006d0      0x2a0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .debug_aranges
-                0x0000000000000968       0x48 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+                0x0000000000000970       0x48 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
  .debug_aranges
-                0x00000000000009b0       0xc8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+                0x00000000000009b8       0xc8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
  .debug_aranges
-                0x0000000000000a78      0x1d0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+                0x0000000000000a80      0x1d0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
  .debug_aranges
-                0x0000000000000c48      0x210 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x0000000000000c50      0x210 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .debug_aranges
-                0x0000000000000e58      0x1e8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000000000e60      0x1e8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .debug_aranges
-                0x0000000000001040      0x3e0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000000001048      0x3e0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
  .debug_aranges
-                0x0000000000001420      0x190 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+                0x0000000000001428      0x190 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
  .debug_aranges
-                0x00000000000015b0       0x20 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+                0x00000000000015b8       0x20 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
  .debug_aranges
-                0x00000000000015d0       0x20 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+                0x00000000000015d8       0x20 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
  .debug_aranges
-                0x00000000000015f0       0x20 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+                0x00000000000015f8       0x20 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
  .debug_aranges
-                0x0000000000001610       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+                0x0000000000001618       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
  .debug_aranges
-                0x0000000000001630       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+                0x0000000000001638       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
  .debug_aranges
-                0x0000000000001650       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+                0x0000000000001658       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
  .debug_aranges
-                0x0000000000001670       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+                0x0000000000001678       0x20 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
  .debug_aranges
-                0x0000000000001690       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+                0x0000000000001698       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
  .debug_aranges
-                0x00000000000016b0       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x00000000000016b8       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
  .debug_aranges
-                0x00000000000016d0       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+                0x00000000000016d8       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
  .debug_aranges
-                0x00000000000016f0       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+                0x00000000000016f8       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
  .debug_aranges
-                0x0000000000001710       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+                0x0000000000001718       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
  .debug_aranges
-                0x0000000000001730       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+                0x0000000000001738       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
  .debug_aranges
-                0x0000000000001750       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+                0x0000000000001758       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
  .debug_aranges
-                0x0000000000001770       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+                0x0000000000001778       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
  .debug_aranges
-                0x0000000000001790       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+                0x0000000000001798       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
  .debug_aranges
-                0x00000000000017b0       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+                0x00000000000017b8       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
  .debug_aranges
-                0x00000000000017d0       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+                0x00000000000017d8       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
  .debug_aranges
-                0x00000000000017f0       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000000017f8       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
  .debug_aranges
-                0x0000000000001810       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+                0x0000000000001818       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
  .debug_aranges
-                0x0000000000001830       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+                0x0000000000001838       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
  .debug_aranges
-                0x0000000000001850       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+                0x0000000000001858       0x20 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
  .debug_aranges
-                0x0000000000001870       0x20 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+                0x0000000000001878       0x20 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
  .debug_aranges
-                0x0000000000001890       0x20 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+                0x0000000000001898       0x20 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
  .debug_aranges
-                0x00000000000018b0       0x20 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+                0x00000000000018b8       0x20 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
  .debug_aranges
-                0x00000000000018d0       0x20 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+                0x00000000000018d8       0x20 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
  .debug_aranges
-                0x00000000000018f0       0x20 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+                0x00000000000018f8       0x20 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
  .debug_aranges
-                0x0000000000001910       0x20 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+                0x0000000000001918       0x20 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
  .debug_aranges
-                0x0000000000001930       0x20 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
+                0x0000000000001938       0x20 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
  .debug_aranges
-                0x0000000000001950       0x20 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
+                0x0000000000001958       0x20 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
  .debug_aranges
-                0x0000000000001970       0x20 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
+                0x0000000000001978       0x20 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
 
 .debug_rnglists
-                0x0000000000000000     0x12b4
+                0x0000000000000000     0x12bb
  .debug_rnglists
                 0x0000000000000000       0x13 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_rnglists
@@ -20134,93 +20138,93 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x0000000000000132       0x1a ./Core/Src/system_stm32wlxx.o
  .debug_rnglists
-                0x000000000000014c       0x2b ./Core/Src/at42qt1070/at42qt1070.o
+                0x000000000000014c       0x32 ./Core/Src/at42qt1070/at42qt1070.o
  .debug_rnglists
-                0x0000000000000177       0x32 ./Core/Src/at42qt1070/circ_buffer.o
+                0x000000000000017e       0x32 ./Core/Src/at42qt1070/circ_buffer.o
  .debug_rnglists
-                0x00000000000001a9       0x19 ./Core/Startup/startup_stm32wle5ccux.o
+                0x00000000000001b0       0x19 ./Core/Startup/startup_stm32wle5ccux.o
  .debug_rnglists
-                0x00000000000001c2      0x187 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+                0x00000000000001c9      0x187 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
  .debug_rnglists
-                0x0000000000000349       0xce ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+                0x0000000000000350       0xce ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
  .debug_rnglists
-                0x0000000000000417       0x72 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+                0x000000000000041e       0x72 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
  .debug_rnglists
-                0x0000000000000489       0x45 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+                0x0000000000000490       0x45 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
  .debug_rnglists
-                0x00000000000004ce      0x227 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+                0x00000000000004d5      0x227 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
  .debug_rnglists
-                0x00000000000006f5       0x35 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+                0x00000000000006fc       0x35 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
  .debug_rnglists
-                0x000000000000072a       0x91 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+                0x0000000000000731       0x91 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
  .debug_rnglists
-                0x00000000000007bb      0x15c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+                0x00000000000007c2      0x15c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
  .debug_rnglists
-                0x0000000000000917      0x18d ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+                0x000000000000091e      0x18d ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
  .debug_rnglists
-                0x0000000000000aa4      0x16e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+                0x0000000000000aab      0x16e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
  .debug_rnglists
-                0x0000000000000c12      0x328 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+                0x0000000000000c19      0x328 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
  .debug_rnglists
-                0x0000000000000f3a      0x147 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+                0x0000000000000f41      0x147 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
  .debug_rnglists
-                0x0000000000001081       0x14 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+                0x0000000000001088       0x14 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
  .debug_rnglists
-                0x0000000000001095       0x14 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+                0x000000000000109c       0x14 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
  .debug_rnglists
-                0x00000000000010a9       0x13 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+                0x00000000000010b0       0x13 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
  .debug_rnglists
-                0x00000000000010bc       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+                0x00000000000010c3       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
  .debug_rnglists
-                0x00000000000010d0       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+                0x00000000000010d7       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
  .debug_rnglists
-                0x00000000000010e4       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+                0x00000000000010eb       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
  .debug_rnglists
-                0x00000000000010f8       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+                0x00000000000010ff       0x14 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
  .debug_rnglists
-                0x000000000000110c       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+                0x0000000000001113       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
  .debug_rnglists
-                0x0000000000001120       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+                0x0000000000001127       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
  .debug_rnglists
-                0x0000000000001133       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+                0x000000000000113a       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
  .debug_rnglists
-                0x0000000000001147       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+                0x000000000000114e       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
  .debug_rnglists
-                0x000000000000115a       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+                0x0000000000001161       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
  .debug_rnglists
-                0x000000000000116e       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+                0x0000000000001175       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
  .debug_rnglists
-                0x0000000000001181       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+                0x0000000000001188       0x20 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
  .debug_rnglists
-                0x00000000000011a1       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+                0x00000000000011a8       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
  .debug_rnglists
-                0x00000000000011b5       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+                0x00000000000011bc       0x14 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
  .debug_rnglists
-                0x00000000000011c9       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+                0x00000000000011d0       0x13 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
  .debug_rnglists
-                0x00000000000011dc       0x13 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+                0x00000000000011e3       0x13 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
  .debug_rnglists
-                0x00000000000011ef       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+                0x00000000000011f6       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
  .debug_rnglists
-                0x0000000000001203       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+                0x000000000000120a       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
  .debug_rnglists
-                0x0000000000001217       0x13 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+                0x000000000000121e       0x13 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
  .debug_rnglists
-                0x000000000000122a       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+                0x0000000000001231       0x14 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
  .debug_rnglists
-                0x000000000000123e       0x14 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+                0x0000000000001245       0x14 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
  .debug_rnglists
-                0x0000000000001252       0x14 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+                0x0000000000001259       0x14 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
  .debug_rnglists
-                0x0000000000001266       0x14 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+                0x000000000000126d       0x14 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
  .debug_rnglists
-                0x000000000000127a       0x13 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+                0x0000000000001281       0x13 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
  .debug_rnglists
-                0x000000000000128d       0x14 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+                0x0000000000001294       0x14 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
  .debug_rnglists
-                0x00000000000012a1       0x13 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+                0x00000000000012a8       0x13 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
 
-.debug_macro    0x0000000000000000    0x1e852
+.debug_macro    0x0000000000000000    0x1e858
  .debug_macro   0x0000000000000000      0x357 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_macro   0x0000000000000357      0xaa8 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_macro   0x0000000000000dff       0x16 ./AZURE_RTOS/App/app_azure_rtos.o
@@ -20296,72 +20300,72 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x000000000001884a      0x293 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_macro   0x0000000000018add      0x377 ./Core/Src/app_threadx.o
  .debug_macro   0x0000000000018e54       0x22 ./Core/Src/app_threadx.o
- .debug_macro   0x0000000000018e76       0x88 ./Core/Src/app_threadx.o
- .debug_macro   0x0000000000018efe       0x10 ./Core/Src/app_threadx.o
- .debug_macro   0x0000000000018f0e      0x36b ./Core/Src/main.o
- .debug_macro   0x0000000000019279      0x311 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x000000000001958a       0x8e ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x0000000000019618       0x51 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x0000000000019669      0x174 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x00000000000197dd       0x5c ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x0000000000019839       0x61 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_macro   0x000000000001989a      0x21e ./Core/Src/stm32wlxx_hal_timebase_tim.o
- .debug_macro   0x0000000000019ab8      0x31b ./Core/Src/stm32wlxx_it.o
- .debug_macro   0x0000000000019dd3      0x21e ./Core/Src/system_stm32wlxx.o
- .debug_macro   0x0000000000019ff1      0x14f ./Core/Src/at42qt1070/at42qt1070.o
- .debug_macro   0x000000000001a140       0x16 ./Core/Src/at42qt1070/at42qt1070.o
- .debug_macro   0x000000000001a156      0x13d ./Core/Src/at42qt1070/circ_buffer.o
- .debug_macro   0x000000000001a293       0x10 ./Core/Src/at42qt1070/circ_buffer.o
- .debug_macro   0x000000000001a2a3      0x242 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
- .debug_macro   0x000000000001a4e5      0x21e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
- .debug_macro   0x000000000001a703      0x21e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
- .debug_macro   0x000000000001a921      0x224 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
- .debug_macro   0x000000000001ab45      0x2ea ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
- .debug_macro   0x000000000001ae2f      0x21e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
- .debug_macro   0x000000000001b04d      0x26c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
- .debug_macro   0x000000000001b2b9      0x230 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
- .debug_macro   0x000000000001b4e9      0x27e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .debug_macro   0x000000000001b767      0x230 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
- .debug_macro   0x000000000001b997      0x21f ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
- .debug_macro   0x000000000001bbb6      0x22a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
- .debug_macro   0x000000000001bde0      0x171 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
- .debug_macro   0x000000000001bf51      0x1bf ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c110       0x34 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c144       0x23 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c167       0x29 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c190       0x2f ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c1bf       0x35 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c1f4       0x29 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c21d       0x29 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c246       0x3b ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_macro   0x000000000001c281      0x17a ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
- .debug_macro   0x000000000001c3fb      0x171 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
- .debug_macro   0x000000000001c56c      0x171 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
- .debug_macro   0x000000000001c6dd      0x17a ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
- .debug_macro   0x000000000001c857      0x17a ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
- .debug_macro   0x000000000001c9d1      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_create.o
- .debug_macro   0x000000000001cb4b      0x177 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
- .debug_macro   0x000000000001ccc2      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
- .debug_macro   0x000000000001ce3c      0x168 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
- .debug_macro   0x000000000001cfa4      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
- .debug_macro   0x000000000001d11e      0x168 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
- .debug_macro   0x000000000001d286      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
- .debug_macro   0x000000000001d400      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
- .debug_macro   0x000000000001d57a      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
- .debug_macro   0x000000000001d6f4      0x171 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
- .debug_macro   0x000000000001d865      0x171 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
- .debug_macro   0x000000000001d9d6      0x171 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
- .debug_macro   0x000000000001db47      0x168 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
- .debug_macro   0x000000000001dcaf      0x168 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
- .debug_macro   0x000000000001de17      0x171 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
- .debug_macro   0x000000000001df88      0x183 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
- .debug_macro   0x000000000001e10b      0x183 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
- .debug_macro   0x000000000001e28e      0x17a ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
- .debug_macro   0x000000000001e408      0x168 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
- .debug_macro   0x000000000001e570      0x17a ./Middlewares/ST/threadx/common/src/txe_thread_create.o
- .debug_macro   0x000000000001e6ea      0x168 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+ .debug_macro   0x0000000000018e76       0x8e ./Core/Src/app_threadx.o
+ .debug_macro   0x0000000000018f04       0x10 ./Core/Src/app_threadx.o
+ .debug_macro   0x0000000000018f14      0x36b ./Core/Src/main.o
+ .debug_macro   0x000000000001927f      0x311 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x0000000000019590       0x8e ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x000000000001961e       0x51 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x000000000001966f      0x174 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x00000000000197e3       0x5c ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x000000000001983f       0x61 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_macro   0x00000000000198a0      0x21e ./Core/Src/stm32wlxx_hal_timebase_tim.o
+ .debug_macro   0x0000000000019abe      0x31b ./Core/Src/stm32wlxx_it.o
+ .debug_macro   0x0000000000019dd9      0x21e ./Core/Src/system_stm32wlxx.o
+ .debug_macro   0x0000000000019ff7      0x14f ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_macro   0x000000000001a146       0x16 ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_macro   0x000000000001a15c      0x13d ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_macro   0x000000000001a299       0x10 ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_macro   0x000000000001a2a9      0x242 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_macro   0x000000000001a4eb      0x21e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_macro   0x000000000001a709      0x21e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+ .debug_macro   0x000000000001a927      0x224 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_macro   0x000000000001ab4b      0x2ea ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ .debug_macro   0x000000000001ae35      0x21e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+ .debug_macro   0x000000000001b053      0x26c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+ .debug_macro   0x000000000001b2bf      0x230 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+ .debug_macro   0x000000000001b4ef      0x27e ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_macro   0x000000000001b76d      0x230 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ .debug_macro   0x000000000001b99d      0x21f ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+ .debug_macro   0x000000000001bbbc      0x22a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+ .debug_macro   0x000000000001bde6      0x171 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+ .debug_macro   0x000000000001bf57      0x1bf ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c116       0x34 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c14a       0x23 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c16d       0x29 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c196       0x2f ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c1c5       0x35 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c1fa       0x29 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c223       0x29 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c24c       0x3b ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_macro   0x000000000001c287      0x17a ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+ .debug_macro   0x000000000001c401      0x171 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+ .debug_macro   0x000000000001c572      0x171 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+ .debug_macro   0x000000000001c6e3      0x17a ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+ .debug_macro   0x000000000001c85d      0x17a ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+ .debug_macro   0x000000000001c9d7      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+ .debug_macro   0x000000000001cb51      0x177 ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+ .debug_macro   0x000000000001ccc8      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+ .debug_macro   0x000000000001ce42      0x168 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+ .debug_macro   0x000000000001cfaa      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+ .debug_macro   0x000000000001d124      0x168 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+ .debug_macro   0x000000000001d28c      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+ .debug_macro   0x000000000001d406      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+ .debug_macro   0x000000000001d580      0x17a ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+ .debug_macro   0x000000000001d6fa      0x171 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+ .debug_macro   0x000000000001d86b      0x171 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+ .debug_macro   0x000000000001d9dc      0x171 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .debug_macro   0x000000000001db4d      0x168 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+ .debug_macro   0x000000000001dcb5      0x168 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+ .debug_macro   0x000000000001de1d      0x171 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+ .debug_macro   0x000000000001df8e      0x183 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+ .debug_macro   0x000000000001e111      0x183 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+ .debug_macro   0x000000000001e294      0x17a ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+ .debug_macro   0x000000000001e40e      0x168 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+ .debug_macro   0x000000000001e576      0x17a ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+ .debug_macro   0x000000000001e6f0      0x168 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
 
-.debug_line     0x0000000000000000    0x22d16
+.debug_line     0x0000000000000000    0x22d86
  .debug_line    0x0000000000000000      0xa3e ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_line    0x0000000000000a3e      0xab6 ./Core/Src/app_threadx.o
  .debug_line    0x00000000000014f4      0xbfe ./Core/Src/main.o
@@ -20370,164 +20374,164 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x00000000000033a1      0xa56 ./Core/Src/stm32wlxx_it.o
  .debug_line    0x0000000000003df7      0x87b ./Core/Src/system_stm32wlxx.o
  .debug_line    0x0000000000004672       0x7f ./Core/Src/tx_initialize_low_level.o
- .debug_line    0x00000000000046f1      0x66c ./Core/Src/at42qt1070/at42qt1070.o
- .debug_line    0x0000000000004d5d      0x69c ./Core/Src/at42qt1070/circ_buffer.o
- .debug_line    0x00000000000053f9       0x7b ./Core/Startup/startup_stm32wle5ccux.o
- .debug_line    0x0000000000005474      0xee0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
- .debug_line    0x0000000000006354      0xd7b ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
- .debug_line    0x00000000000070cf      0xf2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
- .debug_line    0x0000000000007ff9      0xbf0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
- .debug_line    0x0000000000008be9     0x37a1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
- .debug_line    0x000000000000c38a      0xa03 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
- .debug_line    0x000000000000cd8d      0xa7a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
- .debug_line    0x000000000000d807      0xeba ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
- .debug_line    0x000000000000e6c1     0x16fc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .debug_line    0x000000000000fdbd     0x141c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
- .debug_line    0x00000000000111d9     0x3c21 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
- .debug_line    0x0000000000014dfa     0x1cd6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
- .debug_line    0x0000000000016ad0      0x6e0 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
- .debug_line    0x00000000000171b0      0x6d7 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_line    0x0000000000017887      0x676 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
- .debug_line    0x0000000000017efd      0x6f5 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
- .debug_line    0x00000000000185f2      0x6a2 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
- .debug_line    0x0000000000018c94      0x71a ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
- .debug_line    0x00000000000193ae      0x6ca ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
- .debug_line    0x0000000000019a78      0x766 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
- .debug_line    0x000000000001a1de      0x66c ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
- .debug_line    0x000000000001a84a      0x6e3 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
- .debug_line    0x000000000001af2d      0x688 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
- .debug_line    0x000000000001b5b5      0x717 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
- .debug_line    0x000000000001bccc      0x687 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
- .debug_line    0x000000000001c353      0x7cf ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
- .debug_line    0x000000000001cb22      0x807 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
- .debug_line    0x000000000001d329      0x6af ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
- .debug_line    0x000000000001d9d8      0x6a0 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
- .debug_line    0x000000000001e078      0x67f ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
- .debug_line    0x000000000001e6f7      0x687 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
- .debug_line    0x000000000001ed7e      0x686 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
- .debug_line    0x000000000001f404      0x663 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
- .debug_line    0x000000000001fa67      0x7c6 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
- .debug_line    0x000000000002022d      0x755 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
- .debug_line    0x0000000000020982      0x74c ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
- .debug_line    0x00000000000210ce      0x690 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
- .debug_line    0x000000000002175e      0x646 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
- .debug_line    0x0000000000021da4      0x792 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
- .debug_line    0x0000000000022536      0x643 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
- .debug_line    0x0000000000022b79       0x94 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
- .debug_line    0x0000000000022c0d       0x63 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
- .debug_line    0x0000000000022c70       0xa6 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
+ .debug_line    0x00000000000046f1      0x6dc ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_line    0x0000000000004dcd      0x69c ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_line    0x0000000000005469       0x7b ./Core/Startup/startup_stm32wle5ccux.o
+ .debug_line    0x00000000000054e4      0xee0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_line    0x00000000000063c4      0xd7b ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_line    0x000000000000713f      0xf2a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+ .debug_line    0x0000000000008069      0xbf0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_line    0x0000000000008c59     0x37a1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ .debug_line    0x000000000000c3fa      0xa03 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+ .debug_line    0x000000000000cdfd      0xa7a ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+ .debug_line    0x000000000000d877      0xeba ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+ .debug_line    0x000000000000e731     0x16fc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_line    0x000000000000fe2d     0x141c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ .debug_line    0x0000000000011249     0x3c21 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+ .debug_line    0x0000000000014e6a     0x1cd6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+ .debug_line    0x0000000000016b40      0x6e0 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+ .debug_line    0x0000000000017220      0x6d7 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_line    0x00000000000178f7      0x676 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+ .debug_line    0x0000000000017f6d      0x6f5 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+ .debug_line    0x0000000000018662      0x6a2 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+ .debug_line    0x0000000000018d04      0x71a ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+ .debug_line    0x000000000001941e      0x6ca ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+ .debug_line    0x0000000000019ae8      0x766 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+ .debug_line    0x000000000001a24e      0x66c ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+ .debug_line    0x000000000001a8ba      0x6e3 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+ .debug_line    0x000000000001af9d      0x688 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+ .debug_line    0x000000000001b625      0x717 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+ .debug_line    0x000000000001bd3c      0x687 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+ .debug_line    0x000000000001c3c3      0x7cf ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+ .debug_line    0x000000000001cb92      0x807 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+ .debug_line    0x000000000001d399      0x6af ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+ .debug_line    0x000000000001da48      0x6a0 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+ .debug_line    0x000000000001e0e8      0x67f ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+ .debug_line    0x000000000001e767      0x687 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .debug_line    0x000000000001edee      0x686 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+ .debug_line    0x000000000001f474      0x663 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+ .debug_line    0x000000000001fad7      0x7c6 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+ .debug_line    0x000000000002029d      0x755 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+ .debug_line    0x00000000000209f2      0x74c ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+ .debug_line    0x000000000002113e      0x690 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+ .debug_line    0x00000000000217ce      0x646 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+ .debug_line    0x0000000000021e14      0x792 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+ .debug_line    0x00000000000225a6      0x643 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+ .debug_line    0x0000000000022be9       0x94 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
+ .debug_line    0x0000000000022c7d       0x63 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
+ .debug_line    0x0000000000022ce0       0xa6 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
 
-.debug_str      0x0000000000000000    0xac642
+.debug_str      0x0000000000000000    0xac772
  .debug_str     0x0000000000000000    0xa33bb ./AZURE_RTOS/App/app_azure_rtos.o
                                       0xa3a72 (size before relaxing)
- .debug_str     0x00000000000a33bb      0x90f ./Core/Src/app_threadx.o
-                                      0xa4308 (size before relaxing)
- .debug_str     0x00000000000a3cca     0x1190 ./Core/Src/main.o
-                                      0xa4f24 (size before relaxing)
- .debug_str     0x00000000000a4e5a      0x207 ./Core/Src/stm32wlxx_hal_msp.o
-                                      0xa041c (size before relaxing)
- .debug_str     0x00000000000a5061      0x111 ./Core/Src/stm32wlxx_hal_timebase_tim.o
+ .debug_str     0x00000000000a33bb      0x933 ./Core/Src/app_threadx.o
+                                      0xa432c (size before relaxing)
+ .debug_str     0x00000000000a3cee     0x119c ./Core/Src/main.o
+                                      0xa4f54 (size before relaxing)
+ .debug_str     0x00000000000a4e8a      0x207 ./Core/Src/stm32wlxx_hal_msp.o
+                                      0xa0440 (size before relaxing)
+ .debug_str     0x00000000000a5091      0x111 ./Core/Src/stm32wlxx_hal_timebase_tim.o
                                       0x9cea1 (size before relaxing)
- .debug_str     0x00000000000a5172      0x136 ./Core/Src/stm32wlxx_it.o
-                                      0xa0096 (size before relaxing)
- .debug_str     0x00000000000a52a8       0x9e ./Core/Src/system_stm32wlxx.o
+ .debug_str     0x00000000000a51a2      0x136 ./Core/Src/stm32wlxx_it.o
+                                      0xa00ba (size before relaxing)
+ .debug_str     0x00000000000a52d8       0x9e ./Core/Src/system_stm32wlxx.o
                                       0x9c389 (size before relaxing)
- .debug_str     0x00000000000a5346       0x32 ./Core/Src/tx_initialize_low_level.o
+ .debug_str     0x00000000000a5376       0x32 ./Core/Src/tx_initialize_low_level.o
                                          0x79 (size before relaxing)
- .debug_str     0x00000000000a5378      0x30f ./Core/Src/at42qt1070/at42qt1070.o
-                                       0x781b (size before relaxing)
- .debug_str     0x00000000000a5687       0x74 ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_str     0x00000000000a53a8      0x41b ./Core/Src/at42qt1070/at42qt1070.o
+                                       0x7974 (size before relaxing)
+ .debug_str     0x00000000000a57c3       0x74 ./Core/Src/at42qt1070/circ_buffer.o
                                        0x72cb (size before relaxing)
- .debug_str     0x00000000000a56fb       0x28 ./Core/Startup/startup_stm32wle5ccux.o
+ .debug_str     0x00000000000a5837       0x28 ./Core/Startup/startup_stm32wle5ccux.o
                                          0x7b (size before relaxing)
- .debug_str     0x00000000000a5723      0x7cb ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_str     0x00000000000a585f      0x7bf ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
                                       0x9d03b (size before relaxing)
- .debug_str     0x00000000000a5eee      0x362 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_str     0x00000000000a601e      0x362 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
                                       0x9caf9 (size before relaxing)
- .debug_str     0x00000000000a6250      0x2a1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+ .debug_str     0x00000000000a6380      0x2a1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
                                       0x9c78b (size before relaxing)
- .debug_str     0x00000000000a64f1      0x128 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_str     0x00000000000a6621      0x128 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
                                       0x9c46f (size before relaxing)
- .debug_str     0x00000000000a6619      0xe45 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ .debug_str     0x00000000000a6749      0xe45 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
                                       0x9d6d1 (size before relaxing)
- .debug_str     0x00000000000a745e       0xb8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+ .debug_str     0x00000000000a758e       0xb8 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
                                       0x9c8cb (size before relaxing)
- .debug_str     0x00000000000a7516      0x4d4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+ .debug_str     0x00000000000a7646      0x4d4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
                                       0x9c7e0 (size before relaxing)
- .debug_str     0x00000000000a79ea      0x635 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+ .debug_str     0x00000000000a7b1a      0x635 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
                                       0x9cb2d (size before relaxing)
- .debug_str     0x00000000000a801f      0x9f1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_str     0x00000000000a814f      0x9f1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
                                       0x9d0a4 (size before relaxing)
- .debug_str     0x00000000000a8a10      0x569 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ .debug_str     0x00000000000a8b40      0x569 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
                                       0x9cc78 (size before relaxing)
- .debug_str     0x00000000000a8f79      0xec0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+ .debug_str     0x00000000000a90a9      0xec0 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
                                       0x9d80f (size before relaxing)
- .debug_str     0x00000000000a9e39      0x7c3 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+ .debug_str     0x00000000000a9f69      0x7c3 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
                                       0x9d2a4 (size before relaxing)
- .debug_str     0x00000000000aa5fc      0x2bb ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+ .debug_str     0x00000000000aa72c      0x2bb ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
                                        0x9ce2 (size before relaxing)
- .debug_str     0x00000000000aa8b7      0xf81 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_str     0x00000000000aa9e7      0xf81 ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
                                        0xafab (size before relaxing)
- .debug_str     0x00000000000ab838       0xa2 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+ .debug_str     0x00000000000ab968       0xa2 ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
                                        0x9bf8 (size before relaxing)
- .debug_str     0x00000000000ab8da       0xae ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+ .debug_str     0x00000000000aba0a       0xae ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
                                        0xa1a6 (size before relaxing)
- .debug_str     0x00000000000ab988       0x80 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+ .debug_str     0x00000000000abab8       0x80 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
                                        0x9bd4 (size before relaxing)
- .debug_str     0x00000000000aba08       0x87 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+ .debug_str     0x00000000000abb38       0x87 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
                                        0xa246 (size before relaxing)
- .debug_str     0x00000000000aba8f       0x4a ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+ .debug_str     0x00000000000abbbf       0x4a ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
                                        0xa215 (size before relaxing)
- .debug_str     0x00000000000abad9      0x14a ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+ .debug_str     0x00000000000abc09      0x14a ./Middlewares/ST/threadx/common/src/tx_thread_create.o
                                        0xa368 (size before relaxing)
- .debug_str     0x00000000000abc23      0x10a ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+ .debug_str     0x00000000000abd53      0x10a ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
                                        0xa20d (size before relaxing)
- .debug_str     0x00000000000abd2d       0x4a ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+ .debug_str     0x00000000000abe5d       0x4a ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
                                        0xa239 (size before relaxing)
- .debug_str     0x00000000000abd77       0x3d ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+ .debug_str     0x00000000000abea7       0x3d ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
                                        0xa04d (size before relaxing)
- .debug_str     0x00000000000abdb4       0x54 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+ .debug_str     0x00000000000abee4       0x54 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
                                        0xa18f (size before relaxing)
- .debug_str     0x00000000000abe08       0x78 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+ .debug_str     0x00000000000abf38       0x78 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
                                        0xa09c (size before relaxing)
- .debug_str     0x00000000000abe80       0x7a ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+ .debug_str     0x00000000000abfb0       0x7a ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
                                        0xa250 (size before relaxing)
- .debug_str     0x00000000000abefa       0x8a ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+ .debug_str     0x00000000000ac02a       0x8a ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
                                        0xa284 (size before relaxing)
- .debug_str     0x00000000000abf84       0x6f ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+ .debug_str     0x00000000000ac0b4       0x6f ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
                                        0xa18a (size before relaxing)
- .debug_str     0x00000000000abff3       0x47 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+ .debug_str     0x00000000000ac123       0x47 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
                                        0xa0ca (size before relaxing)
- .debug_str     0x00000000000ac03a       0x60 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+ .debug_str     0x00000000000ac16a       0x60 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
                                        0xa0b2 (size before relaxing)
- .debug_str     0x00000000000ac09a      0x1e1 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .debug_str     0x00000000000ac1ca      0x1e1 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
                                        0xa209 (size before relaxing)
- .debug_str     0x00000000000ac27b       0x70 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+ .debug_str     0x00000000000ac3ab       0x70 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
                                        0x9565 (size before relaxing)
- .debug_str     0x00000000000ac2eb       0x42 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+ .debug_str     0x00000000000ac41b       0x42 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
                                        0x9504 (size before relaxing)
- .debug_str     0x00000000000ac32d       0x7e ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+ .debug_str     0x00000000000ac45d       0x7e ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
                                        0xa1b2 (size before relaxing)
- .debug_str     0x00000000000ac3ab       0x54 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+ .debug_str     0x00000000000ac4db       0x54 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
                                        0xa4ea (size before relaxing)
- .debug_str     0x00000000000ac3ff       0x59 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+ .debug_str     0x00000000000ac52f       0x59 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
                                        0xa40b (size before relaxing)
- .debug_str     0x00000000000ac458       0x39 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+ .debug_str     0x00000000000ac588       0x39 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
                                        0xa1d1 (size before relaxing)
- .debug_str     0x00000000000ac491       0x39 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+ .debug_str     0x00000000000ac5c1       0x39 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
                                        0x9a7d (size before relaxing)
- .debug_str     0x00000000000ac4ca       0x67 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+ .debug_str     0x00000000000ac5fa       0x67 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
                                        0xa332 (size before relaxing)
- .debug_str     0x00000000000ac531       0x39 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+ .debug_str     0x00000000000ac661       0x39 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
                                        0x9f95 (size before relaxing)
- .debug_str     0x00000000000ac56a       0x47 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
+ .debug_str     0x00000000000ac69a       0x47 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_schedule.o
                                          0x9a (size before relaxing)
- .debug_str     0x00000000000ac5b1       0x4a ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
+ .debug_str     0x00000000000ac6e1       0x4a ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_thread_stack_build.o
                                          0x9d (size before relaxing)
- .debug_str     0x00000000000ac5fb       0x47 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
+ .debug_str     0x00000000000ac72b       0x47 ./Middlewares/ST/threadx/ports/cortex_m4/gnu/src/tx_timer_interrupt.o
                                          0x9a (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x5f84
+.debug_frame    0x0000000000000000     0x5fa8
  .debug_frame   0x0000000000000000       0x34 ./AZURE_RTOS/App/app_azure_rtos.o
  .debug_frame   0x0000000000000034       0x90 ./Core/Src/app_threadx.o
  .debug_frame   0x00000000000000c4      0x198 ./Core/Src/main.o
@@ -20535,51 +20539,51 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_frame   0x000000000000034c       0x9c ./Core/Src/stm32wlxx_hal_timebase_tim.o
  .debug_frame   0x00000000000003e8      0x118 ./Core/Src/stm32wlxx_it.o
  .debug_frame   0x0000000000000500       0x58 ./Core/Src/system_stm32wlxx.o
- .debug_frame   0x0000000000000558       0xbc ./Core/Src/at42qt1070/at42qt1070.o
- .debug_frame   0x0000000000000614       0xfc ./Core/Src/at42qt1070/circ_buffer.o
- .debug_frame   0x0000000000000710      0x860 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
- .debug_frame   0x0000000000000f70      0x498 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
- .debug_frame   0x0000000000001408      0x24c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
- .debug_frame   0x0000000000001654      0x174 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
- .debug_frame   0x00000000000017c8      0xc34 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
- .debug_frame   0x00000000000023fc      0x100 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
- .debug_frame   0x00000000000024fc      0x31c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
- .debug_frame   0x0000000000002818      0x7cc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
- .debug_frame   0x0000000000002fe4      0x874 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .debug_frame   0x0000000000003858      0x7ec ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
- .debug_frame   0x0000000000004044     0x121c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
- .debug_frame   0x0000000000005260      0x6fc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
- .debug_frame   0x000000000000595c       0x34 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
- .debug_frame   0x0000000000005990       0x2c ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
- .debug_frame   0x00000000000059bc       0x2c ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
- .debug_frame   0x00000000000059e8       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
- .debug_frame   0x0000000000005a1c       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
- .debug_frame   0x0000000000005a50       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
- .debug_frame   0x0000000000005a84       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
- .debug_frame   0x0000000000005ab8       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
- .debug_frame   0x0000000000005aec       0x2c ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
- .debug_frame   0x0000000000005b18       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
- .debug_frame   0x0000000000005b4c       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
- .debug_frame   0x0000000000005b80       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
- .debug_frame   0x0000000000005bb4       0x38 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
- .debug_frame   0x0000000000005bec       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
- .debug_frame   0x0000000000005c20       0x38 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
- .debug_frame   0x0000000000005c58       0x38 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
- .debug_frame   0x0000000000005c90       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
- .debug_frame   0x0000000000005cc4       0x34 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
- .debug_frame   0x0000000000005cf8       0x38 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
- .debug_frame   0x0000000000005d30       0x38 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
- .debug_frame   0x0000000000005d68       0x38 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
- .debug_frame   0x0000000000005da0       0x34 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
- .debug_frame   0x0000000000005dd4       0x34 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
- .debug_frame   0x0000000000005e08       0x34 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
- .debug_frame   0x0000000000005e3c       0x34 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
- .debug_frame   0x0000000000005e70       0x34 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
- .debug_frame   0x0000000000005ea4       0x38 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
- .debug_frame   0x0000000000005edc       0x34 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
- .debug_frame   0x0000000000005f10       0x20 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memset.o)
- .debug_frame   0x0000000000005f30       0x2c C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-init.o)
- .debug_frame   0x0000000000005f5c       0x28 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x0000000000000558       0xe0 ./Core/Src/at42qt1070/at42qt1070.o
+ .debug_frame   0x0000000000000638       0xfc ./Core/Src/at42qt1070/circ_buffer.o
+ .debug_frame   0x0000000000000734      0x860 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_frame   0x0000000000000f94      0x498 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_frame   0x000000000000142c      0x24c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_dma.o
+ .debug_frame   0x0000000000001678      0x174 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_frame   0x00000000000017ec      0xc34 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c.o
+ .debug_frame   0x0000000000002420      0x100 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_i2c_ex.o
+ .debug_frame   0x0000000000002520      0x31c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.o
+ .debug_frame   0x000000000000283c      0x7cc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr_ex.o
+ .debug_frame   0x0000000000003008      0x874 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_frame   0x000000000000387c      0x7ec ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.o
+ .debug_frame   0x0000000000004068     0x121c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim.o
+ .debug_frame   0x0000000000005284      0x6fc ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o
+ .debug_frame   0x0000000000005980       0x34 ./Middlewares/ST/threadx/common/src/tx_byte_pool_create.o
+ .debug_frame   0x00000000000059b4       0x2c ./Middlewares/ST/threadx/common/src/tx_initialize_high_level.o
+ .debug_frame   0x00000000000059e0       0x2c ./Middlewares/ST/threadx/common/src/tx_initialize_kernel_enter.o
+ .debug_frame   0x0000000000005a0c       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_cleanup.o
+ .debug_frame   0x0000000000005a40       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_create.o
+ .debug_frame   0x0000000000005a74       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_get.o
+ .debug_frame   0x0000000000005aa8       0x34 ./Middlewares/ST/threadx/common/src/tx_semaphore_put.o
+ .debug_frame   0x0000000000005adc       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_create.o
+ .debug_frame   0x0000000000005b10       0x2c ./Middlewares/ST/threadx/common/src/tx_thread_initialize.o
+ .debug_frame   0x0000000000005b3c       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_resume.o
+ .debug_frame   0x0000000000005b70       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_shell_entry.o
+ .debug_frame   0x0000000000005ba4       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_sleep.o
+ .debug_frame   0x0000000000005bd8       0x38 ./Middlewares/ST/threadx/common/src/tx_thread_system_preempt_check.o
+ .debug_frame   0x0000000000005c10       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_system_resume.o
+ .debug_frame   0x0000000000005c44       0x38 ./Middlewares/ST/threadx/common/src/tx_thread_system_suspend.o
+ .debug_frame   0x0000000000005c7c       0x38 ./Middlewares/ST/threadx/common/src/tx_thread_time_slice.o
+ .debug_frame   0x0000000000005cb4       0x34 ./Middlewares/ST/threadx/common/src/tx_thread_timeout.o
+ .debug_frame   0x0000000000005ce8       0x34 ./Middlewares/ST/threadx/common/src/tx_timer_expiration_process.o
+ .debug_frame   0x0000000000005d1c       0x38 ./Middlewares/ST/threadx/common/src/tx_timer_initialize.o
+ .debug_frame   0x0000000000005d54       0x38 ./Middlewares/ST/threadx/common/src/tx_timer_system_activate.o
+ .debug_frame   0x0000000000005d8c       0x38 ./Middlewares/ST/threadx/common/src/tx_timer_system_deactivate.o
+ .debug_frame   0x0000000000005dc4       0x34 ./Middlewares/ST/threadx/common/src/tx_timer_thread_entry.o
+ .debug_frame   0x0000000000005df8       0x34 ./Middlewares/ST/threadx/common/src/txe_byte_pool_create.o
+ .debug_frame   0x0000000000005e2c       0x34 ./Middlewares/ST/threadx/common/src/txe_semaphore_create.o
+ .debug_frame   0x0000000000005e60       0x34 ./Middlewares/ST/threadx/common/src/txe_semaphore_get.o
+ .debug_frame   0x0000000000005e94       0x34 ./Middlewares/ST/threadx/common/src/txe_semaphore_put.o
+ .debug_frame   0x0000000000005ec8       0x38 ./Middlewares/ST/threadx/common/src/txe_thread_create.o
+ .debug_frame   0x0000000000005f00       0x34 ./Middlewares/ST/threadx/common/src/txe_thread_resume.o
+ .debug_frame   0x0000000000005f34       0x20 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memset.o)
+ .debug_frame   0x0000000000005f54       0x2c C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-init.o)
+ .debug_frame   0x0000000000005f80       0x28 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_line_str
                 0x0000000000000000      0x109

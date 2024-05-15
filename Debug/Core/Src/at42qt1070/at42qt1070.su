@@ -1,5 +1,6 @@
-../Core/Src/at42qt1070/at42qt1070.c:91:6:at42qt1070_init	24	static
-../Core/Src/at42qt1070/at42qt1070.c:105:6:at42qt1070_new_event_check	4	static
-../Core/Src/at42qt1070/at42qt1070.c:110:6:at42qt1070_key_stete_read	8	static
-../Core/Src/at42qt1070/at42qt1070.c:142:6:at42qt1070_callback	16	static
-../Core/Src/at42qt1070/at42qt1070.c:159:9:at42qt1070_key_stete_get	16	static
+../Core/Src/at42qt1070/at42qt1070.c:93:6:at42qt1070_init	24	static
+../Core/Src/at42qt1070/at42qt1070.c:109:6:at42qt1070_new_event_check	4	static
+../Core/Src/at42qt1070/at42qt1070.c:114:6:at42qt1070_key_stete_read	8	static
+../Core/Src/at42qt1070/at42qt1070.c:146:6:at42qt1070_callback	16	static
+../Core/Src/at42qt1070/at42qt1070.c:167:9:at42qt1070_key_stete_get	16	static
+../Core/Src/at42qt1070/at42qt1070.c:180:27:at42qt1070_key_event_type_handler	24	static

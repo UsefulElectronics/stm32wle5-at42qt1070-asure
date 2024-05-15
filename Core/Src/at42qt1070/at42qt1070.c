@@ -88,7 +88,7 @@ at42qt1070_t at42qt1070_handler = {0};
 /* MACROS --------------------------------------------------------------------*/
 
 /* PRIVATE FUNCTIONS DECLARATION ---------------------------------------------*/
-
+static at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state);
 /* FUNCTION PROTOTYPES -------------------------------------------------------*/
 void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t* change_state_read, uint32_t* get_tick)
 {
@@ -149,7 +149,9 @@ bool at42qt1070_callback(void)
 	{
 		bool new_event = false;
 
-		bool pin_state = at42qt1070_handler.change_pin_read();
+		at42qt1070_change_pin_e pin_state = at42qt1070_handler.change_pin_read();
+
+		at42qt1070_event_e event_type = at42qt1070_key_event_type_handler(pin_state);
 
 		if(!pin_state)
 		{
@@ -175,16 +177,19 @@ uint8_t at42qt1070_key_stete_get(void)
 	return *key_number;
 }
 
-at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state)
+static at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state)
 {
 	at42qt1070_event_e key_event_type = SENSOR_KEY_IDLE;
+
+	static uint32_t long_pressed_timer = 0;
 
 	if(SENSOR_CHANGE_PIN_LOW == current_change_pin_state &&
 	   SENSOR_KEY_IDLE == key_event_type)
 	{
 		key_event_type = SENSOR_KEY_PRESSED;
-		//TODO
-		//Update timer for SENSOR_KEY_LONG_PRESSED event detection .
+		//Update timer for SENSOR_KEY_LONG_PRESSED event detection.
+		long_pressed_timer = at42qt1070_handler.get_tick();
+
 	}
 	else if(SENSOR_CHANGE_PIN_HIGH == current_change_pin_state &&
 			SENSOR_KEY_PRESSED == key_event_type)
@@ -199,10 +204,12 @@ at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_sta
 	else if(SENSOR_CHANGE_PIN_LOW == current_change_pin_state &&
 			SENSOR_KEY_PRESSED == key_event_type)
 	{
-		//TODO
 		//check the spent time since SENSOR_KEY_PRESSED event is first detected.
+		if(at42qt1070_handler.get_tick() - long_pressed_timer > AT42QT1070_LONG_PRESSED_PERIOD)
+		{
+			key_event_type = SENSOR_KEY_LONG_PRESSED;
+		}
 
-		key_event_type = SENSOR_KEY_IDLE;
 	}
 	return key_event_type;
 }
