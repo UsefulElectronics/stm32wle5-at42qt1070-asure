@@ -251,18 +251,6 @@ uint8_t main_key_status_read(void)
 		key_status = at42qt1070_key_stete_get();
 	}
 
-//	uint8_t key_status_address = 3;
-//
-//	uint8_t key_status = 0;
-//
-//	HAL_I2C_GetState(&hi2c1);
-//
-//	key_status = HAL_I2C_IsDeviceReady(&hi2c1, AT42QT1070_SLAVE_ADDRESS, 100, 1000);
-//
-//	HAL_I2C_Master_Transmit(&hi2c1, AT42QT1070_SLAVE_ADDRESS, &key_status_address, 1, 1000);
-//
-//	HAL_I2C_Master_Receive(&hi2c1, AT42QT1070_SLAVE_ADDRESS, &key_status, 1, 1000);
-
 	return key_status;
 }
 

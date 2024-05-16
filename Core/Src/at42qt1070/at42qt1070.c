@@ -73,8 +73,8 @@ typedef struct
 	uint8_t	(*i2c_send)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	uint8_t	(*i2c_receive)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	uint8_t	(*change_pin_read)(void);
-	uint32_t(*get_tick)(void);
 	uint8_t key_buffer;
+	uint32_t(*get_tick)(void);
 	const struct register_set_t *register_address;
 	at42qt1070_state_t  state;
 	circ_buffer_t circ_buffer;
@@ -179,7 +179,7 @@ uint8_t at42qt1070_key_stete_get(void)
 
 static at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state)
 {
-	at42qt1070_event_e key_event_type = SENSOR_KEY_IDLE;
+	static at42qt1070_event_e key_event_type = SENSOR_KEY_IDLE;
 
 	static uint32_t long_pressed_timer = 0;
 

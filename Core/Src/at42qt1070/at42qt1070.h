@@ -56,7 +56,7 @@
 #define AT42QT1070_IDLE_EVENT			0x01
 #define AT42QT1070_NEW_EVENT			0x00
 /// Timing
-#define AT42QT1070_LONG_PRESSED_PERIOD	2000	// 1 seconds
+#define AT42QT1070_LONG_PRESSED_PERIOD	200	// 2 seconds
 
 /* ENUMORATIONS --------------------------------------------------------------*/
 typedef enum

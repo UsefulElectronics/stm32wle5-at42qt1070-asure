@@ -154,8 +154,6 @@ static void thread_new_state_update(ULONG thread_input)
 
     		if(key)
     		{
-//    			tx_mutex_get(&periodic_read_mutex, TX_NO_WAIT);
-
     			tx_semaphore_put(&periodic_read_semaphore);
     		}
     	}
