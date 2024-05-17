@@ -103,6 +103,10 @@ void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t*
 	at42qt1070_handler.state.all 		= 0;
 
 	at42qt1070_handler.register_address = &register_set;
+
+	at42qt1070_reset();
+
+	at42qt1070_calibrate();
 }
 
 
@@ -175,6 +179,28 @@ uint8_t at42qt1070_key_stete_get(void)
 
 
 	return *key_number;
+}
+
+void at42qt1070_calibrate(void)
+{
+	const uint8_t packet_size = AT42QT1070_REGISTER_WEDTH * 2;
+
+	uint8_t temp_buffer[2] = {at42qt1070_handler.register_address->at42qt1070_calibrate, 1};
+
+	at42qt1070_handler.i2c_send(AT42QT1070_SLAVE_ADDRESS,
+								temp_buffer,
+								packet_size);
+}
+
+void at42qt1070_reset(void)
+{
+	const uint8_t packet_size = AT42QT1070_REGISTER_WEDTH * 2;
+
+	uint8_t temp_buffer[2] = {at42qt1070_handler.register_address->at42qt1070_reset, 1};
+
+	at42qt1070_handler.i2c_send(AT42QT1070_SLAVE_ADDRESS,
+								temp_buffer,
+								packet_size);
 }
 
 static at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state)

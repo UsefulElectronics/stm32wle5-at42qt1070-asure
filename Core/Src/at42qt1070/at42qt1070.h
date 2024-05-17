@@ -99,8 +99,11 @@ void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t*
 
 bool at42qt1070_callback(void);
 
-
 uint8_t at42qt1070_key_stete_get(void);
+
+void at42qt1070_calibrate(void);
+
+void at42qt1070_reset(void);
 
 
 #endif /* SRC_AT42QT1070_H_ */

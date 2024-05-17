@@ -174,14 +174,14 @@ static void thread_periodic_read(ULONG thread_input)
 	/* Your thread code here */
 	uint8_t key = 0;
 
-
+	key = main_key_status_read();
 
 	while (1)
 	{
 
-		key = main_key_status_read();
 
-		if(tx_semaphore_get(&periodic_read_semaphore, TX_WAIT_FOREVER) == TX_SUCCESS)
+
+		if(tx_semaphore_get(&periodic_read_semaphore, TX_NO_WAIT) == TX_SUCCESS)
 		{
 			key = main_key_status_read();
 
@@ -201,7 +201,7 @@ static void thread_periodic_read(ULONG thread_input)
 		/* Thread actions */
 //    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
 //
-//    	key = main_key_status_read();
+		main_key_status_read();
 //
         tx_thread_sleep(5); // Example: Sleep for 100 ticks
 	}
