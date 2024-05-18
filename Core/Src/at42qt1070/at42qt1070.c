@@ -73,6 +73,7 @@ typedef struct
 	uint8_t	(*i2c_send)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	uint8_t	(*i2c_receive)(uint16_t slave_address, uint8_t *data_buffer, uint16_t size);
 	uint8_t	(*change_pin_read)(void);
+	uint8_t	(*change_pin_read)(void);
 	uint8_t key_buffer;
 	uint32_t(*get_tick)(void);
 	const struct register_set_t *register_address;
@@ -237,6 +238,24 @@ static at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_
 		}
 
 	}
+	else if(SENSOR_CHANGE_PIN_HIGH == current_change_pin_state &&
+			SENSOR_KEY_LONG_PRESSED == key_event_type)
+	{
+		key_event_type = SENSOR_KEY_RELEASE;
+	}
+
 	return key_event_type;
+}
+
+static at42qt1070_event_e at42qt1070_event_report(void)
+{
+//	uint8_t key_status = 0;
+//
+//	if(at42qt1070_callback())
+//	{
+//		key_status = at42qt1070_key_stete_get();
+//	}
+//
+//	return key_status;
 }
 /*************************************** USEFUL ELECTRONICS*****END OF FILE****/

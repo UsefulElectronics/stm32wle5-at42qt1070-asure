@@ -5,4 +5,4 @@
 ../Core/Src/at42qt1070/at42qt1070.c:171:9:at42qt1070_key_stete_get	1
 ../Core/Src/at42qt1070/at42qt1070.c:184:6:at42qt1070_calibrate	1
 ../Core/Src/at42qt1070/at42qt1070.c:195:6:at42qt1070_reset	1
-../Core/Src/at42qt1070/at42qt1070.c:206:27:at42qt1070_key_event_type_handler	10
+../Core/Src/at42qt1070/at42qt1070.c:206:27:at42qt1070_key_event_type_handler	12
