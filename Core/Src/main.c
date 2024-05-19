@@ -57,7 +57,15 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint32_t led_array[MAIN_LED_COUNT][2] =
+{
+	{LED1_Pin,GPIOB},
+	{LED2_Pin,GPIOB},
+	{LED3_Pin,GPIOB},
+	{LED4_Pin,GPIOA},
+	{LED5_Pin,GPIOA},
+	{LED6_Pin,GPIOB}
+};
 /* USER CODE END 0 */
 
 /**
@@ -94,6 +102,8 @@ int main(void)
 		  	  	  main_i2c_receive,
 				  main_change_pin_read,
 				  HAL_GetTick);
+
+
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();
@@ -214,18 +224,28 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_PIN_GPIO_Port, LED_PIN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LED3_Pin|LED2_Pin|LED1_Pin|LED6_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : LED_PIN_Pin */
-  GPIO_InitStruct.Pin = LED_PIN_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, LED_PIN_Pin|LED5_Pin|LED4_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : LED3_Pin LED2_Pin LED1_Pin LED6_Pin */
+  GPIO_InitStruct.Pin = LED3_Pin|LED2_Pin|LED1_Pin|LED6_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_PIN_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : LED_PIN_Pin LED5_Pin LED4_Pin */
+  GPIO_InitStruct.Pin = LED_PIN_Pin|LED5_Pin|LED4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB12 */
   GPIO_InitStruct.Pin = GPIO_PIN_12;
@@ -270,9 +290,31 @@ GPIO_PinState main_change_pin_read(void)
 	return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12);
 }
 
+
+
 void main_interrupt_callback(void)
 {
 	tx_semaphore_put(&external_gpio_semaphore);
+}
+
+void main_led_control(uint8_t pin_number)
+{
+	static uint8_t gpio_state[MAIN_LED_COUNT] = {0};
+
+	gpio_state[pin_number] ^= 1;
+
+	HAL_GPIO_WritePin(led_array[pin_number][1], led_array[pin_number][0],  gpio_state[pin_number]);
+}
+
+uint8_t main_bit_2_order(uint8_t bit_value)
+{
+	uint8_t shift_count = 0;
+	while(bit_value != 1)
+	{
+		++shift_count;
+		bit_value = bit_value >> 1;
+	}
+	return shift_count;
 }
 /* USER CODE END 4 */
 
@@ -289,8 +331,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM17)
-  {
+  if (htim->Instance == TIM17) {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */

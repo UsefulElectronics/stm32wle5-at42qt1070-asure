@@ -1,4 +1,4 @@
 ../Core/Src/app_threadx.c:77:6:App_ThreadX_Init	56	static
 ../Core/Src/app_threadx.c:123:6:MX_ThreadX_Init	8	static
 ../Core/Src/app_threadx.c:138:13:thread_new_state_update	24	static
-../Core/Src/app_threadx.c:172:13:thread_periodic_read	24	static
+../Core/Src/app_threadx.c:177:13:thread_periodic_read	24	static

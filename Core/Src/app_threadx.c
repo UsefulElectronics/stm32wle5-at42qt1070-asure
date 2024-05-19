@@ -140,6 +140,7 @@ static void thread_new_state_update(ULONG thread_input)
     /* Your thread code here */
 	uint8_t key = 0;
 
+	uint8_t key_number = 0;
     // Create semaphore
     tx_semaphore_create(&external_gpio_semaphore, "gpio interrupt", 0);
 
@@ -151,6 +152,10 @@ static void thread_new_state_update(ULONG thread_input)
     	if (tx_semaphore_get(&external_gpio_semaphore, TX_NO_WAIT) == TX_SUCCESS)
     	{
     		key = main_key_status_read();
+
+			key_number = main_bit_2_order(key);
+
+			main_led_control(key_number);
 
     		if(key)
     		{
@@ -173,6 +178,8 @@ static void thread_periodic_read(ULONG thread_input)
 {
 	/* Your thread code here */
 	uint8_t key = 0;
+
+
 
 	key = main_key_status_read();
 
