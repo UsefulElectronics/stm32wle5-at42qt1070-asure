@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0001e8a6  00000000  00000000  0004578f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00022e9d  00000000  00000000  00064035  2**0
+ 18 .debug_line   00022e9b  00000000  00000000  00064035  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000ac913  00000000  00000000  00086ed2  2**0
+ 19 .debug_str    000ac913  00000000  00000000  00086ed0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00006078  00000000  00000000  001337e8  2**2
+ 20 .debug_frame  00006078  00000000  00000000  001337e4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000109  00000000  00000000  00139860  2**0
+ 21 .debug_line_str 00000109  00000000  00000000  0013985c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1026,23 +1026,24 @@ static void thread_new_state_update(ULONG thread_input)
  80004c2:	4603      	mov	r3, r0
  80004c4:	73fb      	strb	r3, [r7, #15]
 
-			key_number = main_bit_2_order(key);
- 80004c6:	7bfb      	ldrb	r3, [r7, #15]
- 80004c8:	4618      	mov	r0, r3
- 80004ca:	f000 f9d7 	bl	800087c <main_bit_2_order>
- 80004ce:	4603      	mov	r3, r0
- 80004d0:	73bb      	strb	r3, [r7, #14]
-
-			main_led_control(key_number);
- 80004d2:	7bbb      	ldrb	r3, [r7, #14]
- 80004d4:	4618      	mov	r0, r3
- 80004d6:	f000 f9a9 	bl	800082c <main_led_control>
-
     		if(key)
- 80004da:	7bfb      	ldrb	r3, [r7, #15]
- 80004dc:	2b00      	cmp	r3, #0
- 80004de:	d002      	beq.n	80004e6 <thread_new_state_update+0x5e>
+ 80004c6:	7bfb      	ldrb	r3, [r7, #15]
+ 80004c8:	2b00      	cmp	r3, #0
+ 80004ca:	d00c      	beq.n	80004e6 <thread_new_state_update+0x5e>
     		{
+
+    			key_number = main_bit_2_order(key);
+ 80004cc:	7bfb      	ldrb	r3, [r7, #15]
+ 80004ce:	4618      	mov	r0, r3
+ 80004d0:	f000 f9d4 	bl	800087c <main_bit_2_order>
+ 80004d4:	4603      	mov	r3, r0
+ 80004d6:	73bb      	strb	r3, [r7, #14]
+
+    			main_led_control(key_number);
+ 80004d8:	7bbb      	ldrb	r3, [r7, #14]
+ 80004da:	4618      	mov	r0, r3
+ 80004dc:	f000 f9a6 	bl	800082c <main_led_control>
+
     			tx_semaphore_put(&periodic_read_semaphore);
  80004e0:	4806      	ldr	r0, [pc, #24]	; (80004fc <thread_new_state_update+0x74>)
  80004e2:	f005 fc5f 	bl	8005da4 <_txe_semaphore_put>
@@ -1083,11 +1084,9 @@ static void thread_periodic_read(ULONG thread_input)
  800050c:	f000 f934 	bl	8000778 <main_key_status_read>
  8000510:	4603      	mov	r3, r0
  8000512:	73fb      	strb	r3, [r7, #15]
+
 	while (1)
 	{
-
-
-
 		if(tx_semaphore_get(&periodic_read_semaphore, TX_NO_WAIT) == TX_SUCCESS)
  8000514:	2100      	movs	r1, #0
  8000516:	480b      	ldr	r0, [pc, #44]	; (8000544 <thread_periodic_read+0x44>)

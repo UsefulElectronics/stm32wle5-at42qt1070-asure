@@ -153,12 +153,13 @@ static void thread_new_state_update(ULONG thread_input)
     	{
     		key = main_key_status_read();
 
-			key_number = main_bit_2_order(key);
-
-			main_led_control(key_number);
-
     		if(key)
     		{
+
+    			key_number = main_bit_2_order(key);
+
+    			main_led_control(key_number);
+
     			tx_semaphore_put(&periodic_read_semaphore);
     		}
     	}
@@ -185,9 +186,6 @@ static void thread_periodic_read(ULONG thread_input)
 
 	while (1)
 	{
-
-
-
 		if(tx_semaphore_get(&periodic_read_semaphore, TX_NO_WAIT) == TX_SUCCESS)
 		{
 			key = main_key_status_read();
