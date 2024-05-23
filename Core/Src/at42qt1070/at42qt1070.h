@@ -95,14 +95,53 @@ typedef enum
 /* VARIABLES -----------------------------------------------------------------*/
 
 /* FUNCTIONS DECLARATION -----------------------------------------------------*/
+/**
+ * @brief Initializes the AT42QT1070 touch sensor handler.
+ *
+ * This function sets up the AT42QT1070 touch sensor handler by assigning the provided function pointers
+ * for I2C communication, state change detection, and tick retrieval. It also initializes the handler's state,
+ * sets the register address, and performs a reset and calibration of the touch sensor.
+ *
+ * @param send_function Pointer to the function used to send data via I2C.
+ * @param receive_function Pointer to the function used to receive data via I2C.
+ * @param change_state_read Pointer to the function used to read the state change pin.
+ * @param get_tick Pointer to the function used to get the current tick count.
+ */
 void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t* change_state_read, uint32_t* get_tick);
-
+/**
+ * @brief Callback function to handle AT42QT1070 touch sensor events.
+ *
+ * This function checks the state of the change pin using the provided read function. If a change is detected,
+ * it determines the type of key event and, if the pin state indicates a new event, it reads the key state.
+ * The function returns a boolean indicating whether a new event has occurred.
+ *
+ * @return true if a new event has occurred, false otherwise.
+ */
 bool at42qt1070_callback(void);
-
+/**
+ * @brief Retrieves the key state from the circular buffer.
+ *
+ * This function dequeues a key number from the AT42QT1070 handler's circular buffer and updates the
+ * unread event flag based on the number of arrays remaining in the buffer. It returns the dequeued key number.
+ *
+ * @return The key number retrieved from the circular buffer.
+ */
 uint8_t at42qt1070_key_stete_get(void);
-
+/**
+ * @brief Calibrates the AT42QT1070 touch sensor.
+ *
+ * This function sends a calibration command to the AT42QT1070 touch sensor using the I2C send function
+ * provided during initialization. The calibration command is constructed and sent to the sensor's
+ * slave address.
+ */
 void at42qt1070_calibrate(void);
-
+/**
+ * @brief Resets the AT42QT1070 touch sensor.
+ *
+ * This function sends a reset command to the AT42QT1070 touch sensor using the I2C send function
+ * provided during initialization. The reset command is constructed and sent to the sensor's
+ * slave address.
+ */
 void at42qt1070_reset(void);
 
 

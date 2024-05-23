@@ -39,7 +39,6 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define     RTOS_BYTE_POOL_SIZE     8192
 #define     UI_THREAD_STACK_SIZE    1024
 //#define     RTOS_BYTE_POOL_SIZE     8192
 /* USER CODE END PM */
@@ -65,7 +64,27 @@ TX_SEMAPHORE periodic_read_semaphore;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
+/**
+* @brief Thread function to handle state updates based on external GPIO interrupts and periodic reads.
+*
+* This function runs in an infinite loop, waiting for an external GPIO interrupt semaphore. When the
+* semaphore is acquired, it reads the main key status, processes the key, and controls the LED based
+* on the key number. It then signals the periodic read semaphore. The thread sleeps for 10 ticks
+* (or 100 ms) in each iteration to manage the execution timing.
+*
+* @param thread_input Input parameter for the thread (not used in this implementation).
+*/
 static void thread_new_state_update(ULONG thread_input);
+/**
+ * @brief Thread function to handle periodic reads and manage the periodic read semaphore.
+ *
+ * This function runs in an infinite loop, performing periodic reads of the main key status. It waits
+ * for the periodic read semaphore and, upon acquiring it, reads the key status and, if a key is detected,
+ * signals the semaphore again. The thread sleeps for 5 ticks (or 50 ms) in each iteration to manage the
+ * execution timing.
+ *
+ * @param thread_input Input parameter for the thread (not used in this implementation).
+ */
 static void thread_periodic_read(ULONG thread_input);
 /* USER CODE END PFP */
 
@@ -163,15 +182,7 @@ static void thread_new_state_update(ULONG thread_input)
     			tx_semaphore_put(&periodic_read_semaphore);
     		}
     	}
-
-
-
-        /* Thread actions */
-//    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
-//
-//    	key = main_key_status_read();
-//
-        tx_thread_sleep(10); // Example: Sleep for 100 ticks
+        tx_thread_sleep(10); // Execute thread every 10 tick or 100ms
     }
 }
 
@@ -190,25 +201,16 @@ static void thread_periodic_read(ULONG thread_input)
 		{
 			key = main_key_status_read();
 
-
-//			main_i2c_transmit(0x1B << 1,
-//							&register_address,
-//							1);
-//
-//			main_i2c_receive(0x1B << 1,
-//							&key,
-//							1);
 			if(key)
 			{
 				tx_semaphore_put(&periodic_read_semaphore);
 			}
 		}
 		/* Thread actions */
-//    	HAL_GPIO_TogglePin(LED_PIN_GPIO_Port, LED_PIN_Pin);
-//
+
 		main_key_status_read();
 //
-        tx_thread_sleep(5); // Example: Sleep for 100 ticks
+        tx_thread_sleep(5); // Execute thread every 5 tick or 50ms
 	}
 }
 

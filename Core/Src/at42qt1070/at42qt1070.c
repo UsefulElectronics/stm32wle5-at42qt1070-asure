@@ -89,6 +89,16 @@ at42qt1070_t at42qt1070_handler = {0};
 /* MACROS --------------------------------------------------------------------*/
 
 /* PRIVATE FUNCTIONS DECLARATION ---------------------------------------------*/
+/**
+ * @brief Handles key event type based on the current state of the change pin.
+ *
+ * This function updates the key event type based on the current state of the change pin and the
+ * duration the key has been pressed. It handles transitions between idle, pressed, released, and
+ * long-pressed states.
+ *
+ * @param current_change_pin_state The current state of the change pin.
+ * @return The current key event type.
+ */
 static at42qt1070_event_e at42qt1070_key_event_type_handler(bool current_change_pin_state);
 /* FUNCTION PROTOTYPES -------------------------------------------------------*/
 void at42qt1070_init(uint8_t* send_function, uint8_t* receive_fucntion, uint8_t* change_state_read, uint32_t* get_tick)
