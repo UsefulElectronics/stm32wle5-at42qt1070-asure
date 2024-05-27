@@ -18,13 +18,13 @@ In this tutorial, AT1070 seven channel touch sensor is interfaced over I2C by ST
 An LED array is utilized whenever a pad touch event takes place as a response from the MCU that can detect new sensor event over external interrupt.  
 
 The necessary packets to interface AT1070 sensor are discussed over logic analyzer user interface view that will show an efficient way of I2C bus traffic utilization.
-![Circuit Diagram](https://github.com/UsefulElectronics/esp32s3-gc9a01-lvgl/blob/main/circuit%20diagram/circuit%20diagram.PNG)
+![Circuit Diagram](https://github.com/UsefulElectronics/stm32wle5-at42qt1070-asure/blob/main/diagrams/Keypad%20I2C%20read.png)
 
 
 Press timing algorithm is used to detect short click, held pressed, press and release events. 
 
 
 Every part regarding the user interface design is also explained in details using SquareLine Studio.
-![Circuit Diagram](https://github.com/UsefulElectronics/esp32s3-gc9a01-lvgl/blob/main/circuit%20diagram/circuit%20diagram.PNG)
+![Circuit Diagram](https://github.com/UsefulElectronics/stm32wle5-at42qt1070-asure/blob/main/diagrams/TOUCH%20PAD.png)
 ***
 
